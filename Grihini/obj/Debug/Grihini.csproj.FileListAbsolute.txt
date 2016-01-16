@@ -606,3 +606,14 @@ D:\Soumya\Daily Project\Grihini\16.1.2016\Grihini_16_01_2016\Grihini\obj\Debug\R
 D:\Soumya\Daily Project\Grihini\16.1.2016\Grihini_16_01_2016\Grihini\obj\Debug\RdlCompile.compiled
 D:\Soumya\Daily Project\Grihini\16.1.2016\Grihini_16_01_2016\Grihini\obj\Debug\Grihini.dll
 D:\Soumya\Daily Project\Grihini\16.1.2016\Grihini_16_01_2016\Grihini\obj\Debug\Grihini.pdb
+D:\My project work\Grihini\Grihini\bin\Grihini.dll
+D:\My project work\Grihini\Grihini\bin\Grihini.pdb
+D:\My project work\Grihini\Grihini\bin\Grihini_BL.BL.dll
+D:\My project work\Grihini\Grihini\bin\Grihini_DL.DL.dll
+D:\My project work\Grihini\Grihini\bin\Grihini_BL.BL.pdb
+D:\My project work\Grihini\Grihini\bin\Grihini_DL.DL.pdb
+D:\My project work\Grihini\Grihini\obj\Debug\Grihini.csprojResolveAssemblyReference.cache
+D:\My project work\Grihini\Grihini\obj\Debug\RdlCompile.cache
+D:\My project work\Grihini\Grihini\obj\Debug\RdlCompile.compiled
+D:\My project work\Grihini\Grihini\obj\Debug\Grihini.dll
+D:\My project work\Grihini\Grihini\obj\Debug\Grihini.pdb
