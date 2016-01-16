@@ -67,7 +67,8 @@
     <div class="del-name-txt">Country &nbsp; &nbsp;:</div>
     <div style="float:right;">
     <asp:DropDownList ID="dropdowncountry" runat="server" AutoPostBack="true" style="width:230px; float:left; background-color:#FFF; 
-        height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;">
+        height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;" 
+            onselectedindexchanged="dropdowncountry_SelectedIndexChanged">
             <%-- <asp:ListItem Value="1">India</asp:ListItem>
              <asp:ListItem Value="2">Usa</asp:ListItem>
              <asp:ListItem Value="2">Uk</asp:ListItem>  --%>      
@@ -80,7 +81,7 @@
     <div class="del-name-area" style="margin:16px 0 0 0;">
     <div class="del-name-txt">State &nbsp; &nbsp;:</div>
     <div style="float:right;">
-    <asp:DropDownList ID="dropdownstate" runat="server" OnSelectedIndexChanged="ddState_SelectedIndexchanged" style="width:230px; float:left; background-color:#FFF; 
+    <asp:DropDownList ID="dropdownstate" AutoPostBack="true" runat="server" OnSelectedIndexChanged="ddState_SelectedIndexchanged" style="width:230px; float:left; background-color:#FFF; 
         height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:DropDownList>
     <asp:RequiredFieldValidator ID="req_state" runat="server" ErrorMessage="Please select state" 
     ControlToValidate="dropdownstate" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>
@@ -91,7 +92,7 @@
     <div class="del-name-area" style="margin:16px 0 0 0;">
     <div class="del-name-txt">City &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:</div>
     <div style="float:right;">
-    <asp:DropDownList ID="dropdowncity" runat="server" style="width:230px; float:left; background-color:#FFF; 
+    <asp:DropDownList ID="dropdowncity" AutoPostBack="true" runat="server" style="width:230px; float:left; background-color:#FFF; 
         height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:DropDownList>
     <asp:RequiredFieldValidator ID="req_city" runat="server" ErrorMessage="Please select city" 
     ControlToValidate="dropdowncity" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>
@@ -191,6 +192,7 @@
                 <br />
                  Pincode: 
                 <asp:Label ID="Label5" runat="server" Text='<%# Eval("Pincode") %>'></asp:Label>,
+                <br>
                 </br>
                 <asp:Label ID="Label6" runat="server" Text='<%# Eval("State_Id") %>'></asp:Label>,
                 <asp:Label ID="Label7" runat="server" Text='<%# Eval("Country_Id") %>'></asp:Label>
@@ -199,6 +201,7 @@
     <img src="../Images/phone.png" />
                 <asp:Label ID="lblName" runat="server" Text='<%# Eval("PhoneNo") %>'></asp:Label>
 </li>
+                                <br>
               </br>
                 <%--<asp:ImageButton ID="ImageButton2" runat="server" ImageUrl="~/Images/conform.png" style="margin:5px 0 0 0; height:25px; width:130px; padding:0 0 10px 0;" />--%>
                 <div class="btn-continue-with">
