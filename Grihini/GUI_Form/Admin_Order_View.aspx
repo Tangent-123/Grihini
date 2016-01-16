@@ -426,6 +426,9 @@ ul#thumblist li a.zoomThumbActive{
 
            <asp:Button ID="Button2" runat="server" Text="REJECT ORDER" 
             CssClass="button-0" OnClick="reject_onclick" />
+
+            <asp:Button ID="Button3" runat="server" Text="Process Order" 
+            CssClass="button-0" OnClick="Process_onclick" Visible=false />
     </div>
 
    <%--  <div style="float:left; margin:260px 0 0 45px;">
@@ -486,7 +489,10 @@ ul#thumblist li a.zoomThumbActive{
               
                 
                 <br />     
-                                
+                        
+                        <li class="title" style="margin:2px 0 0 0;"> 
+                        <b>EmpId:</b>    
+                        <asp:Label ID="LabelEmpId" runat="server" Text='<%# Eval("Emp_Id") %>'></asp:Label></li>        
 </ul>
                           
                 </li>
@@ -505,8 +511,22 @@ ul#thumblist li a.zoomThumbActive{
 </div>
 
 
+</div>
 
+ <div>
+     <asp:Label ID="lbl_dispatchdetails" runat="server" Text="Dispatch Details" Visible="false"></asp:Label>
+     <asp:TextBox ID="txt_dispatchdetails" runat="server" Visible="false"></asp:TextBox>
+</div>
 
+ <div>
+     <asp:Label ID="Lbl_dispatchstatus" runat="server" Text="Dispatch Status" Visible="false"></asp:Label>
+     <asp:TextBox ID="txt_dispatchstatus" runat="server" Visible="false"></asp:TextBox>
+</div>
+
+<div>
+ <asp:Label ID="lblmsgshow" runat="server" Text="" style="color:Red; visibility="false"></asp:Label>
+
+</div>
 
 
 

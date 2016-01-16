@@ -485,7 +485,7 @@ namespace Grihini_BL.BL
             param[1].Value = CountryId;
 
             DataTable dt = new DataTable();
-            dt = ogde.Return_DataTable("usp_User_Registration", param);
+            dt = ogde.Return_DataTable("usp_mst_Location", param);
             return dt;
         }
 
@@ -502,7 +502,7 @@ namespace Grihini_BL.BL
             param[1].Value = StateId;
 
             DataTable dt = new DataTable();
-            dt = ogde.Return_DataTable("usp_User_Registration", param);
+            dt = ogde.Return_DataTable("usp_mst_Location", param);
             return dt;
         }
     }

@@ -34,7 +34,7 @@ namespace Grihini.GUI_Form
                 {
                     //Label13.Text = "Add Product Details";
                     MultiView1.ActiveViewIndex = 0;
-                    Btn_View.Visible = true;
+                    //Btn_View.Visible = true;
                     Btn_Add.Visible = false;
                     Button1.Visible = true;
                     CountryAll();
@@ -42,14 +42,14 @@ namespace Grihini.GUI_Form
                     Ddl_Location.Enabled = false;
                 }
                 //--------- and View User Details-------//
-                else if (Request.QueryString["target"] == "ViewUserDetails")
-                {
-                    //Label13.Text = "View Product Details";
-                    fetchUserDetailsInGridView();
-                    MultiView1.ActiveViewIndex = 1;
-                    Btn_View.Visible = false;
-                    Btn_Add.Visible = true;
-                }
+                //else if (Request.QueryString["target"] == "ViewUserDetails")
+                //{
+                //    //Label13.Text = "View Product Details";
+                //    fetchUserDetailsInGridView();
+                //    MultiView1.ActiveViewIndex = 1;
+                //    Btn_View.Visible = false;
+                //    Btn_Add.Visible = true;
+                //}
 
             }
         }
@@ -99,8 +99,10 @@ namespace Grihini.GUI_Form
 
             if (reg > 0)
             {
-                Response.Redirect("User_Registration.aspx?target=ViewUserDetails");
-
+                Session["EmailId"] = Convert.ToString(Text_Email.Text);
+                Session["FirstName"] = Convert.ToString(Text_First_Name.Text);
+                Session["LastName"] = Convert.ToString(Text_Last_Name.Text);
+                Response.Redirect("Home.aspx");
 
             }
 
