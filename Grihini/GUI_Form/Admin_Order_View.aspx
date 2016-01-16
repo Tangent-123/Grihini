@@ -354,7 +354,7 @@ ul#thumblist li a.zoomThumbActive{
 
 <div style="width:1024px; margin:0 auto;">
 
-    <div style="float:left; width:350px; margin:35px 0 0 40px;">
+    <div style="float:left; width:350px; margin:35px 0 0 0;">
     <div style="float:left;  background-color:#0099CC; width:350px;">
 <div class="add2main-txt">DELIVERY ADDRESS DETAILS</div>
 </div>
@@ -424,7 +424,7 @@ ul#thumblist li a.zoomThumbActive{
         <asp:Button ID="Button1" runat="server" Text="CONFIRM ORDER" 
             CssClass="button-0" OnClick="confirm_onlick" />
 
-           <asp:Button ID="Button2" runat="server" Text="Reject Order" 
+           <asp:Button ID="Button2" runat="server" Text="REJECT ORDER" 
             CssClass="button-0" OnClick="reject_onclick" />
     </div>
 
@@ -433,7 +433,7 @@ ul#thumblist li a.zoomThumbActive{
             CssClass="button-0" onclick="Downloadadress_click" />
     </div>--%>
 
-    <div style="float:right; width:350px; margin:35px 40px 0 0;">
+    <div style="float:right; width:350px; margin:-277px 0 0 0;">
     <div style="float:left;  background-color:#0099CC; width:350px;">
     <div class="add2main-txt">USER DETAILS</div>
     </div>

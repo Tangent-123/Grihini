@@ -472,5 +472,38 @@ namespace Grihini_BL.BL
             int dt = ogde.Insert_Update_Del("usp_Product_Registration", param);
             return dt;
         }
+        public DataTable fetchStateAgainstCountry(int OperationId, int CountryId)
+        {
+            SqlParameter[] param = new SqlParameter[2];
+
+            param[0] = new SqlParameter("@OperationId", SqlDbType.Int);
+            param[0].Direction = ParameterDirection.Input;
+            param[0].Value = OperationId;
+
+            param[1] = new SqlParameter("@Country_id", SqlDbType.Int);
+            param[1].Direction = ParameterDirection.Input;
+            param[1].Value = CountryId;
+
+            DataTable dt = new DataTable();
+            dt = ogde.Return_DataTable("usp_User_Registration", param);
+            return dt;
+        }
+
+        public DataTable fetchCiryAgaginstState(int OperationId, int StateId)
+        {
+            SqlParameter[] param = new SqlParameter[2];
+
+            param[0] = new SqlParameter("@OperationId", SqlDbType.Int);
+            param[0].Direction = ParameterDirection.Input;
+            param[0].Value = OperationId;
+
+            param[1] = new SqlParameter("@state_id", SqlDbType.Int);
+            param[1].Direction = ParameterDirection.Input;
+            param[1].Value = StateId;
+
+            DataTable dt = new DataTable();
+            dt = ogde.Return_DataTable("usp_User_Registration", param);
+            return dt;
+        }
     }
 }

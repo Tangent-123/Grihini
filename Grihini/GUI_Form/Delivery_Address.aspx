@@ -67,7 +67,8 @@
     <div class="del-name-txt">Country &nbsp; &nbsp;:</div>
     <div style="float:right;">
     <asp:DropDownList ID="dropdowncountry" runat="server" AutoPostBack="true" style="width:230px; float:left; background-color:#FFF; 
-        height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;">
+        height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;" 
+            onselectedindexchanged="dropdowncountry_SelectedIndexChanged">
             <%-- <asp:ListItem Value="1">India</asp:ListItem>
              <asp:ListItem Value="2">Usa</asp:ListItem>
              <asp:ListItem Value="2">Uk</asp:ListItem>  --%>      
