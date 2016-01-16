@@ -617,3 +617,14 @@ D:\My project work\Grihini\Grihini\obj\Debug\RdlCompile.cache
 D:\My project work\Grihini\Grihini\obj\Debug\RdlCompile.compiled
 D:\My project work\Grihini\Grihini\obj\Debug\Grihini.dll
 D:\My project work\Grihini\Grihini\obj\Debug\Grihini.pdb
+E:\Grihini\Grihini_16_01_2016\Grihini\bin\Grihini.dll
+E:\Grihini\Grihini_16_01_2016\Grihini\bin\Grihini.pdb
+E:\Grihini\Grihini_16_01_2016\Grihini\bin\Grihini_BL.BL.dll
+E:\Grihini\Grihini_16_01_2016\Grihini\bin\Grihini_DL.DL.dll
+E:\Grihini\Grihini_16_01_2016\Grihini\bin\Grihini_BL.BL.pdb
+E:\Grihini\Grihini_16_01_2016\Grihini\bin\Grihini_DL.DL.pdb
+E:\Grihini\Grihini_16_01_2016\Grihini\obj\Debug\ResolveAssemblyReference.cache
+E:\Grihini\Grihini_16_01_2016\Grihini\obj\Debug\RdlCompile.cache
+E:\Grihini\Grihini_16_01_2016\Grihini\obj\Debug\RdlCompile.compiled
+E:\Grihini\Grihini_16_01_2016\Grihini\obj\Debug\Grihini.dll
+E:\Grihini\Grihini_16_01_2016\Grihini\obj\Debug\Grihini.pdb
