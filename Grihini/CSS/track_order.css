@@ -1,0 +1,88 @@
+﻿.t_order_products_one
+{
+    float:left;
+    width:1024px;
+    height:35px;
+    background-color:#4eaece;
+}
+.t_order_products_orderno
+{
+    float:left;
+    font-family:Arial;
+    font-size:13px;
+    color:Black;
+    margin:9px 0 0 15px;
+}
+.t_order_products_orderno_area
+{
+    float:left;
+    width:160px;
+    height:15px;
+    background-color:White;
+    margin:9px 0 0 10px;
+}
+.t_order_products_name_area
+{
+    float:left;
+    width:300px;
+}
+.t_order_products_name
+{
+    float:left;
+    font-family:Arial;
+    font-size:13px;
+    color:#666;
+    margin:25px 0 0 15px;
+    font-weight:bold;
+    width:300px;
+}
+.t_order_products_status
+{
+    float:left;
+    font-family:Arial;
+    font-size:13px;
+    color:#666;
+    margin:9px 0 0 15px;
+    font-weight:normal;
+        width:300px;
+}
+.t_order_products_date
+{
+    float:left;
+    font-family:Arial;
+    font-size:13px;
+    color:#666;
+    margin:4px 0 0 15px;
+    font-weight:normal;
+    width:300px;
+}
+.t_order_border
+{
+    width:1024px;
+    height:3px;
+    float:left;
+    background-color:#42a1c1;
+}
+.t_order_shipping_address
+{
+    float:right;
+    width:350px;
+    height:280px;
+    background-color:#a0d2e2;
+
+}
+.t_order_shipping_address_bar
+{
+    float:left;
+    height:35px;
+    width:350px;
+    background-color:#5fa3b9;
+}
+.t_order_shipping_address_bar_txt
+{
+    font-family:Arial;
+    font-size:14px;
+    color:White;
+    text-align:center;
+    margin-top:7px;
+}
