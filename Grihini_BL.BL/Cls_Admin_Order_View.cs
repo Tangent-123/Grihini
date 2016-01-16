@@ -135,5 +135,55 @@ namespace Grihini_BL.BL
            return dt;
 
        }
+
+       public DataTable processorder(int OperationId, int orderid)
+       {
+           SqlParameter[] param = new SqlParameter[2];
+
+           param[0] = new SqlParameter("@OperationId", SqlDbType.Int);
+           param[0].Direction = ParameterDirection.Input;
+           param[0].Value = OperationId;
+
+
+
+           param[1] = new SqlParameter("@order_id", SqlDbType.Int);
+           param[1].Direction = ParameterDirection.Input;
+           param[1].Value = orderid;
+
+
+           DataTable dt = new DataTable();
+           dt = ogde.Return_DataTable("usp_Order_Management", param);
+           return dt;
+
+       }
+
+
+
+       public DataTable processorderdetails(int OperationId, int orderid, string deliverdetails, string deliverystatus)
+       {
+           SqlParameter[] param = new SqlParameter[4];
+
+           param[0] = new SqlParameter("@OperationId", SqlDbType.Int);
+           param[0].Direction = ParameterDirection.Input;
+           param[0].Value = OperationId;
+
+           param[1] = new SqlParameter("@order_id", SqlDbType.Int);
+           param[1].Direction = ParameterDirection.Input;
+           param[1].Value = orderid;
+
+
+           param[2] = new SqlParameter("@Delivery_details", SqlDbType.VarChar, 500);
+           param[2].Direction = ParameterDirection.Input;
+           param[2].Value = deliverdetails;
+
+           param[3] = new SqlParameter("@Delivery_status", SqlDbType.VarChar, 500);
+           param[3].Direction = ParameterDirection.Input;
+           param[3].Value = deliverystatus;
+
+           DataTable dt = new DataTable();
+           dt = ogde.Return_DataTable("usp_Order_Management", param);
+           return dt;
+
+       }
     }
 }
