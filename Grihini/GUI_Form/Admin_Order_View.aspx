@@ -478,7 +478,7 @@ ul#thumblist li a.zoomThumbActive{
 <li class="title" style="margin:8px 0 0 0;"> 
 <b>Contact Details:</b>
 <br />
-<img src="../Images/phone.png" /><asp:Label ID="lbl_Email_Id" runat="server" text='<%#Eval("Email_Id") %>'></asp:Label>
+<img src="../Images/message.png" /><asp:Label ID="lbl_Email_Id" runat="server" text='<%#Eval("Email_Id") %>'></asp:Label>
 <br />
     <img src="../Images/phone.png" /> <asp:Label ID="lbl_Mobile_No" runat="server" Text='<%# Eval("Mobile_No") %>'></asp:Label>
 </li>
