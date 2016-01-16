@@ -486,7 +486,10 @@ ul#thumblist li a.zoomThumbActive{
               
                 
                 <br />     
-                                
+                        
+                        <li class="title" style="margin:2px 0 0 0;"> 
+                        <b>EmpId:</b>    
+                        <asp:Label ID="LabelEmpId" runat="server" Text='<%# Eval("Emp_Id") %>'></asp:Label></li>        
 </ul>
                           
                 </li>

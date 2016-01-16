@@ -209,8 +209,8 @@
 					<div style="left:0;">
 						<ul style="width:200px;">
 							<li class="oe_heading">User Details</li>
-							<li><a href="User_Registration.aspx">Add User Details</a></li>
-							<li id="ViewUser" runat="server" visible="false"><a href="#">View User Details</a></li>
+							<li><a href="User_Registration.aspx?target=AddUserDetails">Add User Details</a></li>
+							<%--<li id="ViewUser" runat="server" visible="false"><a href="#">View User Details</a></li>--%>
 
 
 						</ul>
@@ -263,15 +263,15 @@
                     </div>
 				</li>
 
-                <li><a href="">BILING</a>
+               <%-- <li><a href="">BILING</a>
 					<div style="left:0;">
 						<ul style="width:200px;">
 							<li class="oe_heading">Biling</li>
 							<li><a href=""></a></li>
-							<%--<li id="Li2" runat="server" visible="false"><a href="#"></a></li>--%>
+							<li id="Li2" runat="server" visible="false"><a href="#"></a></li>
                         </ul>
                     </div>
-				</li>              
+				</li>  --%>            
 
 			</ul>	
 		</div>

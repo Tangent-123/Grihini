@@ -131,8 +131,8 @@ namespace Grihini.GUI_Form
 
                 }
 
-                ListItem li = new ListItem("Select Country", "0");
-                dropdowncountry.Items.Insert(0, li);
+                //ListItem li = new ListItem("Select Country", "0");
+                //dropdowncountry.Items.Insert(0, li);
             }
             catch (Exception ex)
             {
@@ -225,8 +225,10 @@ namespace Grihini.GUI_Form
 
         protected void dropdowncountry_SelectedIndexChanged(object sender, EventArgs e)
         {
-            dropdownstate.Items.Clear();
+           // dropdownstate.Items.Clear();
             dropdownstate.Enabled = true;
+            dropdownstate.SelectedValue = "0";
+            dropdowncity.SelectedValue = "0";
             dropdowncity.Enabled = false;
             
             try
@@ -244,7 +246,8 @@ namespace Grihini.GUI_Form
                 }
                 else
                 {
-
+                    dropdownstate.Enabled = false;
+                    dropdowncity.Enabled = false;
                 }
             }
 
