@@ -111,79 +111,36 @@ namespace Grihini.GUI_Form
         //---------------Binding Location in Location Dropdownlist Against selected State-------//
         protected void ddState_SelectedIndexchanged(object sender, EventArgs e)
         {
-            //------------Include Other option in Dropdownlist----------------
-
-            if (Ddl_State.SelectedValue == "1000")
-            {
-                TextStateOther.Visible = true;
-                TextLocationOther.Visible = true;
-                Ddl_Location.Items.Clear();
-                //ddVillage_other.Visible = true;
-                //ddVillage.Items.Clear();
-                ListItem li = new ListItem("Others", "1000");
-                Ddl_Location.Items.Add(li);
-                //ListItem li1 = new ListItem("Others", "1000");
-                //ddVillage.Items.Add(li1);
-            }
-            else
-            {
-                Ddl_State.Items.Clear();
-                Ddl_Location.Items.Clear();
-                //ddVillage.Items.Clear();
-                TextStateOther.Visible = false;
-                TextLocationOther.Visible = false;
-                int StateId = Convert.ToInt32(Ddl_State.SelectedValue);
-                {
-
-                    DataTable dt = new DataTable();
-                    dt = ud.fetchlocation(6, StateId);
-                    if (dt.Rows.Count > 0)
-                    {
-                        Ddl_Location.DataSource = dt;
-                        Ddl_Location.DataTextField = "location_name";
-                        Ddl_Location.DataValueField = "location_id";
-                        Ddl_Location.DataBind();
-
-                    }
-                    else
-                    {
-
-                    }
-                }
-
-                TextStateOther.Visible = false;
-                TextLocationOther.Visible = false;
-            }
-
+           
 
 
             //-------Binding Location Against State--------------//
 
-            //Ddl_Location.Items.Clear();
-            //Ddl_Location.Enabled = true;
-            //try
-            //{
+            Ddl_Location.Items.Clear();
+            Ddl_Location.Enabled = true;
+            try
+            {
 
-            //    DataTable dt = new DataTable();
-            //    dt = ud.fetchlocation(6, Convert.ToInt32(Ddl_State.SelectedValue));
-            //    if (dt.Rows.Count > 0)
-            //    {
-            //        Ddl_Location.DataSource = dt;
-            //        Ddl_Location.DataTextField = "location_name";
-            //        Ddl_Location.DataValueField = "location_id";
-            //        Ddl_Location.DataBind();
+                DataTable dt = new DataTable();
+                dt = ud.fetchlocation(6, Convert.ToInt32(Ddl_State.SelectedValue));
+                if (dt.Rows.Count > 0)
+                {
+                    Ddl_Location.DataSource = dt;
+                    Ddl_Location.DataTextField = "location_name";
+                    Ddl_Location.DataValueField = "location_id";
+                    Ddl_Location.DataBind();
 
-            //    }
-            //    else
-            //    {
+                }
+                else
+                {
 
-            //    }
-            //}
+                }
+            }
 
-            //catch (Exception ex)
-            //{
+            catch (Exception ex)
+            {
 
-            //}
+            }
 
 
         }
@@ -191,52 +148,40 @@ namespace Grihini.GUI_Form
         //---------------Binding State in State Dropdownlist Against selected country-------//
         protected void Ddl_Country_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
 
-            //Ddl_State.Items.Clear();
-            //Ddl_State.Enabled = true;
-            //Ddl_Location.Items.Clear();
-            ////ListItem li = new ListItem("Select Location", "0");
-            ////Ddl_Location.Items.Add(li);
-            //try
-            //{
-
-            //    DataTable dt = new DataTable();
-            //    dt = ud.fetchState(5, Convert.ToInt32(Ddl_Country.SelectedValue));
-            //    if (dt.Rows.Count > 0)
-            //    {
-            //        Ddl_State.DataSource = dt;
-            //        Ddl_State.DataTextField = "StateName";
-            //        Ddl_State.DataValueField = "Stateid";
-            //        Ddl_State.DataBind();
-            //        //ListItem li = new ListItem("Others", "1000");
-            //        //ddDistrict.Items.Add(li);
-            //    }
-            //    else
-            //    {
-
-            //    }
-                
-            //}
-
-            //catch (Exception ex)
-            //{
-
-            //}
 
             Ddl_State.Items.Clear();
-            int id = Convert.ToInt32(ddState.SelectedValue);
-            DataTable dt = new DataTable();
-            dt = ddl.fetchdistrict(7, Convert.ToInt32(ddState.SelectedValue));
-            if (dt.Rows.Count > 0)
+            Ddl_State.Enabled = true;
+            Ddl_Location.Items.Clear();
+            //ListItem li = new ListItem("Select Location", "0");
+            //Ddl_Location.Items.Add(li);
+            try
             {
-                Ddl_State.DataSource = dt;
-                ddDistrict.DataTextField = "District_name";
-                ddDistrict.DataValueField = "District_id";
-                ddDistrict.DataBind();
-                //ListItem li = new ListItem("Others", "1000");
-                //ddDistrict.Items.Add(li);
+
+                DataTable dt = new DataTable();
+                dt = ud.fetchState(5, Convert.ToInt32(Ddl_Country.SelectedValue));
+                if (dt.Rows.Count > 0)
+                {
+                    Ddl_State.DataSource = dt;
+                    Ddl_State.DataTextField = "StateName";
+                    Ddl_State.DataValueField = "Stateid";
+                    Ddl_State.DataBind();
+                    //ListItem li = new ListItem("Others", "1000");
+                    //ddDistrict.Items.Add(li);
+                }
+                else
+                {
+
+                }
+
             }
+
+            catch (Exception ex)
+            {
+
+            }
+
+           
 
         }
         //------------Buttton Click event for View User Details in GridView---------//
