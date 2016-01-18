@@ -332,8 +332,8 @@ ul#thumblist li a.zoomThumbActive{
    <div class="form_box_right">
              <asp:DropDownList ID="Ddl_Gender" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;">
                         <asp:ListItem Value="0">Select Gender</asp:ListItem>
-                        <asp:ListItem Value="1">MALE</asp:ListItem>
-                        <asp:ListItem Value="2">FEMALE</asp:ListItem>
+                        <asp:ListItem Value="MALE">MALE</asp:ListItem>
+                        <asp:ListItem Value="FEMALE">FEMALE</asp:ListItem>
                        
              </asp:DropDownList>
               <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
@@ -455,7 +455,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
         </div>
 
    <div class="form_box_right">
-             <asp:DropDownList ID="Ddl_Location" Visible="false" runat="server" AutoPostBack="true" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;">
+             <asp:DropDownList ID="Ddl_Location" runat="server" AutoPostBack="true" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;">
              </asp:DropDownList>
              <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" 
                         ErrorMessage="Select Location!" ControlToValidate="Ddl_Location" 

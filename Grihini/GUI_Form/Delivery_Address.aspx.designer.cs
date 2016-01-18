@@ -49,6 +49,15 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.DropDownList dropdowncountry;
         
         /// <summary>
+        /// TextOtherCountry control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextOtherCountry;
+        
+        /// <summary>
         /// req_country control.
         /// </summary>
         /// <remarks>
@@ -67,13 +76,13 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.DropDownList dropdownstate;
         
         /// <summary>
-        /// req_state control.
+        /// TextOtherState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_state;
+        protected global::System.Web.UI.WebControls.TextBox TextOtherState;
         
         /// <summary>
         /// dropdowncity control.
@@ -85,13 +94,13 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.DropDownList dropdowncity;
         
         /// <summary>
-        /// req_city control.
+        /// TextOtherCity control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_city;
+        protected global::System.Web.UI.WebControls.TextBox TextOtherCity;
         
         /// <summary>
         /// txtpincode control.
