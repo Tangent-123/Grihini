@@ -612,7 +612,6 @@ D:\My project work\Grihini\Grihini\bin\Grihini_BL.BL.dll
 D:\My project work\Grihini\Grihini\bin\Grihini_DL.DL.dll
 D:\My project work\Grihini\Grihini\bin\Grihini_BL.BL.pdb
 D:\My project work\Grihini\Grihini\bin\Grihini_DL.DL.pdb
-D:\My project work\Grihini\Grihini\obj\Debug\Grihini.csprojResolveAssemblyReference.cache
 D:\My project work\Grihini\Grihini\obj\Debug\RdlCompile.cache
 D:\My project work\Grihini\Grihini\obj\Debug\RdlCompile.compiled
 D:\My project work\Grihini\Grihini\obj\Debug\Grihini.dll
@@ -628,3 +627,4 @@ E:\Grihini\Grihini_16_01_2016\Grihini\obj\Debug\RdlCompile.cache
 E:\Grihini\Grihini_16_01_2016\Grihini\obj\Debug\RdlCompile.compiled
 E:\Grihini\Grihini_16_01_2016\Grihini\obj\Debug\Grihini.dll
 E:\Grihini\Grihini_16_01_2016\Grihini\obj\Debug\Grihini.pdb
+D:\My Project Work\grihini\Grihini\obj\Debug\ResolveAssemblyReference.cache

@@ -8,24 +8,87 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <link href="../CSS/b_jqueryscript.css" rel="stylesheet" type="text/css" />
+    <script src="../JS/b_latestmin.js" type="text/javascript"></script>
+    <script src="../JS/b_immersive.js" type="text/javascript"></script>
+    <link href="../CSS/b_immersive.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
+
+
     <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/newarrival_style.css" rel="stylesheet" type="text/css" />
-
     <link href="../CSS/product_slider.css" rel="stylesheet" type="text/css" />
-    <script src="../JS/product_min.js" type="text/javascript"></script>
     <script src="../JS/product_fixel.js" type="text/javascript"></script>
 
+<div class="wrapper" style="background-color:#c6c6c6;">
+<div style="width:1024px; margin:0 auto; height:30px; border:1px solid #cdcdcd; background-color:#c6c6c6;">
+<div class="h_quicklink">Go to</div>
+<div class="h_quicklink_arrow"><img src="../Images/quick_arrow.png" /></div>
+
+<div class="white_area_lab">
+<div class="lab">
+<ul>
+
+<li><a href="aboutus.aspx">About Us</a></li>
+<li><a href="OUR_ORIGIN.aspx">Our Origin</a></li>
+<li><a href="ourvalues.aspx">Our Values</a></li>
+<li><a href="contact.aspx">Contact Us</a></li>
+
+</ul>
+</div>
+</div>
 
 
+</div>
+</div>
+
+<div class="main">
+<div class="page_container">
+<div id="immersive_slider">
+<div class="slide" data-blurred="../Images/slide1_blurred.jpg">
+<div class="content">
+<h2><a href="#" target="_blank">Besan Laddu</a></h2>
+<p>Laddu or laddoo are ball-shaped sweets popular in the Indian Subcontinent. Laddus are made of flour, minced dough and sugar with other ingredients that vary by recipe. They are often served at festive or religious occasions.</p>
+</div>
+<div class="image"> <a href="#" target="_blank"> <img src="../Images/slide1.jpg" alt="Slider 1"> </a> </div>
+</div>
+<div class="slide" data-blurred="../Images/slide2_blurred.jpg">
+<div class="content">
+<h2><a href="#" target="_blank">BucketListly Apps</a></h2>
+<p>It’s never been easier to watch YouTube on the big screen
+              Send your favorite YouTube videos from your Android phone or tablet to TV with the touch of a button. It’s easy. No wires, no setup, no nothing. Find out more here.</p>
+</div>
+<div class="image"> <a href="#" target="_blank"> <img src="../Images/slide2.jpg" alt="Slider 1"></a> </div>
+</div>
+<div class="slide" data-blurred="../Images/slide3_blurred.jpg">
+<div class="content">
+<h2><a href="#" target="_blank">The Pete Design</a></h2>
+<p>It’s never been easier to watch YouTube on the big screen
+              Send your favorite YouTube videos from your Android phone or tablet to TV with the touch of a button. It’s easy. No wires, no setup, no nothing. Find out more here.</p>
+</div>
+<div class="image"> <a href="#" target="_blank"><img src="../Images/slide3.jpg" alt="Slider 1"></a> </div>
+</div>
+<a href="#" class="is-prev">&laquo;</a> <a href="#" class="is-next">&raquo;</a> </div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#immersive_slider").immersive_slider({
+            container: ".main"
+        });
+    });
+
+    </script> 
 
 
 <div class="shadow-one">
 <div class="wrapper">
 
 <div class="main-wrapper">
-<div style="width:1024px; float:left; background-color:White; height:30px;"></div>
 <div class="main-home">
-<div class="banner">
+<%--<div class="banner">
 <div class="banner-one">
 
 <div class="sleekslider">
@@ -155,7 +218,7 @@
 
 
 </div>
-</div>
+</div>--%>
 
 
 <div class="sellingproduct">
@@ -315,7 +378,7 @@
 <div class="contact-footer-final">
 
 <div class="contact-us">
-<div class="contact-us-txt">CONTACT US</div>
+<div class="quick-link-txt">CONTACT US</div>
 <div class="address">
 <div class="address-icon"><img src="../Images/address.png" /></div>
 <div class="address-details">
@@ -348,7 +411,7 @@ Pune – 411018</div>
 
 
 
-
+<div class="home-signin-area"><img src="../Images/home_signin_area.png" /></div>
 
 
 
@@ -380,6 +443,6 @@ Pune – 411018</div>
 <!-- ModalPopupExtender -->
 </section>
 
-    <asp:Button ID="Button1" runat="server" Text="Button" onclick="Button1_Click" />
+<%--    <asp:Button ID="Button1" runat="server" Text="Button" onclick="Button1_Click" />--%>
 
 </asp:Content>

@@ -111,6 +111,10 @@ namespace Grihini.GUI_Form
         //---------------Binding Location in Location Dropdownlist Against selected State-------//
         protected void ddState_SelectedIndexchanged(object sender, EventArgs e)
         {
+           
+
+
+            //-------Binding Location Against State--------------//
 
             Ddl_Location.Items.Clear();
             Ddl_Location.Enabled = true;
@@ -125,7 +129,7 @@ namespace Grihini.GUI_Form
                     Ddl_Location.DataTextField = "location_name";
                     Ddl_Location.DataValueField = "location_id";
                     Ddl_Location.DataBind();
-                
+
                 }
                 else
                 {
@@ -144,7 +148,7 @@ namespace Grihini.GUI_Form
         //---------------Binding State in State Dropdownlist Against selected country-------//
         protected void Ddl_Country_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
 
             Ddl_State.Items.Clear();
             Ddl_State.Enabled = true;
@@ -162,20 +166,22 @@ namespace Grihini.GUI_Form
                     Ddl_State.DataTextField = "StateName";
                     Ddl_State.DataValueField = "Stateid";
                     Ddl_State.DataBind();
-                    
+                    //ListItem li = new ListItem("Others", "1000");
+                    //ddDistrict.Items.Add(li);
                 }
                 else
                 {
 
                 }
-                //ListItem li = new ListItem("Others", "1000");
-                //ddDistrict.Items.Add(li);
+
             }
 
             catch (Exception ex)
             {
 
             }
+
+           
 
         }
         //------------Buttton Click event for View User Details in GridView---------//

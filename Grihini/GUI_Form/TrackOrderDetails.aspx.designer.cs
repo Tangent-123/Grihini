@@ -22,6 +22,24 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.Label lbl_order;
         
         /// <summary>
+        /// lbl_tems control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_tems;
+        
+        /// <summary>
+        /// lbl_grandtotal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_grandtotal;
+        
+        /// <summary>
         /// GridView_TrackOrderdetails control.
         /// </summary>
         /// <remarks>

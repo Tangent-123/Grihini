@@ -424,6 +424,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" 
                         ErrorMessage="Select Country!" ControlToValidate="Ddl_Country" InitialValue="0" 
                         ValidationGroup="Valid1" Display="None"></asp:RequiredFieldValidator>
+                        
          </div>
    </div>
 
@@ -439,7 +440,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
               <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" 
                         ErrorMessage="Select State!" ControlToValidate="Ddl_State" 
                         ValidationGroup="Valid1" Display="None" InitialValue="0"></asp:RequiredFieldValidator>
-       <asp:TextBox ID="TextStateOther" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
+       <asp:TextBox ID="TextStateOther" Visible="false" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
          </div>
 
    </div>
@@ -454,12 +455,12 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
         </div>
 
    <div class="form_box_right">
-             <asp:DropDownList ID="Ddl_Location" runat="server" AutoPostBack="true" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;">
+             <asp:DropDownList ID="Ddl_Location" Visible="false" runat="server" AutoPostBack="true" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;">
              </asp:DropDownList>
              <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" 
                         ErrorMessage="Select Location!" ControlToValidate="Ddl_Location" 
                         ValidationGroup="Valid1" Display="None" InitialValue="0"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="TextLocationOther" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
+                        <asp:TextBox ID="TextLocationOther" runat="server" Visible="false" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
          </div>
    </div>
 
