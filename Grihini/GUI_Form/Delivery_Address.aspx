@@ -69,10 +69,9 @@
     <asp:DropDownList ID="dropdowncountry" runat="server" AutoPostBack="true" style="width:230px; float:left; background-color:#FFF; 
         height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;" 
             onselectedindexchanged="dropdowncountry_SelectedIndexChanged">
-            <%-- <asp:ListItem Value="1">India</asp:ListItem>
-             <asp:ListItem Value="2">Usa</asp:ListItem>
-             <asp:ListItem Value="2">Uk</asp:ListItem>  --%>      
-    </asp:DropDownList>
+     </asp:DropDownList>
+        <asp:TextBox ID="TextOtherCountry" runat="server" Visible="false" style="width:230px; float:left; background-color:#FFF; 
+        height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
     <asp:RequiredFieldValidator ID="req_country" runat="server" ErrorMessage="Please select country" 
     ControlToValidate="dropdowncountry" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>
     </div>
@@ -83,8 +82,10 @@
     <div style="float:right;">
     <asp:DropDownList ID="dropdownstate" AutoPostBack="true" runat="server" OnSelectedIndexChanged="ddState_SelectedIndexchanged" style="width:230px; float:left; background-color:#FFF; 
         height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:DropDownList>
-    <asp:RequiredFieldValidator ID="req_state" runat="server" ErrorMessage="Please select state" 
-    ControlToValidate="dropdownstate" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>
+          <asp:TextBox ID="TextOtherState" runat="server" Visible="false" style="width:230px; float:left; background-color:#FFF; 
+        height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
+    <%--<asp:RequiredFieldValidator ID="req_state" runat="server" ErrorMessage="Please select state" 
+    ControlToValidate="dropdownstate" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>--%>
     </div>
     </div>
     
@@ -94,8 +95,10 @@
     <div style="float:right;">
     <asp:DropDownList ID="dropdowncity" AutoPostBack="true" runat="server" style="width:230px; float:left; background-color:#FFF; 
         height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:DropDownList>
-    <asp:RequiredFieldValidator ID="req_city" runat="server" ErrorMessage="Please select city" 
-    ControlToValidate="dropdowncity" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>
+      <asp:TextBox ID="TextOtherCity" runat="server" Visible="false" style="width:230px; float:left; background-color:#FFF; 
+        height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
+   <%-- <asp:RequiredFieldValidator ID="req_city" runat="server" ErrorMessage="Please select city" 
+    ControlToValidate="dropdowncity" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>--%>
     </div>
     </div>
 

@@ -32,25 +32,15 @@ namespace Grihini.GUI_Form
                 //------------Query String to redirect Add User details---------//
                 if (Request.QueryString["target"] == "AddUserDetails")
                 {
-                    //Label13.Text = "Add Product Details";
+                    
                     MultiView1.ActiveViewIndex = 0;
-                    //Btn_View.Visible = true;
                     Btn_Add.Visible = false;
                     Button1.Visible = true;
                     CountryAll();
                     Ddl_State.Enabled = false;
                     Ddl_Location.Enabled = false;
                 }
-                //--------- and View User Details-------//
-                //else if (Request.QueryString["target"] == "ViewUserDetails")
-                //{
-                //    //Label13.Text = "View Product Details";
-                //    fetchUserDetailsInGridView();
-                //    MultiView1.ActiveViewIndex = 1;
-                //    Btn_View.Visible = false;
-                //    Btn_Add.Visible = true;
-                //}
-
+                
             }
         }
 
@@ -77,13 +67,17 @@ namespace Grihini.GUI_Form
                 {
                 }
 
-           
+
             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
+
+           
         }
+
         //-----------Button Click Event of resset button-------------//
         protected void Btn_Reset_Click(object sender, EventArgs e)
         {
@@ -93,17 +87,42 @@ namespace Grihini.GUI_Form
         //-----------------Button click event for Submit button for User Details-------------//
         protected void Button1_Click(object sender, EventArgs e)
         {
-            int reg = ud.Insert_Data(1,Convert.ToString(DdlTitle.SelectedValue), Text_First_Name.Text, Text_Middle_Name.Text, Text_Last_Name.Text,
-               Ddl_Gender.SelectedValue, Text_Dob.Text, Text_MobileNo.Text, Text_Email.Text, Ddl_Country.SelectedValue,
-               Ddl_State.SelectedValue, Ddl_Location.SelectedValue, Text_Emp_Id.Text);
-
-            if (reg > 0)
+            try
             {
-                Session["EmailId"] = Convert.ToString(Text_Email.Text);
-                Session["FirstName"] = Convert.ToString(Text_First_Name.Text);
-                Session["LastName"] = Convert.ToString(Text_Last_Name.Text);
-                Response.Redirect("Home.aspx");
+                string StateNm = null;
+                string LocationNm = null;
 
+                if (Ddl_State.SelectedValue == "1000")
+                {
+                   
+                    StateNm = Convert.ToString(TextStateOther.Text);
+                    LocationNm = Convert.ToString(TextLocationOther.Text);
+
+                }
+                else
+                {
+                    StateNm = Ddl_State.SelectedItem.Text;
+                    LocationNm = Ddl_Location.SelectedItem.Text;
+                }
+
+
+                int reg = ud.Insert_Data(1, Convert.ToString(DdlTitle.SelectedValue), Text_First_Name.Text, Text_Middle_Name.Text, Text_Last_Name.Text,
+                   Ddl_Gender.SelectedValue, Text_Dob.Text, Text_MobileNo.Text, Text_Email.Text, Ddl_Country.SelectedValue,
+                   StateNm, LocationNm, Text_Emp_Id.Text);
+
+                if (reg > 0)
+                {
+                    Session["EmailId"] = Convert.ToString(Text_Email.Text);
+                    Session["FirstName"] = Convert.ToString(Text_First_Name.Text);
+                    Session["LastName"] = Convert.ToString(Text_Last_Name.Text);
+                    Response.Redirect("Home.aspx");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
 
         }
@@ -112,47 +131,47 @@ namespace Grihini.GUI_Form
         protected void ddState_SelectedIndexchanged(object sender, EventArgs e)
         {
             //------------Include Other option in Dropdownlist----------------
+            //Ddl_Location.Items.Clear();
+            //Ddl_Location.Enabled = true;
+            try
+            {
 
-            if (Ddl_State.SelectedValue == "1000")
-            {
-                TextStateOther.Visible = true;
-                TextLocationOther.Visible = true;
-                Ddl_Location.Items.Clear();
-                //ddVillage_other.Visible = true;
-                //ddVillage.Items.Clear();
-                ListItem li = new ListItem("Others", "1000");
-                Ddl_Location.Items.Add(li);
-                //ListItem li1 = new ListItem("Others", "1000");
-                //ddVillage.Items.Add(li1);
-            }
-            else
-            {
-                Ddl_State.Items.Clear();
-                Ddl_Location.Items.Clear();
-                //ddVillage.Items.Clear();
-                TextStateOther.Visible = false;
-                TextLocationOther.Visible = false;
-                int StateId = Convert.ToInt32(Ddl_State.SelectedValue);
+                if (Ddl_State.SelectedValue == "1000")
                 {
-
-                    DataTable dt = new DataTable();
-                    dt = ud.fetchlocation(6, StateId);
-                    if (dt.Rows.Count > 0)
-                    {
-                        Ddl_Location.DataSource = dt;
-                        Ddl_Location.DataTextField = "location_name";
-                        Ddl_Location.DataValueField = "location_id";
-                        Ddl_Location.DataBind();
-
-                    }
-                    else
-                    {
-
-                    }
+                    TextStateOther.Visible = true;
+                    TextLocationOther.Visible = true;
+                    
+                    Ddl_Location.Items.Clear();
+                    Ddl_Location.Enabled = false;
+                   
                 }
+                else
+                {
+                    
+                    TextStateOther.Visible = false;
+                    TextLocationOther.Visible = false;
+                    {
+                        Ddl_Location.Items.Clear();
+                        Ddl_Location.Enabled = true;
+                        DataTable dt = new DataTable();
+                        dt = ud.fetchlocation(6, Convert.ToInt32(Ddl_State.SelectedValue));
+                        if (dt.Rows.Count > 0)
+                        {
+                            Ddl_Location.DataSource = dt;
+                            Ddl_Location.DataTextField = "location_name";
+                            Ddl_Location.DataValueField = "location_id";
+                            Ddl_Location.DataBind();
 
-                TextStateOther.Visible = false;
-                TextLocationOther.Visible = false;
+                        }
+                        else
+                        {
+
+                        }
+                    }
+
+                    TextStateOther.Visible = false;
+                    TextLocationOther.Visible = false;
+                }
             }
 
 
@@ -178,12 +197,14 @@ namespace Grihini.GUI_Form
             //    {
 
             //    }
-            //}
 
-            //catch (Exception ex)
-            //{
 
-            //}
+
+            catch (Exception ex)
+            {
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
+            }
 
 
         }
@@ -191,54 +212,63 @@ namespace Grihini.GUI_Form
         //---------------Binding State in State Dropdownlist Against selected country-------//
         protected void Ddl_Country_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-
-            //Ddl_State.Items.Clear();
-            //Ddl_State.Enabled = true;
-            //Ddl_Location.Items.Clear();
-            ////ListItem li = new ListItem("Select Location", "0");
-            ////Ddl_Location.Items.Add(li);
-            //try
-            //{
-
-            //    DataTable dt = new DataTable();
-            //    dt = ud.fetchState(5, Convert.ToInt32(Ddl_Country.SelectedValue));
-            //    if (dt.Rows.Count > 0)
-            //    {
-            //        Ddl_State.DataSource = dt;
-            //        Ddl_State.DataTextField = "StateName";
-            //        Ddl_State.DataValueField = "Stateid";
-            //        Ddl_State.DataBind();
-            //        //ListItem li = new ListItem("Others", "1000");
-            //        //ddDistrict.Items.Add(li);
-            //    }
-            //    else
-            //    {
-
-            //    }
-                
-            //}
-
-            //catch (Exception ex)
-            //{
-
-            //}
-
             Ddl_State.Items.Clear();
-            int id = Convert.ToInt32(ddState.SelectedValue);
-            DataTable dt = new DataTable();
-            dt = ddl.fetchdistrict(7, Convert.ToInt32(ddState.SelectedValue));
-            if (dt.Rows.Count > 0)
+            Ddl_State.Enabled = true;
+            Ddl_Location.Items.Clear();
+            try
             {
-                Ddl_State.DataSource = dt;
-                ddDistrict.DataTextField = "District_name";
-                ddDistrict.DataValueField = "District_id";
-                ddDistrict.DataBind();
-                //ListItem li = new ListItem("Others", "1000");
-                //ddDistrict.Items.Add(li);
-            }
 
+                if (Ddl_Country.SelectedValue == "0")
+                {
+                    Ddl_State.Enabled = false;
+                    TextStateOther.Visible = false;
+                    TextLocationOther.Visible = false;
+
+                }
+                else if (Ddl_State.SelectedValue == "1000")
+                {
+                     Ddl_Location.Enabled = false;
+                    TextStateOther.Visible = true;
+                    TextLocationOther.Visible = true;
+                   
+                }
+                else
+                {
+                    Ddl_State.Items.Clear();
+                    Ddl_Location.Items.Clear();
+                    TextStateOther.Visible = false;
+                    TextLocationOther.Visible = false;
+                    
+                    {
+
+                        DataTable dt = new DataTable();
+                        dt = ud.fetchState(5, Convert.ToInt32(Ddl_Country.SelectedValue));
+                        if (dt.Rows.Count > 0)
+                        {
+                            Ddl_State.DataSource = dt;
+                            Ddl_State.DataTextField = "StateName";
+                            Ddl_State.DataValueField = "Stateid";
+                            Ddl_State.DataBind();
+
+                        }
+                        else
+                        {
+                            //ListItem li = new ListItem("Others", "1000");
+                            //Ddl_State.Items.Add(li);
+                        }
+                    }
+
+                    TextStateOther.Visible = false;
+                    TextLocationOther.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
+            }
         }
+
         //------------Buttton Click event for View User Details in GridView---------//
         protected void Btn_View_Click(object sender, EventArgs e)
         {
@@ -270,7 +300,8 @@ namespace Grihini.GUI_Form
             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
         }
 
@@ -348,7 +379,8 @@ namespace Grihini.GUI_Form
             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
         }
 

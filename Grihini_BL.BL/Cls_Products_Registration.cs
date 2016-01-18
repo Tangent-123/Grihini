@@ -220,7 +220,7 @@ namespace Grihini_BL.BL
             return dt;
         }
 
-        public DataTable Insert_Products(int OperationId, int userid, string Name, int Country, int State, int City, 
+        public DataTable Insert_Products(int OperationId, int userid, string Name, string Country, string State, string City, 
                                         string Pincode,string Address,string Landmark, string Phone)
         {
             SqlParameter[] param = new SqlParameter[10];
@@ -238,15 +238,15 @@ namespace Grihini_BL.BL
             param[2].Direction = ParameterDirection.Input;
             param[2].Value = Name;
 
-            param[3] = new SqlParameter("@Country_Id", SqlDbType.Int);
+            param[3] = new SqlParameter("@Country", SqlDbType.VarChar, 100);
             param[3].Direction = ParameterDirection.Input;
             param[3].Value = Country;
 
-            param[4] = new SqlParameter("@State_Id", SqlDbType.Int);
+            param[4] = new SqlParameter("@State", SqlDbType.VarChar, 100);
             param[4].Direction = ParameterDirection.Input;
             param[4].Value = State;
 
-            param[5] = new SqlParameter("@City_Id", SqlDbType.Int);
+            param[5] = new SqlParameter("@City", SqlDbType.VarChar, 100);
             param[5].Direction = ParameterDirection.Input;
             param[5].Value = City;
 

@@ -12,6 +12,9 @@ using System.Security.Cryptography;
 using System.Text;
 using System.IO;
 using System.Data.OleDb;
+using iTextSharp.text;
+using iTextSharp.text.html.simpleparser;
+using iTextSharp.text.pdf;
 using System.Configuration;
 using Grihini_BL.BL;
 
@@ -26,8 +29,6 @@ namespace Grihini.GUI_Form
             if (!IsPostBack)
             {
                 CountryAll();
-                //fetchAllLocation();
-                //fetchAllState();
                 dropdownstate.Enabled = false;
                 dropdowncity.Enabled = false;
                 fetchAddress();
@@ -49,65 +50,7 @@ namespace Grihini.GUI_Form
 
         }
 
-        //private void fetchAllState()
-        //{
-        //    try
-        //    {
-
-        //        DataTable dt = new DataTable();
-        //        dt = pr.getState(6);
-
-        //        if (dt.Rows.Count > 0)
-        //        {
-
-        //            dropdownstate.DataSource = dt;
-        //            dropdownstate.DataTextField = "StateName";
-        //            dropdownstate.DataValueField = "Stateid";
-        //            dropdownstate.DataBind();
-
-        //        }
-        //        else
-        //        {
-        //        }
-
-        //        ListItem li = new ListItem("Select State", "0");
-        //        dropdownstate.Items.Insert(0, li);
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //    }
-        //}
-
-        //private void fetchAllLocation()
-        //{
-        //    try
-        //    {
-
-        //        DataTable dt = new DataTable();
-        //        dt = pr.getLocation(5);
-
-        //        if (dt.Rows.Count > 0)
-        //        {
-
-        //            dropdowncity.DataSource = dt;
-        //            dropdowncity.DataTextField = "location_name";
-        //            dropdowncity.DataValueField = "location_id";
-        //            dropdowncity.DataBind();
-
-        //        }
-        //        else
-        //        {
-        //        }
-
-        //        ListItem li = new ListItem("Select City", "0");
-        //        dropdowncity.Items.Insert(0, li);
-        //    }
-        //    catch (Exception ex)
-        //    {
-
-        //    }
-        //}
+        
 
         private void CountryAll()
         {
@@ -130,7 +73,7 @@ namespace Grihini.GUI_Form
                 {
 
                 }
-
+               
                 //ListItem li = new ListItem("Select Country", "0");
                 //dropdowncountry.Items.Insert(0, li);
             }
@@ -146,15 +89,33 @@ namespace Grihini.GUI_Form
             
             try
             {
-                int location = (Convert.ToInt32(dropdowncity.SelectedValue));
-                int country = (Convert.ToInt32(dropdowncountry.SelectedValue));
-                int state = (Convert.ToInt32(dropdownstate.SelectedValue));
+                string CountryNm = null;
+                string StateNm = null;
+                string CityNm = null;
+
+                if (dropdowncountry.SelectedValue == "1000")
+                {
+                    CountryNm = Convert.ToString(TextOtherCountry.Text);
+                    StateNm = Convert.ToString(TextOtherState.Text);
+                    CityNm = Convert.ToString(TextOtherCity.Text);
+
+                }
+                else
+                {
+                    CountryNm = dropdowncountry.SelectedItem.Text;
+                    StateNm = dropdownstate.SelectedItem.Text;
+                    CityNm = dropdowncity.SelectedItem.Text;
+                }
+
+                //int location = (Convert.ToInt32(dropdowncity.SelectedValue));
+                //int country = (Convert.ToInt32(dropdowncountry.SelectedValue));
+                //int state = (Convert.ToInt32(dropdownstate.SelectedValue));
 
                 int userid = Convert.ToInt32(Session["UserId"]);
                 DataTable dt = new DataTable();
 
-                dt = pr.Insert_Products(4, Convert.ToInt32(userid), txtname.Text, country, state,
-                                        location,txtpincode.Text, txtaddress.InnerText, txtlandmark.InnerText,
+                dt = pr.Insert_Products(4, Convert.ToInt32(userid), txtname.Text, CountryNm, StateNm,
+                                        CityNm, txtpincode.Text, txtaddress.InnerText, txtlandmark.InnerText,
                                         txtphone.Text);
 
                if (dt.Rows.Count > 0)
@@ -225,7 +186,7 @@ namespace Grihini.GUI_Form
 
         protected void dropdowncountry_SelectedIndexChanged(object sender, EventArgs e)
         {
-           // dropdownstate.Items.Clear();
+            dropdownstate.Items.Clear();
             dropdownstate.Enabled = true;
             dropdownstate.SelectedValue = "0";
             dropdowncity.SelectedValue = "0";
@@ -234,20 +195,56 @@ namespace Grihini.GUI_Form
             try
             {
 
-                DataTable dt = new DataTable();
-                dt = pr.fetchStateAgainstCountry(9, Convert.ToInt32(dropdowncountry.SelectedValue));
-                if (dt.Rows.Count > 0)
-                {
-                    dropdownstate.DataSource = dt;
-                    dropdownstate.DataTextField = "StateName";
-                    dropdownstate.DataValueField = "Stateid";
-                    dropdownstate.DataBind();
-                    
-                }
-                else
+                //DataTable dt = new DataTable();
+                //dt = pr.fetchStateAgainstCountry(9, Convert.ToInt32(dropdowncountry.SelectedValue));
+                //if (dt.Rows.Count > 0)
+                //{
+                //    dropdownstate.DataSource = dt;
+                //    dropdownstate.DataTextField = "StateName";
+                //    dropdownstate.DataValueField = "Stateid";
+                //    dropdownstate.DataBind();
+
+                //}
+                //else
+                //{
+                //    dropdownstate.Enabled = false;
+                //    dropdowncity.Enabled = false;
+                //}
+                if (dropdowncountry.SelectedValue == "1000")
                 {
                     dropdownstate.Enabled = false;
                     dropdowncity.Enabled = false;
+                   
+                    dropdownstate.Text = "Other";
+                   
+                    dropdowncity.Text = "Other";
+                    TextOtherCountry.Visible = true;
+                    TextOtherState.Visible = true;
+                    TextOtherCity.Visible = true;
+                    
+                }
+
+                else
+                {
+                    TextOtherCountry.Visible = false;
+                    TextOtherState.Visible = false;
+                    TextOtherCity.Visible = false;
+
+                    DataTable dt = new DataTable();
+                    dt = pr.fetchStateAgainstCountry(9, Convert.ToInt32(dropdowncountry.SelectedValue));
+                    if (dt.Rows.Count > 0)
+                    {
+                        dropdownstate.DataSource = dt;
+                        dropdownstate.DataTextField = "StateName";
+                        dropdownstate.DataValueField = "Stateid";
+                        dropdownstate.DataBind();
+
+                    }
+                    else
+                    {
+                        dropdownstate.Enabled = false;
+                        dropdowncity.Enabled = false;
+                    }
                 }
             }
 
