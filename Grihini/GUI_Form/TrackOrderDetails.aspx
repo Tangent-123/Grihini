@@ -334,6 +334,8 @@ left: 35%;
                      
                      </ul></div>
 
+                     
+
                      <div class="tab-content" style="width:500px;">
                       <div class="tab-pane fade in active" id="home" >
 
@@ -369,6 +371,61 @@ left: 35%;
 
               
                         </div>
+
+                        <div>
+
+<asp:GridView ID="GridView_TrackOrderdetails" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Records To Display!"
+     AllowSorting="false" Visible="true" Width="1024px">
+
+        <Columns>
+           
+               <asp:TemplateField HeaderText="Order ID" ControlStyle-Font-Size="12px">
+            <ItemTemplate>
+            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+              
+            </ItemTemplate>
+            </asp:TemplateField> 
+
+            <asp:TemplateField HeaderText="Order On" ControlStyle-Font-Size="12px">
+            <ItemTemplate>
+
+              <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl='<%# Eval("ImageName3") %>' Height="150" Width="180"  />
+            </ItemTemplate>
+            </asp:TemplateField>
+
+       
+                        
+
+            <asp:TemplateField HeaderText="Items"   ControlStyle-Font-Size="12px" ControlStyle-Width="0px" >
+            <ItemTemplate>
+           
+            <asp:Label ID="lbl_price" runat="server" text='<%#Eval("Product_name") %>'></asp:Label>
+                  <br />
+            <asp:Label ID="lbl_Quantity" runat="server" text='<%#Eval("Order_Status") %>'></asp:Label>
+                  <br />
+            <asp:Label ID="lbl_discount" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label>
+            
+            </ItemTemplate>
+            </asp:TemplateField>
+
+
+              <asp:TemplateField HeaderText="Grand Total" ControlStyle-Font-Size="12px">
+            <ItemTemplate>
+            <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+
+            </ItemTemplate>
+            </asp:TemplateField>
+                  
+            </Columns>
+          </asp:GridView>
+
+
+
+
+
+</div>
+
+
 
 </div>
 </div>

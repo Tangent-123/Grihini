@@ -250,42 +250,7 @@ ul#thumblist li a.zoomThumbActive{
             </ItemTemplate>
             </asp:TemplateField>
 
-              <%--<asp:TemplateField HeaderText="Quantity"   ControlStyle-Font-Size="12px"  >
-            <ItemTemplate>
-            <asp:Label ID="lbl_Quantity" runat="server" text='<%#Eval("Quantity") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>--%>
-
-
-              <%--<asp:TemplateField HeaderText="Discount(%)"   ControlStyle-Font-Size="12px"  >
-            <ItemTemplate>
-            <asp:Label ID="lbl_discount" runat="server" text='<%#Eval("Discount") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>--%>
-
-        
-
-            <%--<asp:TemplateField HeaderText="Order Date"   ControlStyle-Font-Size="12px"  >
-            <ItemTemplate>
-            <asp:Label ID="lbl_orderdate" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>--%>
-         
-
-
-            <%--<asp:TemplateField HeaderText="Status"   ControlStyle-Font-Size="12px"  >
-            <ItemTemplate>
-            <asp:Label ID="lbl_Status" runat="server" text='<%#Eval("Order_Status") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>--%>
-
-            <%--<asp:TemplateField HeaderText="Month"   ControlStyle-Font-Size="12px"  >
-            <ItemTemplate>
-             <asp:Label ID="lbl_month" runat="server" text='<%#Eval("month") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>--%>
-
-           
+                  
             </Columns>
           </asp:GridView>
 

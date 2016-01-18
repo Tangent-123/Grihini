@@ -439,6 +439,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
               <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" 
                         ErrorMessage="Select State!" ControlToValidate="Ddl_State" 
                         ValidationGroup="Valid1" Display="None" InitialValue="0"></asp:RequiredFieldValidator>
+       <asp:TextBox ID="TextStateOther" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
          </div>
 
    </div>
@@ -458,6 +459,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
              <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" 
                         ErrorMessage="Select Location!" ControlToValidate="Ddl_Location" 
                         ValidationGroup="Valid1" Display="None" InitialValue="0"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="TextLocationOther" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
          </div>
    </div>
 

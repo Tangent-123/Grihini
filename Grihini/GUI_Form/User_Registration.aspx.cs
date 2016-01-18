@@ -162,13 +162,14 @@ namespace Grihini.GUI_Form
                     Ddl_State.DataTextField = "StateName";
                     Ddl_State.DataValueField = "Stateid";
                     Ddl_State.DataBind();
-                    //ListItem li = new ListItem("Others", "1000");
-                    //ddDistrict.Items.Add(li);
+                    
                 }
                 else
                 {
 
                 }
+                //ListItem li = new ListItem("Others", "1000");
+                //ddDistrict.Items.Add(li);
             }
 
             catch (Exception ex)
