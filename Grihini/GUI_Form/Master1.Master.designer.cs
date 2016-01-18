@@ -58,6 +58,15 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
+        /// signinid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl signinid;
+        
+        /// <summary>
         /// Sign_In control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace Grihini.GUI_Form {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Sign_In;
+        
+        /// <summary>
+        /// signupid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl signupid;
         
         /// <summary>
         /// Sign_Up control.

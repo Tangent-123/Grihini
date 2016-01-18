@@ -1199,6 +1199,365 @@ margin:0 0 20px 0;
 }
 
 
+****************TRACK ORDER******************
 
+.t_first_product
+{
+    float:left;
+    width:1024px;
+    height:250px;
+    height:55px;
+    background-color:Aqua;
+}
+.t2_bar
+{
+    float:left;
+    width:340px;
+    height:55px;
+    background-color:#318ead;
+}
+.t2_bar_txt
+{
+    font-family:Arial;
+    font-size:14px;
+    color:White;
+    text-align:center;
+    margin-top:5px;
+
+}
+.t2_product_img
+{
+    float:left;
+}
+.t2_product_orderno
+{
+    float:left;
+    width:1024px;
+    height:30px;
+    background-color:#51b0d0;
+
+}
+.t2_product_orderno_txt
+{
+    float:left;
+    font-family:Arial;
+    font-size:14px;
+   margin:4px 0 0 10px;
+
+}
+.t2_product_orderno_progress
+{
+    width:600px;
+    height:200px;
+    float:right;
+    background-color:#96d8ee;
+}
+
+.t_order_products_name_area
+{
+    float:left;
+    width:200px;
+}
+
+.t2_bar_progress
+{
+    width:530px;
+    float:left;
+    height:30px;
+    background-color:#6eafc5;
+}
+
+.t2_bar_progress_txt
+{
+    float:left;
+    font-family:Arial;
+    font-size:12px;
+    color:White;
+    font-weight:bold;
+}
+.t2_bar_progress_arrow
+{
+    width:39px;
+    height:13px;
+}
+
+
+
+
+
+.contact_area{
+	width:800px;
+	background-color:#FFF;
+	height:220px;
+}
+.contact_area-one{
+	float:left;
+	width:750px;
+	height:130px;
+	margin:20px 0 0 20px;
+}
+.contact_area-two{
+	font-family:Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size:18px;
+	width:300px;
+	color:White;
+	font-weight:bold;
+}
+.contact_area-three
+{
+    float:left;
+    text-align:left;
+	font-family:Arial;
+	font-size:13px;
+	color:#14547e;
+	width:300px;
+	font-weight:bold;
+	margin-top:20px;
+	margin-left:20px;
+}
+.contact_area-four{
+	width:30px;
+	height:30px;
+	float:left;
+}
+.contact_area-five{
+	font-family:Arial;
+	font-size:13px;
+	color:#14547e;
+	float:left;
+	font-weight:bold;
+	font-weight:bold;
+	margin:5px 0 0 15px;
+}
+.contact-email-icon{
+	float:right;
+	margin:38px 100px 0 0;
+}
+.contact-ribbon{
+	width:800px;
+	height:72px;
+	float:left;
+	position:absolute;
+	margin:178px 0 0 283px;
+}
+.aarogya-bar-area
+{
+    width:225px;
+    height:47px;
+    float:left;
+    margin:0 0 0 400px;
+}
+
+****************** OUR ORIGIN ******************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+**************** ORE VALUES *******************
+
+.ourvalues
+{
+    width:1024px;
+    float:left;
+
+}
+
+.ourvalues_img
+{
+    float:left;
+    width:400px;
+    height:241px;
+}
+.ourvalues_img_right
+{
+    float:right;
+    width:400px;
+    height:241px;
+}
+.ourvalues_txt
+{
+    float:right;
+    font-family:Arial;
+    font-size:13px;
+    color:#999;
+    width:580px;
+    height:241px;
+    text-align:justify;
+   margin:0 0 0 0;
+}
+.ourvalues_txt_two
+{
+    float:right;
+    font-family:Arial;
+    font-size:13px;
+    color:#999;
+    width:1024px;
+    height:241px;
+    text-align:justify;
+   margin:0 0 0 0;
+}
+.ourvalues_txt_one{
+    font-family:Cambria;
+    font-size:22px;
+    font-weight:bold;
+    color:#666;
+}
+
+*********************contact us********************
+
+.contactus_image
+{
+    float:left;
+    height:200px;
+    width:1024px;
+}
+.contactus_mainarea
+{
+    width:1024px;
+    float:left;
+    border:1px solid #c7c4c4;
+}
+.contactus_subarea
+{
+    float:left;
+    width:1024px;
+    margin:15px 0 15px 0;
+}
+.contactus_subarea_one
+{
+    float:left;
+    
+    width:270px;
+    height:380px;
+    margin:0 0 0 15px;
+}
+.contactus_subarea_two
+{
+    float:right;
+    width:700px;
+    height:390px;
+    margin:0 0 0 15px;
+}
+.c_address_area
+{
+    float:left;
+    width:671px;
+    font-family:Cambria;
+    font-size:19px;
+    color:#666;
+    font-weight:bold;
+}
+.c_address_area_fewword
+{
+    float:left;
+    width:671px;
+    font-family:Arial;
+    font-size:13px;
+    color:#999;
+    font-weight:bold;
+    margin:10px 0 10px 0 ;
+}
+.c_address_area_fewword_2
+{
+    float:left;
+    width:671px;
+    font-family:Arial;
+    font-size:13px;
+    color:#999;
+    margin:10px 0 10px 0 ;
+}
+.c_address_pure
+{
+    float:left;
+    font-family:Arial;
+    font-size:15px;
+    color:#999;
+    margin:10px 0 0 0;
+    width:300px;
+}
+.c_address_pure_two
+{
+    float:left;
+    font-family:Arial;
+    font-size:13px;
+    color:#999;
+    margin:10px 0 0 0;
+    width:300px;
+}
+.c_map_area
+{
+    width:671px;
+    height:178px;
+    float:left;
+    margin:15px 0 0 0;
+}
+
+
+*******************New Banner*********************
+
+.banner_home_page
+{
+    width:100%;
+    float:left;
+    height:300px;
+    background-color:Aqua;
+}
+
+*****************Our Origin***********************
+
+.ourorigin_main
+{
+    width:1024px;
+    float:left;
+}
+.ourorigin_main_left
+{
+    width:225px;
+    height:350px;
+    float:left;
+}
+.ourorigin_main_img
+{
+    width:225px;
+    height:282px;
+}
+.ourorigin_main_txt
+{
+    float:left;
+    font-family:Arial;
+    font-size:19px;
+    color:#ff6600;
+    margin:15px 0 0 0;
+}
+.ourorigin_main_right
+{
+    width:790px;
+    height:315px;
+    float:right;
+    background-image:url(../Images/ourorigin_page_right_box.png);
+}
+.ourorigin_main_right_txt
+{
+    width:650px;
+    height:285px;
+    text-align:center;
+    font-family:Arial;
+    font-size:13px;
+    color:#666;
+    font-style:oblique;
+    font-weight:bold;
+
+}
 
 

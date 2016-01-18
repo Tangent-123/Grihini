@@ -27,6 +27,7 @@ namespace Grihini.GUI_Form
             if (!IsPostBack)
             {
                 fetchproduct();
+               
             }
 
         }

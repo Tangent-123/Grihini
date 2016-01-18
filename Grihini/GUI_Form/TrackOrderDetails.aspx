@@ -268,21 +268,51 @@ left: 35%;
 
 
 </div>
-<div style="float:left; width:1024px; background-color:#cceef9;">
 
 
-<div>
-<div style="float:left; width:1024px; background-color:#cceef9;">
-<div style="float:left; width:250px; height:200px; margin:0 0 0 0;"><img src="../Images/p6.jpg" width="250" height="200" /></div>
+<div style="float:left;">
 
-<div class="t_order_products_name_area">
-<div class="t_order_products_name">Product Name Text</div>
-<div class="t_order_products_status">Status</div>
-<div class="t_order_products_date">Delivered On Sat,Dec 2016</div>
+<asp:GridView ID="GridView_TrackOrderdetails" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Records To Display!"
+     AllowSorting="false" Visible="true" Width="1024px">
 
-</div>
+        <Columns>
+           
+               <%--<asp:TemplateField HeaderText="Order ID" ControlStyle-Font-Size="12px">
+            <ItemTemplate>
+            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+              
+            </ItemTemplate>
+            </asp:TemplateField>--%> 
 
-<div style="float:right; width:530px; height:200px; background-color:#f1f0ee;">
+            <asp:TemplateField HeaderText="" ControlStyle-Font-Size="12px">
+            <ItemTemplate>
+
+              <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl='<%# Eval("ImageName3") %>' Height="150" Width="180"  />
+            </ItemTemplate>
+            </asp:TemplateField>
+
+       
+                        
+
+            <asp:TemplateField HeaderText=""   ControlStyle-Font-Size="12px" ControlStyle-Width="250" >
+            <ItemTemplate>
+           
+            <asp:Label ID="lbl_price" runat="server" text='<%#Eval("Product_name") %>'></asp:Label>
+                  <br />
+            <asp:Label ID="lbl_Quantity" runat="server" text='<%#Eval("Order_Status") %>'></asp:Label>
+                  <br />
+            <asp:Label ID="lbl_orderdate" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label>
+           <%-- <asp:Label ID="lbl_discount" runat="server"  text='<%#Eval("Discount") %>'></asp:Label>
+             <asp:Label ID="lbl_Grandtotal" runat="server"  text='<%#Eval("Discount") %>'></asp:Label>--%>
+            
+            </ItemTemplate>
+            </asp:TemplateField>
+
+            
+            <asp:TemplateField HeaderText="" ControlStyle-Font-Size="12px">
+            <ItemTemplate>
+
+            <div style="float:right; width:530px; height:200px; background-color:#f1f0ee;">
 <div class="t2_bar_progress">
 
 <div class="t2_bar_progress_txt" style="margin:8px 0 0 20px;">CONFIRM
@@ -381,60 +411,7 @@ left: 35%;
 
 
 
-                        <div>
-
-<asp:GridView ID="GridView_TrackOrderdetails" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Records To Display!"
-     AllowSorting="false" Visible="true" Width="1024px">
-
-        <Columns>
-           
-               <asp:TemplateField HeaderText="Order ID" ControlStyle-Font-Size="12px">
-            <ItemTemplate>
-            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
-              
-            </ItemTemplate>
-            </asp:TemplateField> 
-
-            <asp:TemplateField HeaderText="Order On" ControlStyle-Font-Size="12px">
-            <ItemTemplate>
-
-              <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl='<%# Eval("ImageName3") %>' Height="150" Width="180"  />
-            </ItemTemplate>
-            </asp:TemplateField>
-
-       
                         
-
-            <asp:TemplateField HeaderText="Items"   ControlStyle-Font-Size="12px" ControlStyle-Width="0px" >
-            <ItemTemplate>
-           
-            <asp:Label ID="lbl_price" runat="server" text='<%#Eval("Product_name") %>'></asp:Label>
-                  <br />
-            <asp:Label ID="lbl_Quantity" runat="server" text='<%#Eval("Order_Status") %>'></asp:Label>
-                  <br />
-            <asp:Label ID="lbl_orderdate" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label>
-           <%-- <asp:Label ID="lbl_discount" runat="server"  text='<%#Eval("Discount") %>'></asp:Label>
-             <asp:Label ID="lbl_Grandtotal" runat="server"  text='<%#Eval("Discount") %>'></asp:Label>--%>
-            
-            </ItemTemplate>
-            </asp:TemplateField>
-
-
-              <asp:TemplateField HeaderText="Grand Total" ControlStyle-Font-Size="12px">
-            <ItemTemplate>
-            <asp:Label ID="lbl_Grandtotal" runat="server"  text='<%#Eval("Subtotal") %>'></asp:Label>
-
-            </ItemTemplate>
-            </asp:TemplateField>
-                  
-            </Columns>
-          </asp:GridView>
-
-
-
-
-
-</div>
 
 
 
@@ -448,7 +425,26 @@ left: 35%;
 
 
 
+
+
+
+
 </div>
+             
+            </ItemTemplate>
+            </asp:TemplateField>
+
+            
+                  
+            </Columns>
+          </asp:GridView>
+
+
+
+
+
+</div>
+
 </div>
 </div>
 
@@ -459,6 +455,8 @@ left: 35%;
 
 </div>
 </div>
+
+
 
 
 </div>

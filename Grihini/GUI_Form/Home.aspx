@@ -411,7 +411,7 @@ Pune – 411018</div>
 
 
 
-<div class="home-signin-area"><img src="../Images/home_signin_area.png" /></div>
+<%--<div class="home-signin-area"><img src="../Images/home_signin_area.png" /></div>--%>
 
 
 
