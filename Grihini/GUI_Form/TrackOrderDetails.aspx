@@ -278,7 +278,10 @@ left: 35%;
 <div style="float:right; width:530px; height:200px; background-color:#f1f0ee;">
 <div class="t2_bar_progress">
 
-<div class="t2_bar_progress_txt" style="margin:8px 0 0 20px;">CONFIRM</div>
+<div class="t2_bar_progress_txt" style="margin:8px 0 0 20px;">CONFIRM
+    <asp:Label ID="lbl_order" runat="server" Text="Label"></asp:Label>
+
+</div>
 <div class="t2_bar_progress_arrow" style="margin:8px 0 0 100px;"><img src="../Images/arrow.png" /></div>
 
 <div class="t2_bar_progress_txt" style="margin:-14px 0 0 90px;">DISPATCH</div>
@@ -300,7 +303,6 @@ left: 35%;
         <div class="container" style="width:500px;" >
             <div class="row" style="width:500px;">
                 <div class="board" style="width:500px;">
-                    <!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
                     <div class="board-inner" style="width:500px;">
                     <ul class="nav nav-tabs" id="myTab" style="width:500px;">
                     <div class="liner"></div>
@@ -372,6 +374,8 @@ left: 35%;
               
                         </div>
 
+
+
                         <div>
 
 <asp:GridView ID="GridView_TrackOrderdetails" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Records To Display!"
@@ -403,7 +407,9 @@ left: 35%;
                   <br />
             <asp:Label ID="lbl_Quantity" runat="server" text='<%#Eval("Order_Status") %>'></asp:Label>
                   <br />
-            <asp:Label ID="lbl_discount" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label>
+            <asp:Label ID="lbl_orderdate" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label>
+           <%-- <asp:Label ID="lbl_discount" runat="server"  text='<%#Eval("Discount") %>'></asp:Label>
+             <asp:Label ID="lbl_Grandtotal" runat="server"  text='<%#Eval("Discount") %>'></asp:Label>--%>
             
             </ItemTemplate>
             </asp:TemplateField>
@@ -411,7 +417,7 @@ left: 35%;
 
               <asp:TemplateField HeaderText="Grand Total" ControlStyle-Font-Size="12px">
             <ItemTemplate>
-            <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+            <asp:Label ID="lbl_Grandtotal" runat="server"  text='<%#Eval("Subtotal") %>'></asp:Label>
 
             </ItemTemplate>
             </asp:TemplateField>

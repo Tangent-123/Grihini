@@ -23,6 +23,14 @@ namespace Grihini.GUI_Form
         protected void Page_Load(object sender, EventArgs e)
         {
             bindgrid();
+             int UserID = Convert.ToInt32(Session["UserID"]);
+            DataTable dt = new DataTable();
+            dt = tmo.orderstatus(28, UserID);
+                if(dt.Rows.Count>0)
+                {
+
+
+                }
 
         }
 
@@ -33,7 +41,7 @@ namespace Grihini.GUI_Form
             {
 
                 DataTable dt = new DataTable();
-                dt = tmo.trackorderfetch(24, UserID);
+                dt = tmo.trackmyorder(27, UserID);
 
                 if (dt.Rows.Count > 0)
                 {
