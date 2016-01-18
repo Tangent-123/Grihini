@@ -391,6 +391,15 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
         
         /// <summary>
+        /// TextCountryOther control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextCountryOther;
+        
+        /// <summary>
         /// Label20 control.
         /// </summary>
         /// <remarks>

@@ -424,6 +424,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" 
                         ErrorMessage="Select Country!" ControlToValidate="Ddl_Country" InitialValue="0" 
                         ValidationGroup="Valid1" Display="None"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="TextCountryOther" Visible="false" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
                         
          </div>
    </div>
