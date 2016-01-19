@@ -10,7 +10,7 @@
 
 <div class="wrapper" >
 <div class="sportsproduct">
-<div class="main-wrapper" style="background-color:#FFF; padding-top:10px;">
+<div class="main-wrapper" style="box-shadow:0px 1px solid #222;">
 <div class="sportsproduct-one" style="background-color:#FFF;">
 
 <%--<div class="sportsproduct-two">

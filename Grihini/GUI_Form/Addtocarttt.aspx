@@ -269,7 +269,7 @@ ul#thumblist li a.zoomThumbActive{
 <div style="float:right; margin:20px 0 0 0;">
 
 
-    <asp:Button ID="Button1" runat="server" Text="Confirm" OnClick="Button1_click" style="padding:5px 15px 5px 15px; background-color:#ea9b12; border:none; color:White; cursor:pointer;" />
+    <asp:Button ID="Button1" runat="server" Text="Confirm" OnClick="Button1_click" CssClass="button-0" />
     
     </div>
 

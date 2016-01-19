@@ -85,15 +85,6 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.DropDownList Ddl_Size;
         
         /// <summary>
-        /// DataList_Image_Color control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList_Image_Color;
-        
-        /// <summary>
         /// Ddl_Quantity control.
         /// </summary>
         /// <remarks>
@@ -101,6 +92,15 @@ namespace Grihini.GUI_Form {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList Ddl_Quantity;
+        
+        /// <summary>
+        /// DataList_Image_Color control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList DataList_Image_Color;
         
         /// <summary>
         /// LinkButtonAddTocart control.
@@ -136,6 +136,18 @@ namespace Grihini.GUI_Form {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
+<<<<<<< HEAD
+=======
+        protected global::System.Web.UI.WebControls.Button btn_buynow_false;
+        
+        /// <summary>
+        /// LinkButton_choosemore control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+>>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0
         protected global::System.Web.UI.WebControls.LinkButton LinkButton_choosemore;
         
         /// <summary>

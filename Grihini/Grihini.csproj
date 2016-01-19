@@ -58,7 +58,12 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\addtocart_jqzoom.css" />
+<<<<<<< HEAD
     <Content Include="CSS\button_2.css" />
+=======
+    <Content Include="CSS\button1.css" />
+    <Content Include="CSS\button2.css" />
+>>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0
     <Content Include="CSS\cutedropdown.css" />
     <Content Include="CSS\HomeStyle.css" />
     <Content Include="CSS\jquery.jqzoom.css" />
@@ -83,10 +88,14 @@
     <Content Include="CSS\track_order.css" />
     <Content Include="CSS\viewstyle.css" />
     <Content Include="Default.aspx" />
+<<<<<<< HEAD
     <Content Include="fonts\codropsicons\codropsicons.svg" />
     <Content Include="fonts\codropsicons\license.txt" />
     <Content Include="fonts\icomoon\icomoon.dev.svg" />
     <Content Include="fonts\icomoon\icomoon.svg" />
+=======
+    <Content Include="fonts\codropsicons\license.txt" />
+>>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0
     <Content Include="fonts\icomoon\license.txt" />
     <Content Include="fonts\icomoon\Read Me.txt" />
     <Content Include="GUI_Form\aboutus.aspx" />
@@ -495,6 +504,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_LocalResources\" />
     <Folder Include="BootStrap_Contents\BootStrap_Css\" />
     <Folder Include="BootStrap_Contents\BootStrap_Fonts\" />
     <Folder Include="BootStrap_Contents\BootStrap_Js\" />
@@ -513,9 +523,18 @@
   <ItemGroup>
     <None Include="fonts\.DS_Store" />
     <None Include="fonts\codropsicons\codropsicons.eot" />
+<<<<<<< HEAD
     <None Include="fonts\codropsicons\codropsicons.ttf" />
     <None Include="fonts\codropsicons\codropsicons.woff" />
     <None Include="fonts\icomoon\icomoon.eot" />
+=======
+    <None Include="fonts\codropsicons\codropsicons.svg" />
+    <None Include="fonts\codropsicons\codropsicons.ttf" />
+    <None Include="fonts\codropsicons\codropsicons.woff" />
+    <None Include="fonts\icomoon\icomoon.dev.svg" />
+    <None Include="fonts\icomoon\icomoon.eot" />
+    <None Include="fonts\icomoon\icomoon.svg" />
+>>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0
     <None Include="fonts\icomoon\icomoon.ttf" />
     <None Include="fonts\icomoon\icomoon.woff" />
     <None Include="GrihiniDataSet.xsc">

@@ -37,7 +37,7 @@
     }
 </script> 
 
-    <link href="../CSS/Style_Delivery.css" rel="stylesheet" type="text/css" />
+
 
 
    <div class="wrapper" style="background:none;">
