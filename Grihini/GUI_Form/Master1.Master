@@ -125,15 +125,15 @@
 
     <asp:ScriptManager ID="ScriptManager1" runat="server">
     </asp:ScriptManager>
-<div class="giftcart" style="margin:0 25px 0 0;">
+<div class="signin_master" id="signinid" runat="server">
 <div id="Sign_In" runat="server" class="giftcart-one" style="cursor: pointer;"><a href="User_Login.aspx"><strong>Sign In</strong></a></div>
 </div>
 
-<div class="giftcart" style="margin:0 25px 0 0;">
+<div class="signin_master" style="margin-right:7px;" id="signupid" runat="server">
 <div id="Sign_Up" runat="server" class="giftcart-one" style="cursor: pointer;"><a href="User_Registration.aspx?target=AddUserDetails"><strong>Sign Up</strong></a></div>
 </div>
 
-<div class="giftcart" style="margin:0 25px 0 0;">
+<div class="giftcart" style="margin:-7px 25px 0 0;">
 <div id="LogOut" runat="server" class="giftcart-one" style="cursor: pointer;">
 <asp:ImageButton ID="ImageButton1" runat="server" Width="20" Height="20" ImageUrl="~/Images/logout-icon.png" OnClick="Logout_Click"/>
     </div>
@@ -149,8 +149,8 @@
 <div class="giftcart-two"><img src="../Images/trackorder.png" /></div>
 </div>
 
-<div id="Div_Username" runat="server" visible="false" class="trackorder">
-<div class="trackorder-logo" style="cursor: pointer;"><strong>
+<div id="Div_Username" runat="server" visible="false" class="trackorder" style="margin:0 0 0 300px; float:left;">
+<div class="trackorder-logo" style="cursor: pointer; color:White;"><strong>
     <asp:Label ID="Lbl_Username" runat="server" Text=""></asp:Label></strong></div>
 
 </div>
@@ -177,12 +177,21 @@
 
 </div>--%>
 
-    
+
 
 </div>
 
 
-<div id="welcome" runat="server" class="welcome-area" style="margin:0 auto;"><a href="Home.aspx"><img src="../Images/welcome.png" /></a></div>
+ <div id="Div1" runat="server" visible="true" style="margin:0 0 0 0; float:right;">
+<a href="Addtocarttt.aspx"><div id="Div2" runat="server" visible="true" style="width:100px; height:33px; float:right; background-image:url(../Images/addtocart.png);">
+
+    <div style="margin:12px 0 0 78px; float:left; color:Black; font-size:13px;"><asp:Label ID="Label1" runat="server" Text="" ></asp:Label></div>
+</div>
+</a>
+</div>   
+
+
+<div style="height:30px; color:#666; font-family:Cambria; font-size:17px; font-weight:bold; margin:16px 0 0 0; text-align:center;">WELCOME TO GRIHINI ONLINE SHOOPING PORTAL</div>
 
 
 <%--<div class="categories">
@@ -195,7 +204,7 @@
 </div>
 
 
-<div class="menuarea">
+<div class="menuarea" id="main_menu" runat="server" visible="false">
 <div class="main-wrapper">
 
  <div class="menu" id="Menu1" runat="server" visible="false">

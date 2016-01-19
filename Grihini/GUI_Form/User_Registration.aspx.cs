@@ -32,7 +32,7 @@ namespace Grihini.GUI_Form
                 //------------Query String to redirect Add User details---------//
                 if (Request.QueryString["target"] == "AddUserDetails")
                 {
-                    
+
                     MultiView1.ActiveViewIndex = 0;
                     Btn_Add.Visible = false;
                     Button1.Visible = true;
@@ -40,11 +40,11 @@ namespace Grihini.GUI_Form
                     Ddl_State.Enabled = false;
                     Ddl_Location.Enabled = false;
                 }
-                
+
             }
         }
 
-        
+
         private void CountryAll()
         {
             Ddl_Country.Items.Clear();
@@ -75,7 +75,7 @@ namespace Grihini.GUI_Form
                 Response.Write("<script>alert('" + strError + "');</script>");
             }
 
-           
+
         }
 
         //-----------Button Click Event of resset button-------------//
@@ -95,16 +95,25 @@ namespace Grihini.GUI_Form
 
                 if (Ddl_Country.SelectedValue == "1000")
                 {
+<<<<<<< HEAD
                     CountryNm = Convert.ToString(TextCountryOther.Text);
+=======
+
+>>>>>>> cd8498c4cf0874c8988789cec3dab4bebdf99071
                     StateNm = Convert.ToString(TextStateOther.Text);
                     LocationNm = Convert.ToString(TextLocationOther.Text);
 
                 }
                 else
                 {
+<<<<<<< HEAD
                     CountryNm = Ddl_Country.SelectedItem.Text;
                     StateNm = Ddl_State.SelectedItem.Text;
                     LocationNm = Ddl_Location.SelectedItem.Text;
+=======
+                    StateNm = Ddl_State.SelectedValue;
+                    LocationNm = Ddl_Location.SelectedValue;
+>>>>>>> cd8498c4cf0874c8988789cec3dab4bebdf99071
                 }
 
 
@@ -143,14 +152,46 @@ namespace Grihini.GUI_Form
                 dt = ud.fetchlocation(6, Convert.ToInt32(Ddl_State.SelectedValue));
                 if (dt.Rows.Count > 0)
                 {
+<<<<<<< HEAD
                     Ddl_Location.DataSource = dt;
                     Ddl_Location.DataTextField = "location_name";
                     Ddl_Location.DataValueField = "location_id";
                     Ddl_Location.DataBind();
+=======
+                    TextStateOther.Visible = true;
+                    TextLocationOther.Visible = true;
+
+                    Ddl_Location.Items.Clear();
+                    Ddl_Location.Enabled = false;
+>>>>>>> cd8498c4cf0874c8988789cec3dab4bebdf99071
 
                 }
                 else
                 {
+<<<<<<< HEAD
+=======
+
+                    TextStateOther.Visible = false;
+                    TextLocationOther.Visible = false;
+                    {
+                        Ddl_Location.Items.Clear();
+                        Ddl_Location.Enabled = true;
+                        DataTable dt = new DataTable();
+                        dt = ud.fetchlocation(6, Convert.ToInt32(Ddl_State.SelectedValue));
+                        if (dt.Rows.Count > 0)
+                        {
+                            Ddl_Location.DataSource = dt;
+                            Ddl_Location.DataTextField = "location_name";
+                            Ddl_Location.DataValueField = "location_id";
+                            Ddl_Location.DataBind();
+
+                        }
+                        else
+                        {
+
+                        }
+                    }
+>>>>>>> cd8498c4cf0874c8988789cec3dab4bebdf99071
 
                 }
             }
@@ -215,8 +256,18 @@ namespace Grihini.GUI_Form
                 if (Ddl_Country.SelectedValue == "1000")
                 {
                     Ddl_State.Enabled = false;
+<<<<<<< HEAD
                     Ddl_Location.Enabled = false;
                     TextCountryOther.Visible = true;
+=======
+                    TextStateOther.Visible = false;
+                    TextLocationOther.Visible = false;
+
+                }
+                else if (Ddl_State.SelectedValue == "1000")
+                {
+                    Ddl_Location.Enabled = false;
+>>>>>>> cd8498c4cf0874c8988789cec3dab4bebdf99071
                     TextStateOther.Visible = true;
                     TextLocationOther.Visible = true;
 
@@ -228,9 +279,12 @@ namespace Grihini.GUI_Form
                     TextStateOther.Visible = false;
                     TextLocationOther.Visible = false;
 
+<<<<<<< HEAD
                     DataTable dt = new DataTable();
                     dt = ud.fetchState(5, Convert.ToInt32(Ddl_Country.SelectedValue));
                     if (dt.Rows.Count > 0)
+=======
+>>>>>>> cd8498c4cf0874c8988789cec3dab4bebdf99071
                     {
                         Ddl_State.DataSource = dt;
                         Ddl_State.DataTextField = "StateName";

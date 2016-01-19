@@ -220,8 +220,8 @@ namespace Grihini_BL.BL
             return dt;
         }
 
-        public DataTable Insert_Products(int OperationId, int userid, string Name, string Country, string State, string City, 
-                                        string Pincode,string Address,string Landmark, string Phone)
+        public DataTable Insert_Products(int OperationId, int userid, string Name, string Country, string State, string City,
+                                        string Pincode, string Address, string Landmark, string Phone)
         {
             SqlParameter[] param = new SqlParameter[10];
 
@@ -268,7 +268,7 @@ namespace Grihini_BL.BL
             param[9].Direction = ParameterDirection.Input;
             param[9].Value = Phone;
 
-           
+
 
            
 
@@ -449,7 +449,7 @@ namespace Grihini_BL.BL
             param[1] = new SqlParameter("@User_Id", SqlDbType.VarChar, 100);
             param[1].Direction = ParameterDirection.Input;
             param[1].Value = userid;
-            
+
             DataTable dt = new DataTable();
             dt = ogde.Return_DataTable("usp_User_Registration", param);
             return dt;

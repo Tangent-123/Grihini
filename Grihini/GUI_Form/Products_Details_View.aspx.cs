@@ -47,7 +47,7 @@ namespace Grihini.GUI_Form
                     Btn_AddtoCart.Visible = false;
                     ImageButton2.Visible = true;
                     btn_buynoww.Visible = true;
-                    btn_buynow_false.Visible = false;
+                    //btn_buynow_false.Visible = false;
 
                 }
                 if (dt.Rows.Count == 0)
@@ -55,7 +55,7 @@ namespace Grihini.GUI_Form
                     Btn_AddtoCart.Visible = true;
                     ImageButton2.Visible = false;
                     btn_buynoww.Visible = true;
-                    btn_buynow_false.Visible = false;
+                    //btn_buynow_false.Visible = false;
                 }
 
 
@@ -64,7 +64,7 @@ namespace Grihini.GUI_Form
                     Btn_AddtoCart.Visible = true;
                     ImageButton2.Visible = false;
                     btn_buynoww.Visible = true;
-                    btn_buynow_false.Visible = false;
+                    //btn_buynow_false.Visible = false;
 
                 }
 

@@ -43,8 +43,8 @@ namespace Grihini.GUI_Form
                 if (User_Name == "")
                 {
                     LogOut.Visible = false;
-                    Sign_Up.Visible = true;
-                    Sign_In.Visible = true;
+                    signupid.Visible = true;
+                    signinid.Visible = true;
                     Menu1.Visible = false;
                     View_Products.Visible = true;
                     View_Products1.Visible = false;
@@ -52,9 +52,9 @@ namespace Grihini.GUI_Form
                 }
                 else
                 {
-                    Sign_In.Visible = false;
+                    signinid.Visible = false;
                     LogOut.Visible = true;
-                    Sign_Up.Visible = false;
+                    signupid.Visible = false;
                     Menu1.Visible = false;
                     Div_Username.Visible = true;
                     Lbl_Username.Text = "Welcome " + first_name;
@@ -68,6 +68,7 @@ namespace Grihini.GUI_Form
                         View_Products2.Visible = true;
                         Addprod.Visible = true;
                         Menu1.Visible = true;
+                        main_menu.Visible = true;
 
                     }
                     else
@@ -80,14 +81,14 @@ namespace Grihini.GUI_Form
                         Addprod.Visible = false;
                         fetchtrack();
                         fetchcartcount();
-                        Sign_Up.Visible = false;
-                        Sign_In.Visible = false;
+                        signupid.Visible = false;
+                        signinid.Visible = false;
                     }
                 }
                 if (EmailId != "" && FirstNm != "" && LastNm!="")
             {
-                Sign_In.Visible = false;
-                Sign_Up.Visible = false;
+                signinid.Visible = false;
+                signupid.Visible = false;
                 Lbl_Username.Visible = true;
                 LogOut.Visible = true;
                 Track.Visible = true;

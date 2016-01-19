@@ -248,37 +248,75 @@ left: 35%;
 <div class="t_order_products_one" style=" height:50px;">
 <div class="t2_bar" style="border-right:2px solid #fff;">
 <div class="t2_bar_txt">ORDER ON</div>
-<div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;">20 Dec 2016</div>
+<div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;">
+  <asp:Label ID="lbl_order" runat="server" Text=""></asp:Label>
+</div>
 </div>
 <div class="t2_bar" style="border-right:2px solid #fff;">
-<div class="t2_bar_txt">ITEMS</div>
-<div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;">1</div>
+<div class="t2_bar_txt">QUANTITY
+<asp:Label ID="lbl_tems" runat="server" Text=""></asp:Label>
+
+</div>
+<div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;"></div>
 </div>
 <div class="t2_bar">
 <div class="t2_bar_txt">GRAND TOTAL</div>
+
+<asp:Label ID="lbl_grandtotal" runat="server" Text=""></asp:Label>
 <div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;">2100.00</div>
 </div>
 
 
 </div>
-<div style="float:left; width:1024px; background-color:#cceef9;">
 
 
-<div>
-<div style="float:left; width:1024px; background-color:#cceef9;">
-<div style="float:left; width:250px; height:200px; margin:0 0 0 0;"><img src="../Images/p6.jpg" width="250" height="200" /></div>
+<div style="float:left;">
 
-<div class="t_order_products_name_area">
-<div class="t_order_products_name">Product Name Text</div>
-<div class="t_order_products_status">Status</div>
-<div class="t_order_products_date">Delivered On Sat,Dec 2016</div>
+<asp:GridView ID="GridView_TrackOrderdetails" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Records To Display!"
+     AllowSorting="false" Visible="true" Width="1024px">
 
-</div>
+        <Columns>
+           
+               <%--<asp:TemplateField HeaderText="Order ID" ControlStyle-Font-Size="12px">
+            <ItemTemplate>
+            <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
+              
+            </ItemTemplate>
+            </asp:TemplateField>--%> 
 
-<div style="float:right; width:530px; height:200px; background-color:#f1f0ee;">
+            <asp:TemplateField HeaderText="" ControlStyle-Font-Size="12px">
+            <ItemTemplate>
+
+              <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl='<%# Eval("ImageName3") %>' Height="150" Width="180"  />
+            </ItemTemplate>
+            </asp:TemplateField>
+
+       
+                        
+
+            <asp:TemplateField HeaderText=""   ControlStyle-Font-Size="12px" ControlStyle-Width="250" >
+            <ItemTemplate>
+           
+            <asp:Label ID="lbl_price" runat="server" text='<%#Eval("Product_name") %>'></asp:Label>
+                  <br />
+            <asp:Label ID="lbl_Quantity" runat="server" text='<%#Eval("Order_Status") %>'></asp:Label>
+                  <br />
+            <asp:Label ID="lbl_orderdate" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label>
+           <%-- <asp:Label ID="lbl_discount" runat="server"  text='<%#Eval("Discount") %>'></asp:Label>
+             <asp:Label ID="lbl_Grandtotal" runat="server"  text='<%#Eval("Discount") %>'></asp:Label>--%>
+            
+            </ItemTemplate>
+            </asp:TemplateField>
+
+            
+            <asp:TemplateField HeaderText="" ControlStyle-Font-Size="12px">
+            <ItemTemplate>
+
+            <div style="float:right; width:530px; height:200px; background-color:#f1f0ee;">
 <div class="t2_bar_progress">
 
-<div class="t2_bar_progress_txt" style="margin:8px 0 0 20px;">CONFIRM</div>
+<div class="t2_bar_progress_txt" style="margin:8px 0 0 20px;">CONFIRM
+  </div>
 <div class="t2_bar_progress_arrow" style="margin:8px 0 0 100px;"><img src="../Images/arrow.png" /></div>
 
 <div class="t2_bar_progress_txt" style="margin:-14px 0 0 90px;">DISPATCH</div>
@@ -300,7 +338,6 @@ left: 35%;
         <div class="container" style="width:500px;" >
             <div class="row" style="width:500px;">
                 <div class="board" style="width:500px;">
-                    <!-- <h2>Welcome to IGHALO!<sup>™</sup></h2>-->
                     <div class="board-inner" style="width:500px;">
                     <ul class="nav nav-tabs" id="myTab" style="width:500px;">
                     <div class="liner"></div>
@@ -333,6 +370,8 @@ left: 35%;
 
                      
                      </ul></div>
+
+                     
 
                      <div class="tab-content" style="width:500px;">
                       <div class="tab-pane fade in active" id="home" >
@@ -370,6 +409,12 @@ left: 35%;
               
                         </div>
 
+
+
+                        
+
+
+
 </div>
 </div>
 </div>
@@ -380,7 +425,26 @@ left: 35%;
 
 
 
+
+
+
+
 </div>
+             
+            </ItemTemplate>
+            </asp:TemplateField>
+
+            
+                  
+            </Columns>
+          </asp:GridView>
+
+
+
+
+
+</div>
+
 </div>
 </div>
 
@@ -391,6 +455,8 @@ left: 35%;
 
 </div>
 </div>
+
+
 
 
 </div>

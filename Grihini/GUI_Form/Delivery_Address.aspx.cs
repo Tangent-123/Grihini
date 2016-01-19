@@ -21,7 +21,6 @@ using Grihini_BL.BL;
 namespace Grihini.GUI_Form
 {
     public partial class Delivery_Address : System.Web.UI.Page
-        
     {
         Cls_Products_Registration pr = new Cls_Products_Registration();
         protected void Page_Load(object sender, EventArgs e)
@@ -50,7 +49,7 @@ namespace Grihini.GUI_Form
 
         }
 
-        
+
 
         private void CountryAll()
         {
@@ -73,7 +72,7 @@ namespace Grihini.GUI_Form
                 {
 
                 }
-               
+
                 //ListItem li = new ListItem("Select Country", "0");
                 //dropdowncountry.Items.Insert(0, li);
             }
@@ -86,7 +85,7 @@ namespace Grihini.GUI_Form
 
         protected void ImageButton100_Click(object sender, ImageClickEventArgs e)
         {
-            
+
             try
             {
                 string CountryNm = null;
@@ -118,30 +117,30 @@ namespace Grihini.GUI_Form
                                         CityNm, txtpincode.Text, txtaddress.InnerText, txtlandmark.InnerText,
                                         txtphone.Text);
 
-               if (dt.Rows.Count > 0)
-               {
-                   string Address_Id = Convert.ToString(dt.Rows[0]["ID"]);
-                   Session["Address_Id"] = Address_Id;
-                   Session["Delivery_Id"] = "";
+                if (dt.Rows.Count > 0)
+                {
+                    string Address_Id = Convert.ToString(dt.Rows[0]["ID"]);
+                    Session["Address_Id"] = Address_Id;
+                    Session["Delivery_Id"] = "";
 
-                   Response.Redirect("Products_Order_Confirm.aspx");
-               }
-              
+                    Response.Redirect("Products_Order_Confirm.aspx");
+                }
+
             }
 
 
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 string strError = ex.Message.Replace("'", "");
                 Response.Write("<script>alert('" + strError + "');</script>");
             }
 
-        
+
         }
 
         protected void ddState_SelectedIndexchanged(object sender, EventArgs e)
         {
-            
+
             dropdowncity.Items.Clear();
             dropdowncity.Enabled = true;
             try
@@ -191,7 +190,7 @@ namespace Grihini.GUI_Form
             dropdownstate.SelectedValue = "0";
             dropdowncity.SelectedValue = "0";
             dropdowncity.Enabled = false;
-            
+
             try
             {
 
@@ -215,14 +214,14 @@ namespace Grihini.GUI_Form
                 {
                     dropdownstate.Enabled = false;
                     dropdowncity.Enabled = false;
-                   
+
                     dropdownstate.Text = "Other";
-                   
+
                     dropdowncity.Text = "Other";
                     TextOtherCountry.Visible = true;
                     TextOtherState.Visible = true;
                     TextOtherCity.Visible = true;
-                    
+
                 }
 
                 else
@@ -255,7 +254,7 @@ namespace Grihini.GUI_Form
                 Response.Write("<script>alert('" + strError + "');</script>");
             }
 
-        
+
         }
     }
 }
