@@ -5,6 +5,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+
+<link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
 <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 
 <script src="../JS/min2.js" type="text/javascript"></script>

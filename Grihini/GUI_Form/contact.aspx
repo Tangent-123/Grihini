@@ -4,6 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
+    <link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 
     <div class="wrapper" style="background-color:#f7f5ee;">
@@ -22,7 +23,7 @@
 <div class="c_address_area" style="margin:15px 0 0 0; width:300px;">Address</div>
 
 <div class="c_address_pure">Tata Motors Grihini Social Welfare Society</div>
-<div class="c_address_pure_two">A-2-X-25, Tata motors colony, <br />Pimpari, Pune – 411018</div>
+<div class="c_address_pure_two">A-2-X-25, Tata motors colony, <br />Pimpri, Pune – 411018</div>
 </div>
 
 </div>

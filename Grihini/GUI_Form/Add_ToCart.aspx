@@ -2,6 +2,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+
+<link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
+<link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+
 <div>  
 
 <div id="Cart" runat="server" visible="false" style="width:200px; height:30px; background-color:Aqua; float:right;">

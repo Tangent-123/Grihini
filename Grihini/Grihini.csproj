@@ -315,6 +315,7 @@
     </Compile>
     <Compile Include="GUI_Form\aboutus.aspx.cs">
       <DependentUpon>aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GUI_Form\aboutus.aspx.designer.cs">
       <DependentUpon>aboutus.aspx</DependentUpon>
@@ -349,6 +350,7 @@
     </Compile>
     <Compile Include="GUI_Form\contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GUI_Form\contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
@@ -383,12 +385,14 @@
     </Compile>
     <Compile Include="GUI_Form\ourvalues.aspx.cs">
       <DependentUpon>ourvalues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GUI_Form\ourvalues.aspx.designer.cs">
       <DependentUpon>ourvalues.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI_Form\OUR_ORIGIN.aspx.cs">
       <DependentUpon>OUR_ORIGIN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="GUI_Form\OUR_ORIGIN.aspx.designer.cs">
       <DependentUpon>OUR_ORIGIN.aspx</DependentUpon>

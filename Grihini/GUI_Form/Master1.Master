@@ -78,7 +78,7 @@
     <div class="wrapper">
 <div class="header">
 <div class="main-wrapper">
-<div id="Home" runat="server" style="float:left; height:20px; width:20px; margin-top:5px;"><a href="Home.aspx"><img src="../Images/Home.png" height="20" width="20" /></a></div>
+<div id="Home" runat="server" style="float:left; height:20px; width:20px;"><a href="Home.aspx"><img src="../Images/Home.png" height="20" width="20" /></a></div>
 <div class="header-one" style="width:600px;">
 
     
@@ -191,7 +191,7 @@
 </div>   
 
 
-<div style="height:30px; color:#666; font-family:Cambria; font-size:17px; font-weight:bold; margin:16px 0 0 0; text-align:center;">WELCOME TO GRIHINI ONLINE SHOOPING PORTAL</div>
+<div style="height:30px; color:#666; font-family:Cambria; font-size:17px; font-weight:bold; margin:16px 0 0 0; text-align:center;">WELCOME TO GRIHINI ONLINE SHOPPING PORTAL</div>
 
 
 <%--<div class="categories">
@@ -361,7 +361,7 @@
 <div class="main-wrapper">
 <div class="footer-three">
 <div class="copyright-area"><strong>Copyright 2015 Tata Motors Grihini</strong></div>
-<div class="companyname-area"><strong>Design & Developed by Tangent Tech Solutions</strong></div>
+<div class="companyname-area"><strong>Designed & Developed by Tangent Tech Solutions</strong></div>
 </div>
 </div>
 </div>
