@@ -130,7 +130,7 @@
 </div>
 
 <div class="signin_master" style="margin-right:7px;" id="signupid" runat="server">
-<div id="Sign_Up" runat="server" class="giftcart-one" style="cursor: pointer;"><a href="User_Registration.aspx"><strong>Sign Up</strong></a></div>
+<div id="Sign_Up" runat="server" class="giftcart-one" style="cursor: pointer;"><a href="User_Registration.aspx?target=AddUserDetails"><strong>Sign Up</strong></a></div>
 </div>
 
 <div class="giftcart" style="margin:-7px 25px 0 0;">

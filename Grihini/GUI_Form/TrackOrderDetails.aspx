@@ -257,7 +257,7 @@ left: 35%;
 <asp:Label ID="lbl_tems" runat="server" Text=""></asp:Label>
 
 </div>
-<div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;">1</div>
+<div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;"></div>
 </div>
 <div class="t2_bar">
 <div class="t2_bar_txt">GRAND TOTAL</div>

@@ -101,8 +101,8 @@ namespace Grihini.GUI_Form
                 }
                 else
                 {
-                    StateNm = Ddl_State.SelectedItem.Text;
-                    LocationNm = Ddl_Location.SelectedItem.Text;
+                    StateNm = Ddl_State.SelectedValue;
+                    LocationNm = Ddl_Location.SelectedValue;
                 }
 
 
