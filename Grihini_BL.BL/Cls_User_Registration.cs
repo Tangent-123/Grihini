@@ -62,7 +62,7 @@ namespace Grihini_BL.BL
 
 
         public int Insert_Data(int OperationId, string Title, string First_Name, string Middle_Name, string Last_Name,
-            string Gender, string Dob, string Mobile_No, string Email_Id, string CountryNm, string StateNm, string LocationNm, string Emp_Id)
+            string Gender, string Dob, string Mobile_No, string Email_Id, int CountryId, int StateId, string LocationName, string Emp_Id)
         {
             SqlParameter[] param = new SqlParameter[13];
 
@@ -102,17 +102,17 @@ namespace Grihini_BL.BL
             param[8].Direction = ParameterDirection.Input;
             param[8].Value = Email_Id;
 
-            param[9] = new SqlParameter("@CountryNm", SqlDbType.VarChar, 100);
+            param[9] = new SqlParameter("@CountryId", SqlDbType.Int);
             param[9].Direction = ParameterDirection.Input;
-            param[9].Value = CountryNm;
+            param[9].Value = CountryId;
 
-            param[10] = new SqlParameter("@StateNm", SqlDbType.VarChar, 100);
+            param[10] = new SqlParameter("@StateId", SqlDbType.Int);
             param[10].Direction = ParameterDirection.Input;
-            param[10].Value = StateNm;
+            param[10].Value = StateId;
 
-            param[11] = new SqlParameter("@LocationNm", SqlDbType.VarChar, 100);
+            param[11] = new SqlParameter("@LocationName", SqlDbType.VarChar, 100);
             param[11].Direction = ParameterDirection.Input;
-            param[11].Value = LocationNm;
+            param[11].Value = LocationName;
 
             param[12] = new SqlParameter("@Emp_Id", SqlDbType.VarChar, 100);
             param[12].Direction = ParameterDirection.Input;

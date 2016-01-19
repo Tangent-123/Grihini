@@ -37,14 +37,22 @@ namespace Grihini.GUI_Form
 
         private void fetchAddress()
         {
-            string userid = Convert.ToString(Session["UserId"]);
-            DataTable dtadd = new DataTable();
-            dtadd = pr.fetchAdd(2, userid);
-
-            if (dtadd.Rows.Count > 0)
+            try
             {
-                DataList_Address.DataSource = dtadd;
-                DataList_Address.DataBind();
+                string userid = Convert.ToString(Session["UserId"]);
+                DataTable dtadd = new DataTable();
+                dtadd = pr.fetchAdd(2, userid);
+
+                if (dtadd.Rows.Count > 0)
+                {
+                    DataList_Address.DataSource = dtadd;
+                    DataList_Address.DataBind();
+                }
+            }
+            catch (Exception ex)
+            {
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
 
         }
@@ -73,8 +81,7 @@ namespace Grihini.GUI_Form
 
                 }
 
-                //ListItem li = new ListItem("Select Country", "0");
-                //dropdowncountry.Items.Insert(0, li);
+               
             }
             catch (Exception ex)
             {
@@ -88,33 +95,26 @@ namespace Grihini.GUI_Form
 
             try
             {
-                string CountryNm = null;
-                string StateNm = null;
-                string CityNm = null;
 
-                if (dropdowncountry.SelectedValue == "1000")
+                int  Country_Id = Convert.ToInt32(dropdowncountry.SelectedValue);
+                int State_Id = Convert.ToInt32(dropdownstate.SelectedValue);
+                string Location_Name = null;
+
+                if (dropdowncity.SelectedValue == "1000")
                 {
-                    CountryNm = Convert.ToString(TextOtherCountry.Text);
-                    StateNm = Convert.ToString(TextOtherState.Text);
-                    CityNm = Convert.ToString(TextOtherCity.Text);
+                    Location_Name = Convert.ToString(TextOtherLocation.Text);
 
                 }
                 else
                 {
-                    CountryNm = dropdowncountry.SelectedItem.Text;
-                    StateNm = dropdownstate.SelectedItem.Text;
-                    CityNm = dropdowncity.SelectedItem.Text;
+                    Location_Name = dropdowncity.SelectedItem.Text;
                 }
-
-                //int location = (Convert.ToInt32(dropdowncity.SelectedValue));
-                //int country = (Convert.ToInt32(dropdowncountry.SelectedValue));
-                //int state = (Convert.ToInt32(dropdownstate.SelectedValue));
-
+                
                 int userid = Convert.ToInt32(Session["UserId"]);
                 DataTable dt = new DataTable();
 
-                dt = pr.Insert_Products(4, Convert.ToInt32(userid), txtname.Text, CountryNm, StateNm,
-                                        CityNm, txtpincode.Text, txtaddress.InnerText, txtlandmark.InnerText,
+                dt = pr.Insert_Products(4, Convert.ToInt32(userid), txtname.Text, Country_Id, State_Id,
+                                        Location_Name, txtpincode.Text, txtaddress.InnerText, txtlandmark.InnerText,
                                         txtphone.Text);
 
                 if (dt.Rows.Count > 0)
@@ -140,9 +140,10 @@ namespace Grihini.GUI_Form
 
         protected void ddState_SelectedIndexchanged(object sender, EventArgs e)
         {
-
+            
             dropdowncity.Items.Clear();
             dropdowncity.Enabled = true;
+            TextOtherLocation.Visible = false;
             try
             {
 
@@ -190,62 +191,27 @@ namespace Grihini.GUI_Form
             dropdownstate.SelectedValue = "0";
             dropdowncity.SelectedValue = "0";
             dropdowncity.Enabled = false;
-
+            dropdowncity.Items.Clear();
+            TextOtherLocation.Visible = false;
             try
             {
 
-                //DataTable dt = new DataTable();
-                //dt = pr.fetchStateAgainstCountry(9, Convert.ToInt32(dropdowncountry.SelectedValue));
-                //if (dt.Rows.Count > 0)
-                //{
-                //    dropdownstate.DataSource = dt;
-                //    dropdownstate.DataTextField = "StateName";
-                //    dropdownstate.DataValueField = "Stateid";
-                //    dropdownstate.DataBind();
+                DataTable dt = new DataTable();
+                dt = pr.fetchStateAgainstCountry(9, Convert.ToInt32(dropdowncountry.SelectedValue));
+                if (dt.Rows.Count > 0)
+                {
+                    dropdownstate.DataSource = dt;
+                    dropdownstate.DataTextField = "StateName";
+                    dropdownstate.DataValueField = "Stateid";
+                    dropdownstate.DataBind();
 
-                //}
-                //else
-                //{
-                //    dropdownstate.Enabled = false;
-                //    dropdowncity.Enabled = false;
-                //}
-
-                if (dropdowncountry.SelectedValue == "1000")
+                }
+                else
                 {
                     dropdownstate.Enabled = false;
                     dropdowncity.Enabled = false;
-
-                    dropdownstate.Text = "Other";
-
-                    dropdowncity.Text = "Other";
-                    TextOtherCountry.Visible = true;
-                    TextOtherState.Visible = true;
-                    TextOtherCity.Visible = true;
-
                 }
 
-                else
-                {
-                    TextOtherCountry.Visible = false;
-                    TextOtherState.Visible = false;
-                    TextOtherCity.Visible = false;
-
-                    DataTable dt = new DataTable();
-                    dt = pr.fetchStateAgainstCountry(9, Convert.ToInt32(dropdowncountry.SelectedValue));
-                    if (dt.Rows.Count > 0)
-                    {
-                        dropdownstate.DataSource = dt;
-                        dropdownstate.DataTextField = "StateName";
-                        dropdownstate.DataValueField = "Stateid";
-                        dropdownstate.DataBind();
-
-                    }
-                    else
-                    {
-                        dropdownstate.Enabled = false;
-                        dropdowncity.Enabled = false;
-                    }
-                }
             }
 
             catch (Exception ex)
@@ -255,6 +221,32 @@ namespace Grihini.GUI_Form
             }
 
 
+        }
+
+        protected void dropdowncity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dropdowncity.SelectedValue == "1000")
+                {
+                    TextOtherLocation.Visible = true;
+                    dropdowncity.Enabled = false;
+
+                }
+                else
+                {
+                    TextOtherLocation.Visible = false;
+                 }
+            }
+
+            catch (Exception ex)
+            {
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
+            }
+
+
+    
         }
     }
 }

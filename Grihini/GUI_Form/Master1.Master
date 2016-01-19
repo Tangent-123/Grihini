@@ -183,9 +183,9 @@
 
 
  <div id="Div1" runat="server" visible="true" style="margin:0 0 0 0; float:right;">
-<a href="Addtocarttt.aspx"><div id="Div2" runat="server" visible="true" style="width:100px; height:33px; float:right; background-image:url(../Images/addtocart.png);">
-
-    <div style="margin:12px 0 0 78px; float:left; color:Black; font-size:13px;"><asp:Label ID="Label1" runat="server" Text="" ></asp:Label></div>
+<a href="Addtocarttt.aspx">
+<div id="Div2" runat="server" visible="true" style="width:100px; height:33px; float:right; background-image:url(../Images/addtocart.png);">
+<div style="margin:12px 0 0 78px; float:left; color:Black; font-size:13px;"><asp:Label ID="Label1" runat="server" Text="" ></asp:Label></div>
 </div>
 </a>
 </div>   
@@ -219,55 +219,36 @@
 						<ul style="width:200px;">
 							<li class="oe_heading">User Details</li>
 							<li><a href="User_Registration.aspx?target=AddUserDetails">Add User Details</a></li>
-							<%--<li id="ViewUser" runat="server" visible="false"><a href="#">View User Details</a></li>--%>
+							<li><a href="User_Registration.aspx?target=ViewUserDetails">View User Details</a></li>
 
 
 						</ul>
-<%--						<ul style="width:180px;">
-							<li class="oe_heading">Driver Details</li>
-							<li><a href="mst_Driver_Registration.aspx?target=AddnewDriver">Add Driver Details</a></li>
-							<li><a href="mst_Driver_Registration.aspx?target=ViewAllDriver">View Driver Details</a></li>
-							<li><a href="UnderConstruction.aspx">Download Driver Details</a></li>
-						</ul>--%>
+
 						
 					</div>
 				</li>
 				<li><a href="">PRODUCTS</a>
 					<div style="left:-112px;"><!-- -112px -->
 						<ul style="width:170px;">
-							<li class="oe_heading">Product</li>
+							<li class="oe_heading">Product Management</li>
 							<li id="Addprod" runat="server"><a href="Product_Reg.aspx?target=AddProduct">Add Product</a></li>
-						<%--	<li><a href="UnderConstruction.aspx">District</a></li>--%>
+						
 							<li id="View_Products" runat="server"><a href="Products_View.aspx">View Product</a></li>
                             <li id="View_Products1" runat="server"><a href="Product_Reg.aspx?target=ViewAllProduct">View Product</a></li>
-                            <li id="View_Products2" runat="server"><a href="Admin_Order_View.aspx">Product Order View</a></li>
+                            <%--<li id="View_Products2" runat="server"><a href="Admin_Order_View.aspx">Product Order View</a></li>--%>
 
 						</ul>
-<%--						<ul style="width:200px;">
-							<li class="oe_heading">Project Management</li>
-							<li><a href="mst_Trip.aspx?target=ViewAllTrip">Trip</a></li>
-							<li><a href="mst_Tollgate.aspx?target=ViewAllTollgate">Toll Gate</a></li>
-							<li><a href="mst_Vehicle_MaintenanceType.aspx?target=ViewAllMaintenanceType">Vehicle Maintaince Type</a></li>
-							<li><a href="mst_Insurance_Vendor.aspx?target=ViewAllInsurance_Vendor">Insurance Vendor</a></li>
-						</ul>
-						<ul>
-							<li class="oe_heading">Vehicle</li>
-                            <li><a href="Vehicle_Mapping.aspx">Vehicle Mapping</a></li>
-							<li><a href="mst_Vehicle_Registration.aspx?target=ViewAllVehicle">Vehicle Registration</a></li>
-							<li><a href="Insurance_Manager.aspx?target=ViewAllInsurance_Manager">Vehicle Insurance</a></li>
-							<li><a href="Vehicle_ServicingDetails.aspx">Vehicle Servicing</a></li>
-							<li><a href="mst_VehicleStatus.aspx">Vehicle Status</a></li>      
-						</ul>--%>
+
 					</div>
 				</li>
 				  <li><a href="">ORDER</a>
 					<div style="left:0;">
 						<ul style="width:200px;">
-							<li class="oe_heading">Order</li>
+							<li class="oe_heading">Order Management</li>
 							<li><a href="Admin_Order_View.aspx">Product Order View</a></li>
-                            <li><a href="MonthWiseUserOrder.aspx">Month Wise Order View</a></li>
-                            <li><a href="Products_Order_Confirm.aspx">Products Order Confirm</a></li>
-							<%--<li id="Li1" runat="server" visible="false"><a href="#">View User Details</a></li>--%>
+                            <li><a href="MonthWiseUserOrder.aspx">Monthwise Billing</a></li>
+                            <li><a href="Products_Order_Confirm.aspx">Track Order</a></li>
+							
                         </ul>
                     </div>
 				</li>

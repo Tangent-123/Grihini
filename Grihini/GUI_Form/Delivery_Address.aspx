@@ -56,9 +56,9 @@
     <div style="float:right;">
     <asp:TextBox ID="txtname" runat="server" onkeyup="SentenceCase(this);" style="width:230px; float:left; 
         background-color:#FFF; height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
-    <asp:RequiredFieldValidator ID="req_name" runat="server" ErrorMessage="Please enter name" 
+    <asp:RequiredFieldValidator ID="req_name" runat="server" ErrorMessage="Please Enter Name!" 
     ControlToValidate="txtname" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>
-    <asp:RegularExpressionValidator ID="regu_name" runat="server" ErrorMessage="Only character is allow in name" 
+    <asp:RegularExpressionValidator ID="regu_name" runat="server" ErrorMessage="Only Character is Allowed in Name!" 
     ControlToValidate="txtname" ForeColor="Red" ValidationExpression="^[A-Za-z\s]+$" ValidationGroup="Delivery_Group" Display="None"></asp:RegularExpressionValidator>
     </div>
     </div>
@@ -70,10 +70,9 @@
         height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;" 
             onselectedindexchanged="dropdowncountry_SelectedIndexChanged">
      </asp:DropDownList>
-        <asp:TextBox ID="TextOtherCountry" runat="server" Visible="false" style="width:230px; float:left; background-color:#FFF; 
-        height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
-    <asp:RequiredFieldValidator ID="req_country" runat="server" ErrorMessage="Please select country" 
-    ControlToValidate="dropdowncountry" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>
+        
+    <asp:RequiredFieldValidator ID="req_country" runat="server" ErrorMessage="Please Select Country!" 
+    ControlToValidate="dropdowncountry" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None" InitialValue="0"></asp:RequiredFieldValidator>
     </div>
     </div>
 
@@ -82,23 +81,27 @@
     <div style="float:right;">
     <asp:DropDownList ID="dropdownstate" AutoPostBack="true" runat="server" OnSelectedIndexChanged="ddState_SelectedIndexchanged" style="width:230px; float:left; background-color:#FFF; 
         height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:DropDownList>
-          <asp:TextBox ID="TextOtherState" runat="server" Visible="false" style="width:230px; float:left; background-color:#FFF; 
-        height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
-    <%--<asp:RequiredFieldValidator ID="req_state" runat="server" ErrorMessage="Please select state" 
-    ControlToValidate="dropdownstate" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>--%>
+     
+     <asp:RequiredFieldValidator ID="req_state" runat="server" ErrorMessage="Please Select State!" 
+    ControlToValidate="dropdownstate" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None" InitialValue="0"></asp:RequiredFieldValidator>
     </div>
     </div>
     
 
     <div class="del-name-area" style="margin:16px 0 0 0;">
-    <div class="del-name-txt">City &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:</div>
+    <div class="del-name-txt">Location &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:</div>
     <div style="float:right;">
     <asp:DropDownList ID="dropdowncity" AutoPostBack="true" runat="server" style="width:230px; float:left; background-color:#FFF; 
-        height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:DropDownList>
-      <asp:TextBox ID="TextOtherCity" runat="server" Visible="false" style="width:230px; float:left; background-color:#FFF; 
+        height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;" 
+            onselectedindexchanged="dropdowncity_SelectedIndexChanged"></asp:DropDownList>
+            <asp:RequiredFieldValidator ID="req_city" runat="server" ErrorMessage="Please Select Location!" 
+    ControlToValidate="dropdowncity" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None" InitialValue="0"></asp:RequiredFieldValidator>
+      
+      <asp:TextBox ID="TextOtherLocation" runat="server" Visible="false" style="width:230px; float:left; background-color:#FFF; 
         height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
-   <%-- <asp:RequiredFieldValidator ID="req_city" runat="server" ErrorMessage="Please select city" 
-    ControlToValidate="dropdowncity" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>--%>
+    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                        ErrorMessage="Enter Other Location!" ControlToValidate="TextOtherLocation" 
+                        ValidationGroup="Valid1" Display="None"></asp:RequiredFieldValidator>
     </div>
     </div>
 
@@ -111,9 +114,9 @@
     <div style="float:right;">
     <asp:TextBox ID="txtpincode" runat="server" style="width:230px; float:left; 
         background-color:#FFF; height:25px; margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
-    <asp:RequiredFieldValidator ID="req_pincode" runat="server" ErrorMessage="Please enter pincode" 
+    <asp:RequiredFieldValidator ID="req_pincode" runat="server" ErrorMessage="Please Enter Pincode!" 
     ControlToValidate="txtpincode" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>
-    <asp:RegularExpressionValidator ID="regu_pincode" runat="server" ErrorMessage="Only numeric is allow in pincode" 
+    <asp:RegularExpressionValidator ID="regu_pincode" runat="server" ErrorMessage="Only Numeric is Allowed in Pincode!" 
     ControlToValidate="txtpincode" ForeColor="Red" ValidationExpression="^[0-9\s]+$" ValidationGroup="Delivery_Group" Display="None"></asp:RegularExpressionValidator>
     </div>
     </div>
@@ -125,7 +128,7 @@
     style="width:230px; height:50px;"></textarea>
     <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="10pt" Text="Chars left" style="float:left; margin:6px 0 0 0;"></asp:Label>
     <label ID="lblsize_address" Font-Names="Arial" Font-Size="10pt" style="float:left; margin:5px 0 0 10px;">200</label>
-    <asp:RequiredFieldValidator ID="req_address" runat="server" ErrorMessage="Please enter address" 
+    <asp:RequiredFieldValidator ID="req_address" runat="server" ErrorMessage="Please Enter Address!" 
     ControlToValidate="txtaddress" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>
     </div>
     </div>
@@ -137,19 +140,19 @@
     style="width:230px; height:50px;"></textarea>
     <asp:Label ID="Label2" runat="server" Font-Names="Arial" Font-Size="10pt" Text="Chars left" style="float:left; margin:6px 0 0 0;"></asp:Label>
     <label ID="lblsize_landmark" Font-Names="Arial" Font-Size="10pt" style="float:left; margin:5px 0 0 10px;">200</label>
-    <asp:RequiredFieldValidator ID="req_landmark" runat="server" ErrorMessage="Please enter landmark" 
+    <asp:RequiredFieldValidator ID="req_landmark" runat="server" ErrorMessage="Please Enter Landmark!" 
     ControlToValidate="txtlandmark" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>
     </div>
     </div>
 
     <div class="del-name-area" style="margin:16px 0 0 0;">
-    <div class="del-name-txt">Phone &nbsp; &nbsp;:</div>
+    <div class="del-name-txt">Contact &nbsp; &nbsp;:</div>
     <div style="float:right;">
     <asp:TextBox ID="txtphone" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; 
         margin:0 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
-    <asp:RequiredFieldValidator ID="req_phone" runat="server" ErrorMessage="Please enter phone number" 
+    <asp:RequiredFieldValidator ID="req_phone" runat="server" ErrorMessage="Please Enter Contact Number!" 
     ControlToValidate="txtphone" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>
-    <asp:RegularExpressionValidator ID="regu_phone" runat="server" ErrorMessage="Only numeric is allow in phone number" 
+    <asp:RegularExpressionValidator ID="regu_phone" runat="server" ErrorMessage="Only Numeric is Allowed in Contact Number!" 
     ControlToValidate="txtphone" ForeColor="Red" ValidationExpression="^[0-9\s]+$" ValidationGroup="Delivery_Group" Display="None"></asp:RegularExpressionValidator>
     </div>
     </div>

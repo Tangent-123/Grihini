@@ -217,10 +217,10 @@ ul#thumblist li a.zoomThumbActive{
    <div class="wrapper" style="background:none;">
    <div class="product">
    <div style="width:auto; height:25px; float:right; margin:10px 10px 10px 0;">
-       <%--<asp:Button ID="Btn_View" runat="server" Text="View All" CssClass="btn_submit"
+       <asp:Button ID="Btn_View" runat="server" Text="View All" CssClass="btn_submit"
        BackColor="Black" Font-Bold="True" ForeColor="White" 
            style="float:left; margin:0 0 20px 0; width:100px; height:25px; font-family:Arial; font-size:13px; color:White; background-color:#fc8332; border:none; cursor:pointer;" onclick="Btn_View_Click1" 
-          />--%>
+          />
                         </div>
    <div class="Insert">
    <div class="reg-toptxt" style="float:left; margin:20px 0 0 20px;">User Registration</div>
@@ -419,7 +419,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" 
                         ErrorMessage="Select Country!" ControlToValidate="Ddl_Country" InitialValue="0" 
                         ValidationGroup="Valid1" Display="None"></asp:RequiredFieldValidator>
-                        <asp:TextBox ID="TextCountryOther" Visible="false" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
+                        
                         
          </div>
    </div>
@@ -436,7 +436,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
               <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" 
                         ErrorMessage="Select State!" ControlToValidate="Ddl_State" 
                         ValidationGroup="Valid1" Display="None" InitialValue="0"></asp:RequiredFieldValidator>
-       <asp:TextBox ID="TextStateOther" Visible="false" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
+      
          </div>
 
    </div>
@@ -451,12 +451,21 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
         </div>
 
    <div class="form_box_right">
-             <asp:DropDownList ID="Ddl_Location" runat="server" AutoPostBack="true" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;">
+             <asp:DropDownList ID="Ddl_Location" runat="server" AutoPostBack="true" 
+                 style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;" 
+                 onselectedindexchanged="Ddl_Location_SelectedIndexChanged">
              </asp:DropDownList>
              <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" 
                         ErrorMessage="Select Location!" ControlToValidate="Ddl_Location" 
                         ValidationGroup="Valid1" Display="None" InitialValue="0"></asp:RequiredFieldValidator>
                         <asp:TextBox ID="TextLocationOther" runat="server" Visible="false" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
+                        
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                        ErrorMessage="Enter Other Location!" ControlToValidate="TextLocationOther" 
+                        ValidationGroup="Valid1" Display="None"></asp:RequiredFieldValidator>
+                    &nbsp;&nbsp;&nbsp;
+                    
+                    
          </div>
    </div>
 
