@@ -7,12 +7,12 @@
     <link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 
-    <div class="wrapper" style="background-color:#f7f5ee;">
+    <div class="wrapper">
 
     <div class="main-wrapper">
     <div class="contactus_image"><img src="../Images/contactus_bar.png" /></div>
 
-<div class="contactus_mainarea">
+<div class="contactus_mainarea" style="border:1px solid #eae6db;">
 <div class="contactus_subarea">
 
 <div class="contactus_subarea_one">

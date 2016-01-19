@@ -44,7 +44,7 @@ namespace Grihini.GUI_Form
                 dt = cart.buttonvisible(10, userid, ProductId);
                 if (dt.Rows.Count > 0)
                 {
-                    Btn_AddtoCart.Visible = false;
+                    LinkButtonAddTocart.Visible = false;
                     ImageButton2.Visible = true;
                     btn_buynoww.Visible = true;
                     btn_buynow_false.Visible = false;
@@ -52,7 +52,7 @@ namespace Grihini.GUI_Form
                 }
                 if (dt.Rows.Count == 0)
                 {
-                    Btn_AddtoCart.Visible = true;
+                    LinkButtonAddTocart.Visible = true;
                     ImageButton2.Visible = false;
                     btn_buynoww.Visible = true;
                     btn_buynow_false.Visible = false;
@@ -61,7 +61,7 @@ namespace Grihini.GUI_Form
 
                 if (userid == 0)
                 {
-                    Btn_AddtoCart.Visible = true;
+                    LinkButtonAddTocart.Visible = true;
                     ImageButton2.Visible = false;
                     btn_buynoww.Visible = true;
                     btn_buynow_false.Visible = false;

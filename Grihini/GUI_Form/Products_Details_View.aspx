@@ -13,6 +13,7 @@
 <script src="../JS/tiks.js" type="text/javascript"></script>
 <link href="../CSS/tikszoom.css" rel="stylesheet" type="text/css" />
 
+
 <style type"text/css">
 
 body{margin:0px;padding:0px;font-family:Arial;}
@@ -45,9 +46,10 @@ ul#thumblist li a.zoomThumbActive{
 </style>
 
 
+    <link href="../CSS/button2.css" rel="stylesheet" type="text/css" />
+
 
 <div class="wrapper">
-<div class="product">
 <div id="validdiv" runat="server" visible="false" style="background-color:#0099cc;">
 
 <div style="width:450px; margin:0 auto; height:30px;">
@@ -58,12 +60,7 @@ ul#thumblist li a.zoomThumbActive{
 </div>
 
     </div>
-<div class="main-wrapper">
-
-
-
-
-
+<div class="main-wrapper" style="border:1px solid #eae6db; background-color:White; height:580px;">
 <div class="product-one"><img src="../Images/add1.png" /></div>
 
 <div class="product-two">    
@@ -97,7 +94,15 @@ ul#thumblist li a.zoomThumbActive{
     </div>
     </div>
 
-    
+    <div class="quanti">
+    <div class="selectsize-one">Select Quantity</div>
+    <div class="selectsize-two">
+    <div>
+        <asp:DropDownList ID="Ddl_Quantity" runat="server" style="width:130px; height:31px;">
+        </asp:DropDownList>
+    </div>
+    </div>
+    </div>   
 
     <div class="color" style="float:left; margin:0 0 0 60px;">
     <div>
@@ -115,19 +120,12 @@ ul#thumblist li a.zoomThumbActive{
     </div>
 
     </div>
-    <div class="quanti" style="margin:10px 0 0 -1px;">
-    <div class="selectsize-one">Select Quantity</div>
-    <div class="selectsize-two">
-    <div>
-        <asp:DropDownList ID="Ddl_Quantity" runat="server" style="width:130px; height:31px;">
-        </asp:DropDownList>
-    </div>
-    </div>
-    </div>
+
 
     <div class="button">
     <div class="add2cart">
-        <asp:Button ID="Btn_AddtoCart" runat="server" Text="ADD TO CART" onclick="Btn_addtocart22_Click" Visible="true" cssclass="button-0"/>
+     <asp:LinkButton ID="LinkButtonAddTocart" runat="server" OnClick="Btn_addtocart22_Click" class="btn btn-5 btn-5a icon-cart"><span> ADD TO CART</span></asp:LinkButton>
+        <%--<asp:Button ID="Btn_AddtoCart" runat="server" Text="ADD TO CART" onclick="Btn_addtocart22_Click" Visible="true" cssclass="button-0" style="background-color:#77cc6d;"/>--%>
         <%--<asp:ImageButton ID="Btn_addtocart22"  runat="server" 
                            onclick="Btn_addtocart22_Click" Visible="true" --%>
                            
@@ -142,26 +140,37 @@ ul#thumblist li a.zoomThumbActive{
 
        
 
-    <div class="buy2now">
-        <asp:Button ID="btn_buynoww" runat="server" Text="BUY NOW" Visible="true" OnClick="Btn_buynow_Click" CssClass="button-0"/>
+    <div class="buy2now"> 
+
+        <asp:LinkButton ID="LinkButto_buynoww" runat="server" onclick="Btn_buynow_Click" class="btn btn-50 btn-50a icon-cart"><span> BUY NOW</span></asp:LinkButton>
+
+<%--        <asp:Button ID="btn_buynoww" runat="server" Text="BUY NOW" Visible="true"  CssClass="button-0"/>--%>
     <%--<a href="#"><img src="../Images/buynow.png"/></a>--%>
        <%-- <asp:ImageButton ID="Btn_buynow" runat="server" Visible="true" 
             ImageUrl="../Images/buynow.png" onclick="Btn_buynow_Click" />--%>
-        <asp:Button ID="btn_buynow_false" runat="server" Text="BUY NOW (false)" Visible="true" onclick="Btn_buynow_Click" Enabled="false" CssClass="button-0"/>
+        <asp:Button ID="btn_buynow_false" runat="server" Text="BUY NOW (false)" Visible="true" Enabled="false" CssClass="button-0"/>
 
            <%-- <asp:ImageButton ID="ImageButton3" runat="server" Visible="true" 
             ImageUrl="../Images/buynow_FALSE.png"  onclick="Btn_buynow_Click" Enabled="false"/>--%>
     </div>
 
 
-        <div class="buy2now" >
-            <asp:Button ID="Button3" runat="server" Text="Choose More Items" OnClick="buymore_click" CssClass="button-0" />
+        <div class="buy2now_2">
+            <asp:LinkButton ID="LinkButton_choosemore" OnClick="buymore_click" runat="server" class="btn btn-51 btn-51a glyphicon-plus"><span> CHOOSE MORE PRODUCTS</span></asp:LinkButton>
+
+           <%-- <asp:Button ID="Button3" runat="server" Text="CHOOSE MORE PRODUCTS"  CssClass="btn btn-5 btn-5a glyphicon-plus" style="width:254px;" />--%>
    
   <%--      <asp:ImageButton ID="ImageButton4" runat="server" Visible="true" style="margin:-36.2px 0 0 160px;"
             ImageUrl="../Images/buymore.png" OnClick="buymore_click"/>--%>
-
-           
     </div>
+
+
+
+
+       
+
+
+
 
     </div>
 
@@ -172,7 +181,7 @@ ul#thumblist li a.zoomThumbActive{
 
     <div  id="zoom1">
     
-        <asp:Image ID="Product_Image" runat="server" style="height:300px; width:350px; border: 3px solid #666; margin:0 0 0 250px;" data-big-image="../Images/imgProd/triumph_big1.jpg"   class="tiksluszoom" />
+        <asp:Image ID="Product_Image" runat="server" style="height:300px; width:350px; border: 3px solid #666; margin:0 0 0 0;" data-big-image="../Images/imgProd/triumph_big1.jpg"   class="tiksluszoom" />
         
     </div>
 
@@ -183,7 +192,7 @@ ul#thumblist li a.zoomThumbActive{
 		</script>--%>
 
 
-        <div style="margin:5px 0 0 250px;">
+        <div style="margin:5px 0 0 0;">
         <asp:DataList ID="DataList_Image" runat="server" RepeatDirection="Horizontal">
          <ItemStyle BackColor="White" ForeColor="Black" BorderWidth="2px" />
             <ItemTemplate>
@@ -209,7 +218,6 @@ ul#thumblist li a.zoomThumbActive{
 
 
 
-</div>
 </div>
 </div>
 

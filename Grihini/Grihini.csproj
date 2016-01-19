@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\addtocart_jqzoom.css" />
+    <Content Include="CSS\button1.css" />
+    <Content Include="CSS\button2.css" />
     <Content Include="CSS\cutedropdown.css" />
     <Content Include="CSS\HomeStyle.css" />
     <Content Include="CSS\jquery.jqzoom.css" />
@@ -81,6 +83,9 @@
     <Content Include="CSS\track_order.css" />
     <Content Include="CSS\viewstyle.css" />
     <Content Include="Default.aspx" />
+    <Content Include="fonts\codropsicons\license.txt" />
+    <Content Include="fonts\icomoon\license.txt" />
+    <Content Include="fonts\icomoon\Read Me.txt" />
     <Content Include="GUI_Form\aboutus.aspx" />
     <Content Include="GUI_Form\Addtocarttt.aspx" />
     <Content Include="GUI_Form\Add_ToCart.aspx" />
@@ -478,6 +483,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="App_LocalResources\" />
     <Folder Include="BootStrap_Contents\BootStrap_Css\" />
     <Folder Include="BootStrap_Contents\BootStrap_Fonts\" />
     <Folder Include="BootStrap_Contents\BootStrap_Js\" />
@@ -494,6 +500,16 @@
     <Content Include="GUI_Form\Master1.Master" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="fonts\.DS_Store" />
+    <None Include="fonts\codropsicons\codropsicons.eot" />
+    <None Include="fonts\codropsicons\codropsicons.svg" />
+    <None Include="fonts\codropsicons\codropsicons.ttf" />
+    <None Include="fonts\codropsicons\codropsicons.woff" />
+    <None Include="fonts\icomoon\icomoon.dev.svg" />
+    <None Include="fonts\icomoon\icomoon.eot" />
+    <None Include="fonts\icomoon\icomoon.svg" />
+    <None Include="fonts\icomoon\icomoon.ttf" />
+    <None Include="fonts\icomoon\icomoon.woff" />
     <None Include="GrihiniDataSet.xsc">
       <DependentUpon>GrihiniDataSet.xsd</DependentUpon>
     </None>
