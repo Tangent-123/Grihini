@@ -102,6 +102,7 @@
        <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" 
                         ErrorMessage="Select Category" 
                         ControlToValidate="Ddl_Category" ValidationGroup="Valid1" Display="None"></asp:RequiredFieldValidator>
+       <asp:TextBox ID="TextCategoryOther" Visible="false" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
     </div>
     </div>
 
@@ -116,6 +117,7 @@
         </asp:DropDownList>
         <asp:RequiredFieldValidator ID="RequiredFieldValidatorSubCategory" Display="None" ControlToValidate="Ddl_SubCategory"
         runat="server" ErrorMessage="Select Product Sub Category!" ValidationGroup="Valid1"></asp:RequiredFieldValidator>
+        <asp:TextBox ID="TextSubCatOther" Visible="false" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
     </div>
     </div>
     </div>

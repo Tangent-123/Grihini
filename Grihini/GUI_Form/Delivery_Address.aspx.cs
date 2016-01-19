@@ -210,6 +210,7 @@ namespace Grihini.GUI_Form
                 //    dropdownstate.Enabled = false;
                 //    dropdowncity.Enabled = false;
                 //}
+
                 if (dropdowncountry.SelectedValue == "1000")
                 {
                     dropdownstate.Enabled = false;
