@@ -366,7 +366,7 @@ a{
 	width:1024px;
 	float:left;
 	height:130px;
-	margin-top:30px;
+
 }
 .product-two{
 	float: left;
@@ -548,13 +548,15 @@ margin-top:35px;
 	font-size:12px;
 	color:#CCC;
 	float:left;
+	width:400px;
 }
 .companyname-area{
 	font-family:Arial;
 	font-size:12px;
 	color:#CCC;
 	float:right;
-	margin-left:550px;
+	margin-left:600px;
+	margin:-1px 0 0 0;
 }
 
 

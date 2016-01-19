@@ -3,6 +3,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+
+    <link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/addtocart_jqzoom.css" rel="stylesheet" type="text/css" />
     <script src="../JS/addtocart_one.js" type="text/javascript"></script>
     <script src="../JS/addtocart_two.js" type="text/javascript"></script>
@@ -30,8 +33,6 @@
 
     });
 </script>
-
-
 <style type"text/css">
 
 body{margin:0px;padding:0px;font-family:Arial;}
@@ -62,7 +63,6 @@ ul#thumblist li a.zoomThumbActive{
 }
 
 </style>
-
 <style type="text/css">
 	body {
 		font: normal 14px/21px Arial, serif;

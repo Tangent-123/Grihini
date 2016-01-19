@@ -351,20 +351,20 @@
 
 <div class="our-business">
 <div class="our-business-img"><img src="../Images/business.png" /></div>
-<div class="our-business-txt">OUR BUSINESS</div>
+<a href="aboutus.aspx"><div class="our-business-txt">OUR BUSINESS</div></a>
 <div class="our-business-txtdetail">Grihini has four major lines of business ranging from electronics, cable harness, tailoring and food products.</div>
 </div>
 
 
 <div class="founder-details">
 <div class="founder-details-img"><img src="../Images/founder.png" /></div>
-<div class="founder-details-txt">OUR FOUNDER</div>
+<a href="OUR_ORIGIN.aspx"><div class="founder-details-txt">OUR FOUNDER</div></a>
 <div class="founder-details-txtdetail">Mrs. Leelatai Moolgaonkar. Tata Motors Grihini Social Welfare Society was founded in 1973 under the guidance of Mrs. Leelatai Moolgaonkar.</div>
 </div>
 
 <div class="our-values">
 <div class="our-business-imges"><img src="../Images/values.png" /></div>
-<div class="our-values-txt">OUR VALUES</div>
+<a href="ourvalues.aspx"><div class="our-values-txt">OUR VALUES</div></a>
 <div class="our-values-txtdetail">An entrepreneurial spirit and shared vision can do wonders, surpass hurdles and liberate individuals. </div>
 
 </div>
@@ -382,7 +382,7 @@
 <div class="address">
 <div class="address-icon"><img src="../Images/address.png" /></div>
 <div class="address-details">
-<div class="address-details-one">Tata Motors Grihini Social Welfare Society <br/><br/>A-2-X-25, Tata motors colony, Pimpari, 
+<div class="address-details-one">Tata Motors Grihini Social Welfare Society <br/><br/>A-2-X-25, Tata motors colony, Pimpri, 
 Pune – 411018</div>
 </div>
 </div>
@@ -397,7 +397,7 @@ Pune – 411018</div>
 </div>
 
 
-<div class="quick-link"> 
+<%--<div class="quick-link"> 
 <div class="quick-link-txt">QUICK LINKS</div>
 <div class="tab">
 <ul>
@@ -407,7 +407,7 @@ Pune – 411018</div>
 <li><a href="#">MASALA</a></li>
 </ul>
 </div>
-</div>
+</div>--%>
 
 
 
