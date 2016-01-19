@@ -44,7 +44,7 @@ ul#thumblist li a.zoomThumbActive{
 
 </style>
 
-
+<link href="../CSS/button_2.css" rel="stylesheet" type="text/css" />
 
 <div class="wrapper">
 <div class="product">
@@ -127,7 +127,9 @@ ul#thumblist li a.zoomThumbActive{
 
     <div class="button">
     <div class="add2cart">
-        <asp:Button ID="Btn_AddtoCart" runat="server" Text="ADD TO CART" onclick="Btn_addtocart22_Click" Visible="true" cssclass="button-0"/>
+       <%-- <asp:Button ID="Btn_AddtoCart" runat="server" Text="ADD TO CART" onclick="Btn_addtocart22_Click" Visible="true" cssclass="button-0"/>--%>
+       <asp:LinkButton ID="LinkButtonAddTocart" runat="server" OnClick="Btn_addtocart22_Click" class="btn btn-5 btn-5a icon-cart" Visible="true"><span> ADD TO CART</span></asp:LinkButton>
+
    
                             <asp:ImageButton ID="ImageButton2"  runat="server" ImageUrl="../Images/addtocart_false.png"
                            onclick="Btn_addtocart22_Click" Visible="false" Enabled="false"/>
@@ -135,13 +137,19 @@ ul#thumblist li a.zoomThumbActive{
 
       
     <div class="buy2now">
-        <asp:Button ID="btn_buynoww" runat="server" Text="BUY NOW" Visible="true" OnClick="Btn_buynow_Click" CssClass="button-0"/>
+<%--        <asp:Button ID="btn_buynoww" runat="server" Text="BUY NOW" Visible="true" OnClick="Btn_buynow_Click" CssClass="button-0"/>--%>
+
+<asp:LinkButton ID="LinkButto_buynoww" runat="server" onclick="Btn_buynow_Click" class="btn btn-50 btn-50a icon-cart" Visible="true"><span> BUY NOW</span></asp:LinkButton>
+
 
     </div>
 
 
     <div class="buy2now">
-    <asp:Button ID="Button3" runat="server" Text="Choose More Items" OnClick="buymore_click" CssClass="button-0" />
+   <%-- <asp:Button ID="Button3" runat="server" Text="Choose More Items" OnClick="buymore_click" CssClass="button-0" />--%>
+
+   
+            <asp:LinkButton ID="LinkButton_choosemore" OnClick="buymore_click" runat="server" class="btn btn-51 btn-51a glyphicon-plus"><span> CHOOSE MORE PRODUCTS</span></asp:LinkButton>
               
     </div>
 

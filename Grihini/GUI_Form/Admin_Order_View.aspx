@@ -199,7 +199,7 @@ ul#thumblist li a.zoomThumbActive{
 <div id="View1" runat="server" class="main-wrapper" style="height:425px;">
 
 <div style="width:1024px; float:left; height:35px; margin:15px 0 0 0; background-color:#0099CC;">
-<div class="add2main-txt">PRODUCT DETAILS</div>
+<div class="add2main-txt">ORDER LIST</div>
 </div>
 <asp:GridView ID="GridView_Pro_View" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Products In Cart"
      AllowSorting="false" Visible="true" Width="1024px" EnableModelValidation="True" EmptyDataRowStyle-Font-Bold="true" EmptyDataRowStyle-BorderColor="Red"
@@ -209,65 +209,51 @@ ul#thumblist li a.zoomThumbActive{
 
     <Columns>
 
-    <asp:TemplateField HeaderText="Order Id"   ControlStyle-Font-Size="12px" >
+            <asp:TemplateField HeaderText="ORDER ID"   ControlStyle-Font-Size="12px" >
             <ItemTemplate>
             <asp:Label ID="lbl_Item1" runat="server" Text='<%#Eval("Order_Id") %>'></asp:Label>
-            
-
             </ItemTemplate>
             </asp:TemplateField>
 
-  <asp:TemplateField HeaderText="ITEM"   ControlStyle-Font-Size="12px"  >
+            <asp:TemplateField HeaderText="PRODUCT NAME"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_Item2" runat="server" Text='<%#Eval("Product_name") %>'></asp:Label>
-            
-
             </ItemTemplate>
             </asp:TemplateField>
 
             <asp:ImageField DataImageUrlField="ImageName2" ControlStyle-Width="100"
-        ControlStyle-Height = "100" HeaderText = "Preview Image"/>
+        ControlStyle-Height = "100" HeaderText = "PRODUCT IMAGE"/>
 
-      
-
-  <asp:TemplateField HeaderText="QTY"   ControlStyle-Font-Size="12px"  >
+            <asp:TemplateField HeaderText="QUANTITY"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_QTY" runat="server" Text='<%#Eval("Quantity") %>'></asp:Label>
-
             </ItemTemplate>
             </asp:TemplateField>
 
-  <asp:TemplateField HeaderText="PRICE (Rs.)"   ControlStyle-Font-Size="12px"  >
+            <asp:TemplateField HeaderText="PRICE (Rs.)"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_PRICE" runat="server" text='<%#Eval("Product_price") %>'></asp:Label>
             </ItemTemplate>
             </asp:TemplateField>
 
-  <asp:TemplateField HeaderText="Subtotal (Rs.)"   ControlStyle-Font-Size="12px"  >
+            <asp:TemplateField HeaderText="SUBTOTAL (Rs.)"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_Subtotal1" runat="server" text='<%#Eval("Subtotal") %>'></asp:Label>
             </ItemTemplate>
             </asp:TemplateField>
 
-           <asp:TemplateField HeaderText="Order Status"   ControlStyle-Font-Size="12px"  >
+            <asp:TemplateField HeaderText="ORDER STATUS"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_Subtotal2" runat="server" text='<%#Eval("Order_Status") %>'></asp:Label>
             </ItemTemplate>
             </asp:TemplateField>
 
-             <asp:TemplateField HeaderText="Order Status"   ControlStyle-Font-Size="12px"  >
+             <asp:TemplateField HeaderText="ACTION"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
-          
-              <asp:Button ID="Button_View" runat="server" Text="View Details"  CssClass="button-0" ToolTip="View Details" CommandName="Address_id" CommandArgument='<%#Eval("Deliver_Address_Id")+","+Eval("user_Id")+","+Eval("Product_Id")+","+Eval("order_id")%>'/>
-                            
-            </ItemTemplate>
+             <asp:Button ID="Button_View" runat="server" Text="View Details"  CssClass="button-0" ToolTip="View Details" CommandName="Address_id" CommandArgument='<%#Eval("Deliver_Address_Id")+","+Eval("user_Id")+","+Eval("Product_Id")+","+Eval("order_id")%>'/>
+             </ItemTemplate>
             </asp:TemplateField>
-  
-  
-  </Columns>
-
-
-
+    </Columns>
     </asp:GridView>
 
 
@@ -276,7 +262,7 @@ ul#thumblist li a.zoomThumbActive{
 <div id="view_pro" runat="server" class="main-wrapper" visible="false">
 <div>
 <div style="width:1024px; float:left; height:35px; margin:5px 0 0 0; background-color:#0099CC;">
-<div class="add2main-txt">PRODUCT DETAILS</div>
+<div class="add2main-txt">ORDER DETAILS</div>
 </div>
 <asp:GridView ID="GridView_Product_Det" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Products In Cart"
      AllowSorting="false" Visible="true" Width="1024px" EnableModelValidation="True" EmptyDataRowStyle-Font-Bold="true" EmptyDataRowStyle-BorderColor="Red"
@@ -286,69 +272,58 @@ ul#thumblist li a.zoomThumbActive{
 
     <Columns>
 
-    <asp:TemplateField HeaderText="Order Id"   ControlStyle-Font-Size="12px" >
+            <asp:TemplateField HeaderText="ORDER ID"   ControlStyle-Font-Size="12px" >
             <ItemTemplate>
             <asp:Label ID="lbl_Item1" runat="server" Text='<%#Eval("Order_Id") %>'></asp:Label>
-            
-
             </ItemTemplate>
             </asp:TemplateField>
 
-  <asp:TemplateField HeaderText="ITEM"   ControlStyle-Font-Size="12px"  >
+            <asp:TemplateField HeaderText="PRODUCT NAME"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_Item2" runat="server" Text='<%#Eval("Product_name") %>'></asp:Label>
-            
-
             </ItemTemplate>
             </asp:TemplateField>
 
             <asp:ImageField DataImageUrlField="ImageName2" ControlStyle-Width="100"
-        ControlStyle-Height = "100" HeaderText = "Preview Image"/>
+        ControlStyle-Height = "100" HeaderText = "PRODUCT IMAGE"/>
 
       
 
-  <asp:TemplateField HeaderText="QTY"   ControlStyle-Font-Size="12px"  >
+            <asp:TemplateField HeaderText="QUANTITY"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_QTY" runat="server" Text='<%#Eval("Quantity") %>'></asp:Label>
-
             </ItemTemplate>
             </asp:TemplateField>
 
         <asp:ImageField DataImageUrlField="ImageName3" ControlStyle-Width="100"
         ControlStyle-Height = "100" HeaderText = "PRODUCT COLOR"/>
 
-        <asp:TemplateField HeaderText="SIZE"   ControlStyle-Font-Size="12px"  >
+            <asp:TemplateField HeaderText="SIZE"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_SIZE" runat="server" Text='<%#Eval("size") %>'></asp:Label>
-
             </ItemTemplate>
             </asp:TemplateField>
 
-  <asp:TemplateField HeaderText="PRICE (Rs.)"   ControlStyle-Font-Size="12px"  >
+            <asp:TemplateField HeaderText="PRICE (Rs.)"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_PRICE" runat="server" text='<%#Eval("Product_price") %>'></asp:Label>
             </ItemTemplate>
             </asp:TemplateField>
 
-  <%--<asp:TemplateField HeaderText="Subtotal (Rs.)"   ControlStyle-Font-Size="12px"  >
+            <%--<asp:TemplateField HeaderText="Subtotal (Rs.)"   ControlStyle-Font-Size="12px">
             <ItemTemplate>
             <asp:Label ID="lbl_Subtotal1" runat="server" text='<%#Eval("Subtotal") %>'></asp:Label>
             </ItemTemplate>
             </asp:TemplateField>--%>
 
-           <asp:TemplateField HeaderText="Order Status"   ControlStyle-Font-Size="12px" >
+           <asp:TemplateField HeaderText="ORDER STATUS"   ControlStyle-Font-Size="12px" >
             <ItemTemplate>
             <asp:Label ID="lbl_Subtotal2" runat="server" text='<%#Eval("Order_Status") %>'></asp:Label>
             </ItemTemplate>
             </asp:TemplateField>
 
-             
-  
-  </Columns>
-
-
-
-    </asp:GridView>
+            </Columns>
+            </asp:GridView>
 
 </div>
 
@@ -394,7 +369,7 @@ ul#thumblist li a.zoomThumbActive{
 
 </li>
 <li class="title" style="margin:8px 0 0 0;"> 
-<b>PinCode:</b>
+<b>Pincode:</b>
 <asp:Label ID="lbl_Pincode" runat="server" text='<%#Eval("Pincode") %>'></asp:Label>
 </li>
  <li class="title" style="margin:8px 0 0 0;"> 
@@ -524,12 +499,12 @@ ul#thumblist li a.zoomThumbActive{
 </div>
 
 <div>
- <asp:Label ID="lblmsgshow" runat="server" Text="" style="color:Red; visibility="false"></asp:Label>
+ <asp:Label ID="lblmsgshow" runat="server" Text="" style="color:Red;" visibility="false"></asp:Label>
 
 </div>
 
 
 
-</div>
+<%--</div>--%>
 
 </asp:Content>

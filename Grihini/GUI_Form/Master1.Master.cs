@@ -65,10 +65,11 @@ namespace Grihini.GUI_Form
                         Home.Visible = false;
                         View_Products.Visible = false;
                         View_Products1.Visible = true;
-                        View_Products2.Visible = true;
+                       //View_Products2.Visible = true;
                         Addprod.Visible = true;
                         Menu1.Visible = true;
                         main_menu.Visible = true;
+                        Div2.Visible = false;
 
                     }
                     else
@@ -77,7 +78,7 @@ namespace Grihini.GUI_Form
                         Home.Visible = true;
                         View_Products.Visible = true;
                         View_Products1.Visible = false;
-                        View_Products2.Visible = false;
+                        //View_Products2.Visible = false;
                         Addprod.Visible = false;
                         fetchtrack();
                         fetchcartcount();

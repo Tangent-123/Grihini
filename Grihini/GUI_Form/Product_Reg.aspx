@@ -102,6 +102,7 @@
        <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" 
                         ErrorMessage="Select Category" 
                         ControlToValidate="Ddl_Category" ValidationGroup="Valid1" Display="None"></asp:RequiredFieldValidator>
+       <asp:TextBox ID="TextCategoryOther" Visible="false" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
     </div>
     </div>
 
@@ -116,6 +117,7 @@
         </asp:DropDownList>
         <asp:RequiredFieldValidator ID="RequiredFieldValidatorSubCategory" Display="None" ControlToValidate="Ddl_SubCategory"
         runat="server" ErrorMessage="Select Product Sub Category!" ValidationGroup="Valid1"></asp:RequiredFieldValidator>
+        <asp:TextBox ID="TextSubCatOther" Visible="false" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
     </div>
     </div>
     </div>
@@ -149,7 +151,7 @@
     
     <div> 
          <textarea ID="Text_Pro_Description" runat="server" class="txtBox" cols="41" 
-                onkeydown="LimtCharacters(this,150,'lblcount111');" rows="3" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></textarea>
+                onkeydown="LimtCharacters(this,150,'lblcount111');" rows="5" style="width:230px; float:left; background-color:#FFF; height:50px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></textarea>
                 <asp:RequiredFieldValidator ID="RequiredFieldValidatorProductDescription" Display="None" ControlToValidate="Text_Pro_Description"
         runat="server" ErrorMessage="Enter Product Description!" ValidationGroup="Valid1"></asp:RequiredFieldValidator>
 
@@ -164,7 +166,7 @@
           <div class="reg-boxone">
     <div class="form-box-left">
     <div> 
-          <asp:Label ID="Label10" runat="server" Text="Product Price(Rs.)"></asp:Label> 
+          <asp:Label ID="Label10" runat="server" Text="Product Price (Rs.)"></asp:Label> 
           <asp:Label ID="Label11" runat="server" Text="*" Font-Size="12px" ForeColor="Red"></asp:Label>
     </div>
 
@@ -176,7 +178,7 @@
     </div>
     <div class="form-box-right">
      <div> 
-          <asp:Label ID="Label14" runat="server" Text="Max quantity"></asp:Label> 
+          <asp:Label ID="Label14" runat="server" Text="Quantity"></asp:Label> 
           <asp:Label ID="Label15" runat="server" Text="*" Font-Size="12px" ForeColor="Red"></asp:Label>
      </div>
 
@@ -311,7 +313,7 @@
 
          <div class="form-box-left">     
           <div> 
-          <asp:Label ID="Label16" runat="server" Text="color"></asp:Label> 
+          <asp:Label ID="Label16" runat="server" Text="Product Colour"></asp:Label> 
           <asp:Label ID="Label17" runat="server" Text="*" Font-Size="12px" ForeColor="Red"></asp:Label>
           </div>
 
@@ -465,6 +467,19 @@
 
                   
                </div>
+
+               <div style="width:auto; height:auto; float:right; margin:3px 50px 10px 0; ">
+                <asp:ImageButton ID="Btn_Excel_Export2" runat="server" Width="25px"  Height="25px"
+                    ImageUrl="~/Images/NewExcel_Download.png" ToolTip="Download Excel" 
+                    onclick="Btn_Excel_Export2_Click"/>
+
+
+                    <asp:ImageButton ID="Btn_Pdf_Export2" runat="server" Width="25px"  Height="25px"
+                    ImageUrl="~/Images/NewPDF_Download.png" ToolTip="Download Pdf" 
+                    onclick="Btn_Pdf_Export2_Click"/>
+                    
+        </div>
+
     <div class="main-wrapper">
             <div id="Panel3" runat="server" class="grid"  style="width:1024px; min-height:30px; margin:5px 0 0 8px; float:left; border:1px solid #ccc; overflow:auto; background-color:White; text-align:center;">
             <asp:GridView ID="GridViewProduct" runat="server" AutoGenerateColumns="False" 
@@ -530,17 +545,7 @@
          
            </div>
 
-            <div style="width:auto; height:auto; float:right; margin:3px 10px 10px 0; ">
-                <asp:ImageButton ID="Btn_Excel_Export2" runat="server" Width="50px"  Height="50px"
-                    ImageUrl="~/Images/NewExcel_Download.png" ToolTip="Download Excel" 
-                    onclick="Btn_Excel_Export2_Click"/>
-
-
-  <asp:ImageButton ID="Btn_Pdf_Export2" runat="server" Width="50px"  Height="50px"
-                    ImageUrl="~/Images/NewPDF_Download.png" ToolTip="Download Pdf" 
-                    onclick="Btn_Pdf_Export2_Click"/>
-                    
-        </div>
+            
            </div>
            </div>
     <%--</div>--%>

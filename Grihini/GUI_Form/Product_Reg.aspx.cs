@@ -29,7 +29,7 @@ namespace Grihini.GUI_Form
         {
             if (!IsPostBack)
             {
-                AllCategory();
+                //AllCategory();
                 //AllSubCategory();
 
                 if (!IsPostBack)
@@ -89,7 +89,8 @@ namespace Grihini.GUI_Form
             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
         }
 
@@ -116,12 +117,12 @@ namespace Grihini.GUI_Form
                 {
                 }
 
-                //ListItem li = new ListItem("Select Category", "0");
-                //Ddl_Category.Items.Insert(0, li);
+                
             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
         }
 
@@ -152,7 +153,8 @@ namespace Grihini.GUI_Form
             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
 
         }
@@ -487,7 +489,8 @@ namespace Grihini.GUI_Form
                         }
                         catch (Exception ex)
                         {
-
+                            string strError = ex.Message.Replace("'", "");
+                            Response.Write("<script>alert('" + strError + "');</script>");
                         }
 
                         //-----------------------------------------------//
@@ -547,7 +550,8 @@ namespace Grihini.GUI_Form
             catch (Exception ex)
             {
 
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
         }
 
@@ -582,7 +586,8 @@ namespace Grihini.GUI_Form
             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
         }
 

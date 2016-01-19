@@ -220,7 +220,7 @@ namespace Grihini_BL.BL
             return dt;
         }
 
-        public DataTable Insert_Products(int OperationId, int userid, string Name, string Country, string State, string City,
+        public DataTable Insert_Products(int OperationId, int userid, string Name, int Country_Id, int State_Id, string Location,
                                         string Pincode, string Address, string Landmark, string Phone)
         {
             SqlParameter[] param = new SqlParameter[10];
@@ -233,22 +233,21 @@ namespace Grihini_BL.BL
             param[1].Direction = ParameterDirection.Input;
             param[1].Value = userid;
 
-
             param[2] = new SqlParameter("@Name", SqlDbType.VarChar, 100);
             param[2].Direction = ParameterDirection.Input;
             param[2].Value = Name;
 
-            param[3] = new SqlParameter("@Country", SqlDbType.VarChar, 100);
+            param[3] = new SqlParameter("@Country_Id", SqlDbType.Int);
             param[3].Direction = ParameterDirection.Input;
-            param[3].Value = Country;
+            param[3].Value = Country_Id;
 
-            param[4] = new SqlParameter("@State", SqlDbType.VarChar, 100);
+            param[4] = new SqlParameter("@State_Id", SqlDbType.Int);
             param[4].Direction = ParameterDirection.Input;
-            param[4].Value = State;
+            param[4].Value = State_Id;
 
-            param[5] = new SqlParameter("@City", SqlDbType.VarChar, 100);
+            param[5] = new SqlParameter("@Location", SqlDbType.VarChar, 100);
             param[5].Direction = ParameterDirection.Input;
-            param[5].Value = City;
+            param[5].Value = Location;
 
             param[6] = new SqlParameter("@Pincode", SqlDbType.VarChar, 100);
             param[6].Direction = ParameterDirection.Input;
@@ -267,12 +266,6 @@ namespace Grihini_BL.BL
             param[9] = new SqlParameter("@PhoneNo", SqlDbType.VarChar, 100);
             param[9].Direction = ParameterDirection.Input;
             param[9].Value = Phone;
-
-
-
-            //int dt = ogde.Insert_Update_Del("usp_Txn_Cart", param);
-
-            //return dt;
 
             DataTable dt = new DataTable();
             dt = ogde.Return_DataTable("usp_Txn_Cart", param);

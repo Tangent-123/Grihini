@@ -20,7 +20,7 @@
     
     </div>
     <div style="float:left; margin:28px 0 0 30px;"> 
-    <asp:Label ID="Label1" runat="server" Text="User Name"></asp:Label> 
+    <asp:Label ID="Label1" runat="server" Text="Email Id"></asp:Label> 
     </div>
 
     <div style="float:left; margin:55px 0 0 -80px;">

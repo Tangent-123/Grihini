@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CSS\addtocart_jqzoom.css" />
+    <Content Include="CSS\button_2.css" />
     <Content Include="CSS\cutedropdown.css" />
     <Content Include="CSS\HomeStyle.css" />
     <Content Include="CSS\jquery.jqzoom.css" />
@@ -68,6 +69,7 @@
     <Content Include="CSS\need.css" />
     <Content Include="CSS\newarrival_style.css" />
     <Content Include="CSS\newstyle.css" />
+    <Content Include="CSS\popup.css" />
     <Content Include="CSS\product_slider.css" />
     <Content Include="CSS\screen.css" />
     <Content Include="CSS\search_component.css" />
@@ -92,6 +94,7 @@
     <Content Include="GUI_Form\MonthWiseUserOrder.aspx" />
     <Content Include="GUI_Form\ourvalues.aspx" />
     <Content Include="GUI_Form\OUR_ORIGIN.aspx" />
+    <Content Include="GUI_Form\popup.aspx" />
     <Content Include="GUI_Form\Products_Details_View.aspx" />
     <Content Include="GUI_Form\Products_Order_Confirm.aspx" />
     <Content Include="GUI_Form\Products_View.aspx" />
@@ -268,6 +271,7 @@
     <Content Include="JS\arrival_min.js" />
     <Content Include="JS\arrival_vmc.js" />
     <Content Include="JS\cutedrop.js" />
+    <Content Include="JS\Jquery.min.js" />
     <Content Include="JS\js1.6.js" />
     <Content Include="JS\menu_animate.js" />
     <Content Include="JS\menu_font.js" />
@@ -396,6 +400,13 @@
     </Compile>
     <Compile Include="GUI_Form\OUR_ORIGIN.aspx.designer.cs">
       <DependentUpon>OUR_ORIGIN.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Form\popup.aspx.cs">
+      <DependentUpon>popup.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI_Form\popup.aspx.designer.cs">
+      <DependentUpon>popup.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI_Form\Products_Details_View.aspx.cs">
       <DependentUpon>Products_Details_View.aspx</DependentUpon>

@@ -31,6 +31,15 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.View View_UserInsert;
         
         /// <summary>
+        /// Btn_View control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Btn_View;
+        
+        /// <summary>
         /// Lb_name control.
         /// </summary>
         /// <remarks>
@@ -238,15 +247,6 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.TextBox Text_Dob;
         
         /// <summary>
-        /// Img_Pres control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton Img_Pres;
-        
-        /// <summary>
         /// RequiredFieldValidator13 control.
         /// </summary>
         /// <remarks>
@@ -391,15 +391,6 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator8;
         
         /// <summary>
-        /// TextCountryOther control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextCountryOther;
-        
-        /// <summary>
         /// Label20 control.
         /// </summary>
         /// <remarks>
@@ -434,15 +425,6 @@ namespace Grihini.GUI_Form {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator9;
-        
-        /// <summary>
-        /// TextStateOther control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextStateOther;
         
         /// <summary>
         /// Label22 control.
@@ -488,6 +470,15 @@ namespace Grihini.GUI_Form {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextLocationOther;
+        
+        /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// Label9 control.

@@ -49,15 +49,6 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.DropDownList dropdowncountry;
         
         /// <summary>
-        /// TextOtherCountry control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextOtherCountry;
-        
-        /// <summary>
         /// req_country control.
         /// </summary>
         /// <remarks>
@@ -76,13 +67,13 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.DropDownList dropdownstate;
         
         /// <summary>
-        /// TextOtherState control.
+        /// req_state control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextOtherState;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_state;
         
         /// <summary>
         /// dropdowncity control.
@@ -94,13 +85,31 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.DropDownList dropdowncity;
         
         /// <summary>
-        /// TextOtherCity control.
+        /// req_city control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextOtherCity;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator req_city;
+        
+        /// <summary>
+        /// TextOtherLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextOtherLocation;
+        
+        /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// txtpincode control.
