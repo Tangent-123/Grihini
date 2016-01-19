@@ -62,7 +62,7 @@ namespace Grihini_BL.BL
             return dt;
         }
 
-        public DataTable Insert_Products(int OperationId, int Category, int SubCategory, string Product_Name, string Description, string Text_Price, string Max_quantity, string Discount)
+        public DataTable Insert_Products(int OperationId, string Category, string SubCategory, string Product_Name, string Description, string Text_Price, string Max_quantity, string Discount)
         {
 
             SqlParameter[] param = new SqlParameter[8];
@@ -71,11 +71,11 @@ namespace Grihini_BL.BL
             param[0].Direction = ParameterDirection.Input;
             param[0].Value = OperationId;
 
-            param[1] = new SqlParameter("@Category_id", SqlDbType.Int);
+            param[1] = new SqlParameter("@Category_name", SqlDbType.VarChar, 100);
             param[1].Direction = ParameterDirection.Input;
             param[1].Value = Category;
 
-            param[2] = new SqlParameter("@Subcategory_id", SqlDbType.Int);
+            param[2] = new SqlParameter("@SubCategory_name", SqlDbType.VarChar, 100);
             param[2].Direction = ParameterDirection.Input;
             param[2].Value = SubCategory;
 

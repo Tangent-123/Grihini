@@ -2,6 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+   
     <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/addtocart_jqzoom.css" rel="stylesheet" type="text/css" />
     <script src="../JS/addtocart_one.js" type="text/javascript"></script>
@@ -201,6 +202,7 @@ ul#thumblist li a.zoomThumbActive{
 <div style="width:1024px; float:left; height:35px; margin:15px 0 0 0; background-color:#0099CC;">
 <div class="add2main-txt">ORDER LIST</div>
 </div>
+
 <asp:GridView ID="GridView_Pro_View" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Products In Cart"
      AllowSorting="false" Visible="true" Width="1024px" EnableModelValidation="True" EmptyDataRowStyle-Font-Bold="true" EmptyDataRowStyle-BorderColor="Red"
      EmptyDataRowStyle-BackColor="Azure" EmptyDataRowStyle-ForeColor="Red" onrowcommand="griduser_RowCommand1">

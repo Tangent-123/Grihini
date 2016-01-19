@@ -27,12 +27,7 @@ namespace Grihini.GUI_Form
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                //AllCategory();
-                //AllSubCategory();
-
-                if (!IsPostBack)
+             if (!IsPostBack)
                 {
 
                     if (Request.QueryString["target"] == "AddProduct")
@@ -44,13 +39,6 @@ namespace Grihini.GUI_Form
                         Btn_Submit.Visible = true;
                         fetchAllProduct();
                         AllCategory();
-
-                        //fetchAllCompany();
-
-
-                        //ListItem li = new ListItem("Select Location", "0");
-                        //Ddl_Location.Items.Insert(0, li);
-
                     }
                     else if (Request.QueryString["target"] == "ViewAllProduct")
                     {
@@ -65,7 +53,7 @@ namespace Grihini.GUI_Form
 
             }
 
-        }
+       
         //--------------Fetch All Product Details In GridView---------////
         private void fetchAllProduct()
         {
@@ -128,28 +116,61 @@ namespace Grihini.GUI_Form
 
         protected void Category_Subcategory10(object sender, EventArgs e)
         {
+            Ddl_SubCategory.Enabled = false;
             try
             {
-                int category = Convert.ToInt32(Ddl_Category.SelectedValue);
+                //int category = Convert.ToInt32(Ddl_Category.SelectedValue);
 
-                DataTable dt = new DataTable();
-                dt = pr.getSubCategory(6, category);
+                //DataTable dt = new DataTable();
+                //dt = pr.getSubCategory(6, category);
 
-                if (dt.Rows.Count > 0)
+                //if (dt.Rows.Count > 0)
+                //{
+
+                //    Ddl_SubCategory.DataSource = dt;
+                //    Ddl_SubCategory.DataTextField = "Subcategory_name";
+                //    Ddl_SubCategory.DataValueField = "Subcategory_id";
+                //    Ddl_SubCategory.DataBind();
+
+                //}
+                //else
+                //{
+                //}
+
+                if (Ddl_Category.SelectedValue == "1000")
                 {
-
-                    Ddl_SubCategory.DataSource = dt;
-                    Ddl_SubCategory.DataTextField = "Subcategory_name";
-                    Ddl_SubCategory.DataValueField = "Subcategory_id";
-                    Ddl_SubCategory.DataBind();
+                   
+                    Ddl_SubCategory.Enabled = false;
+                    TextCategoryOther.Visible = true;
+                    Ddl_SubCategory.Items.Clear();
+                    TextSubCatOther.Visible = true;
 
                 }
                 else
                 {
-                }
+                   
+                    TextCategoryOther.Visible = false;
+                    TextSubCatOther.Visible = false;
+                    Ddl_Category.Enabled = true;
+                    Ddl_SubCategory.Enabled = true;
 
-                //ListItem li = new ListItem("Select SubCategory", "0");
-                //Ddl_SubCategory.Items.Insert(0, li);
+                    int category = Convert.ToInt32(Ddl_Category.SelectedValue);
+
+                    DataTable dt = new DataTable();
+                    dt = pr.getSubCategory(6, category);
+
+                    if (dt.Rows.Count > 0)
+                    {
+
+                        Ddl_SubCategory.DataSource = dt;
+                        Ddl_SubCategory.DataTextField = "Subcategory_name";
+                        Ddl_SubCategory.DataValueField = "Subcategory_id";
+                        Ddl_SubCategory.DataBind();
+
+                    }
+
+                }
+                
             }
             catch (Exception ex)
             {
@@ -183,6 +204,20 @@ namespace Grihini.GUI_Form
 
             try
             {
+                string CategoryName = null;
+                string SubCategoryName = null;
+
+                if (Ddl_Category.SelectedValue == "1000")
+                {
+                    CategoryName = Convert.ToString(TextCategoryOther.Text);
+                    SubCategoryName = Convert.ToString(TextSubCatOther.Text);
+
+                }
+                else
+                {
+                    CategoryName = Ddl_Category.SelectedItem.Text;
+                    SubCategoryName = Ddl_SubCategory.SelectedItem.Text;
+                }
 
                 string size = "";
                 string Weight = "";
@@ -196,7 +231,10 @@ namespace Grihini.GUI_Form
                 //if (Btn_Submit.Text == "Save")
 
 
-                dt = pr.Insert_Products(1, Convert.ToInt32(Ddl_Category.SelectedValue), Convert.ToInt32(Ddl_SubCategory.SelectedValue), Text_Product_Name.InnerText,
+                //dt = pr.Insert_Products(1, Convert.ToInt32(Ddl_Category.SelectedValue), Convert.ToInt32(Ddl_SubCategory.SelectedValue), Text_Product_Name.InnerText,
+                //    Text_Pro_Description.InnerText, Text_Price.Text, Text_Max_quantity.Text, Text_Discount.Text);
+
+                dt = pr.Insert_Products(1, CategoryName, SubCategoryName, Text_Product_Name.InnerText,
                     Text_Pro_Description.InnerText, Text_Price.Text, Text_Max_quantity.Text, Text_Discount.Text);
 
 
