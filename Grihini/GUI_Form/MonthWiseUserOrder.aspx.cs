@@ -58,7 +58,8 @@ namespace Grihini.GUI_Form
             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
         }
 
@@ -102,8 +103,164 @@ namespace Grihini.GUI_Form
 
         //-------------Button click event to Pdf Download of GridView----/////
 
-        protected void BtnDownloadPdf_Click(object sender, EventArgs e)
+        //protected void BtnDownloadPdf_Click(object sender, EventArgs e)
+        //{
+        //    using (StringWriter sw = new StringWriter())
+        //    {
+        //        using (HtmlTextWriter hw = new HtmlTextWriter(sw))
+        //        {
+        //            Document pdfDoc = new Document(PageSize.A2, 10f, 10f, 10f, 0f);
+        //            HTMLWorker htmlparser = new HTMLWorker(pdfDoc);
+        //            PdfWriter.GetInstance(pdfDoc, Response.OutputStream);
+        //            pdfDoc.Open();
+        //            using (MemoryStream stream = new MemoryStream())
+        //            {
+        //                string imageURL = Server.MapPath(".") + "../../Images/whiteBackground.png";
+        //                iTextSharp.text.Image chartImage = iTextSharp.text.Image.GetInstance(imageURL);
+
+        //                chartImage.ScalePercent(65f);
+        //                chartImage.ScaleToFit(30f, 30f);
+        //                chartImage.Alignment = iTextSharp.text.Image.DX;
+
+        //                pdfDoc.Add(chartImage);
+        //            }
+        //            using (MemoryStream stream = new MemoryStream())
+        //            {
+        //                string imageURL = Server.MapPath(".") + "../../Images/whiteBackground.png";
+        //                iTextSharp.text.Image chartImage = iTextSharp.text.Image.GetInstance(imageURL);
+
+        //                chartImage.ScalePercent(65f);
+        //                chartImage.ScaleToFit(100f, 100f);
+        //                chartImage.Alignment = iTextSharp.text.Image.DX;
+
+        //                pdfDoc.Add(chartImage);
+        //            }
+        //            using (MemoryStream stream = new MemoryStream())
+        //            {
+        //                string imageURL = Server.MapPath(".") + "../../Images/whiteBackground.png";
+        //                iTextSharp.text.Image chartImage = iTextSharp.text.Image.GetInstance(imageURL);
+
+        //                chartImage.ScalePercent(65f);
+        //                chartImage.ScaleToFit(30f, 60f);
+        //                chartImage.Alignment = iTextSharp.text.Image.DY;
+
+        //                pdfDoc.Add(chartImage);
+        //            }
+        //            using (MemoryStream stream = new MemoryStream())
+        //            {
+        //                string imageURL = Server.MapPath(".") + "../../Images/welcome.jpg";
+        //                iTextSharp.text.Image chartImage = iTextSharp.text.Image.GetInstance(imageURL);
+
+        //                chartImage.ScalePercent(65f);
+        //                chartImage.ScaleToFit(200f, 80f);
+        //                chartImage.Alignment = iTextSharp.text.Image.DY;
+
+        //                pdfDoc.Add(chartImage);
+        //            }
+        //            Paragraph paragraph1 = new Paragraph("Project Wise Stackholder Details");
+        //            paragraph1.Font.Size = 16;
+        //            pdfDoc.Add(new Paragraph(paragraph1));
+        //            using (MemoryStream stream = new MemoryStream())
+        //            {
+        //                string imageURL = Server.MapPath(".") + "../../Images/whiteBackground.png";
+        //                iTextSharp.text.Image chartImage = iTextSharp.text.Image.GetInstance(imageURL);
+
+        //                chartImage.ScalePercent(65f);
+        //                chartImage.ScaleToFit(30f, 60f);
+        //                chartImage.Alignment = iTextSharp.text.Image.DY;
+
+        //                pdfDoc.Add(chartImage);
+        //            }
+
+
+        //            Panel1.RenderControl(hw);
+        //            StringReader sr = new StringReader(sw.ToString());
+        //            htmlparser.Parse(sr);
+        //            Paragraph paragraph4 = new Paragraph("       ");
+        //            paragraph4.Font.Size = 150;
+        //            pdfDoc.Add(new Paragraph(paragraph4));
+        //            DateTime today = DateTime.Now;
+
+        //            string datetime = (today.ToString("ddd MMM dd yyyy HH:mm:ss"));
+        //            Paragraph paragraph3 = new Paragraph("Report Generated On : " + datetime + "");
+        //            paragraph3.Font.Size = 10;
+        //            pdfDoc.Add(new Paragraph(paragraph3));
+
+        //            pdfDoc.Close();
+        //            Response.ContentType = "application/pdf";
+        //            Response.AddHeader("content-disposition", "attachment;filename=Month_Wise_Order_Details.pdf");
+        //            Response.Cache.SetCacheability(HttpCacheability.NoCache);
+        //            Response.Write(pdfDoc);
+        //            Response.End();
+
+
+        //        }
+        //    }
+
+           
+        //}
+
+        //------------Button click Event To Download Excel File of The Bound GridView-----------///
+        //protected void BtnDownloadExcel_Click(object sender, EventArgs e)
+        //{
+        //    PrepareControlForExport(GridViewMonthWiseUserOrder);
+        //    ExportGridView();
+        //}
+
+
+
+        //-------------Method to Export Excel File-----//
+
+        private void ExportGridView()
         {
+            try
+            {
+                Response.ClearContent();
+                Response.ClearHeaders();
+
+                Response.ContentType = "application/vnd.ms-excel";
+                Response.AddHeader("Content-Disposition", "attachment; filename=Monthwise_User_Order_Report.xls");
+
+                StringWriter sw = new StringWriter();
+                HtmlTextWriter htw = new HtmlTextWriter(sw);
+                GridViewMonthWiseUserOrder.RenderControl(htw);
+                Response.Write(sw.ToString());
+                Response.End();
+            }
+            catch (Exception ex)
+            {
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
+            }
+        }
+        //--------Gridview RowCommand Event----///
+        protected void GridViewMonthWiseUserOrder_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
+            if (e.CommandName == "details")
+                {
+                   
+                    Session["UserID"] = Convert.ToInt32(e.CommandArgument);
+                    Response.Redirect("SpecificUserOrderDescription.aspx");
+                   
+              }
+        
+                   
+
+                
+        }
+
+        //------------Button click Event To Download Excel File of The Bound GridView-----------///
+        protected void Btn_Excel_Export4_Click(object sender, ImageClickEventArgs e)
+        {
+            PrepareControlForExport(GridViewMonthWiseUserOrder);
+            ExportGridView();
+        }
+
+        //-------------Button click event to Pdf Download of GridView----/////
+        protected void Btn_Pdf_Export4_Click(object sender, ImageClickEventArgs e)
+        {
+
             using (StringWriter sw = new StringWriter())
             {
                 using (HtmlTextWriter hw = new HtmlTextWriter(sw))
@@ -195,55 +352,6 @@ namespace Grihini.GUI_Form
 
                 }
             }
-
-           
-        }
-
-        //------------Button click Event To Download Excel File of The Bound GridView-----------///
-        protected void BtnDownloadExcel_Click(object sender, EventArgs e)
-        {
-            PrepareControlForExport(GridViewMonthWiseUserOrder);
-            ExportGridView();
-        }
-
-        //-------------Method to Export Excel File-----//
-
-        private void ExportGridView()
-        {
-            try
-            {
-                Response.ClearContent();
-                Response.ClearHeaders();
-
-                Response.ContentType = "application/vnd.ms-excel";
-                Response.AddHeader("Content-Disposition", "attachment; filename=Monthwise_User_Order_Report.xls");
-
-                StringWriter sw = new StringWriter();
-                HtmlTextWriter htw = new HtmlTextWriter(sw);
-                GridViewMonthWiseUserOrder.RenderControl(htw);
-                Response.Write(sw.ToString());
-                Response.End();
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
-        //--------Gridview RowCommand Event----///
-        protected void GridViewMonthWiseUserOrder_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
-
-            if (e.CommandName == "details")
-                {
-                   
-                    Session["UserID"] = Convert.ToInt32(e.CommandArgument);
-                    Response.Redirect("SpecificUserOrderDescription.aspx");
-                   
-              }
-        
-                   
-
-                
         }
 
     }

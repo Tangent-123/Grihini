@@ -200,11 +200,28 @@ ul#thumblist li a.zoomThumbActive{
 <div class="product">
 <div class="main-wrapper" style="height:425px;">
 
+<<<<<<< HEAD
+<div style="width:1024px; float:left; height:35px; margin:10px 0 0 0; background-color:#0099CC;">
+<div class="add2main-txt">MONTHWISE BILLING</div>
+        </div>
+=======
+<div style="width:auto; height:auto; float:right; margin:3px 10px 10px 0; ">
+                <asp:ImageButton ID="Btn_Excel_Export4" runat="server" Width="25px"  Height="25px"
+                    ImageUrl="~/Images/NewExcel_Download.png" ToolTip="Download Excel" 
+                    onclick="Btn_Excel_Export4_Click"/>
+>>>>>>> 605f25e617f3a53606536b78d98d22ea042db043
+
+
+  <asp:ImageButton ID="Btn_Pdf_Export4" runat="server" Width="25px"  Height="25px"
+                    ImageUrl="~/Images/NewPDF_Download.png" ToolTip="Download Pdf" 
+                    onclick="Btn_Pdf_Export4_Click"/>
+           </div>
+
 <div style="width:1024px; float:left; height:35px; margin:10px 0 0 0; background-color:#0099CC;">
 <div class="add2main-txt">MONTHWISE BILLING</div>
         </div>
 
-        <div runat="server" id="Panel1" style="margin:30px 0 0 0px; float:left;">
+        <div runat="server" id="Panel1" style="margin:2px 0 0 0px; float:left;">
     <asp:GridView ID="GridViewMonthWiseUserOrder" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Recoreds To Dispplay!"
      AllowSorting="false" Visible="true" Width="1024px" EnableModelValidation="True" EmptyDataRowStyle-Font-Bold="true" EmptyDataRowStyle-BorderColor="Red"
      EmptyDataRowStyle-BackColor="Azure" EmptyDataRowStyle-ForeColor="Red" OnRowCommand="GridViewMonthWiseUserOrder_RowCommand">
@@ -253,15 +270,15 @@ ul#thumblist li a.zoomThumbActive{
     </asp:GridView>
     </div>
 <div style="float:right; margin:20px 0 0 0;">
-<asp:Button ID="BtnDownloadExcel" runat="server" Text="Download Excel" 
+<%--<asp:Button ID="BtnDownloadExcel" runat="server" Text="Download Excel" 
         style="padding:5px 15px 5px 15px; background-color:#ea9b12; border:none; color:White; cursor:pointer;" 
-        onclick="BtnDownloadExcel_Click" />
+        onclick="BtnDownloadExcel_Click" />--%>
     </div>
 
     <div style="float:right; margin:20px 0 0 0;">
-<asp:Button ID="BtnDownloadPdf" runat="server" Text="Download Pdf" 
+<%--<asp:Button ID="BtnDownloadPdf" runat="server" Text="Download Pdf" 
             style="padding:5px 15px 5px 15px; background-color:#ea9b12; border:none; color:White; cursor:pointer;" 
-            onclick="BtnDownloadPdf_Click" />
+            onclick="BtnDownloadPdf_Click" />--%>
     </div>
 
 </div>
