@@ -3,6 +3,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+
 <script type="text/javascript">
     function LimtCharacters(txtMsg, CharLength, indicator) {
         chars = txtMsg.value.length;
@@ -34,7 +37,7 @@
     }
 </script> 
 
-    <link href="../CSS/Style_Delivery.css" rel="stylesheet" type="text/css" />
+
 
 
    <div class="wrapper" style="background:none;">

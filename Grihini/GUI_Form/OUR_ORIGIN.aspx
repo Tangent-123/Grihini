@@ -4,16 +4,21 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
+
+<link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
 <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+
+
+
 
 <div class="wrapper">
 <div class="main-wrapper">
 
 
-<div class="wrapper" style="background-color:White;"> 
-<div class="main-wrapper" style="height:480px;">
+<div class="wrapper"> 
+<div class="main-wrapper" style="height:550px; border:1px solid #eae6db;">
 
-<div style="float:left; width:1024px; height:180px; margin:-10px 0 20px 0;"><img src="../Images/ourorigin_page_bar.png" /></div>
+<div style="float:left; width:1024px; height:180px; margin:0 0 20px 0;"><img src="../Images/ourorigin_page_bar.png" /></div>
 
 <div class="ourorigin_main">
 

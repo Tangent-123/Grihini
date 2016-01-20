@@ -3,14 +3,14 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
+<link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
 <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 
 
-<div class="wrapper" style="background-color:White;"> 
-<div class="main-wrapper" style="height:900px;">
+<div class="wrapper"> 
+<div class="main-wrapper" style="height:890px; border:1px solid #eae6db;">
 
-<div style="float:left; width:1024px; height:180px; margin:-10px 0 20px 0;"><img src="../Images/about_grihini_bar.png" /></div>
+<div style="float:left; width:1024px; height:180px; margin:0 0 20px 0;"><img src="../Images/about_grihini_bar.png" /></div>
 
 <div class="ourvalues" style="margin-top:20px;">
 <div class="ourvalues_img"><img src="../Images/aboutus_page_img.png" /></div>
@@ -62,7 +62,7 @@ The new age women are far more educated and have come up with new and advanced s
 
 Linking of business unit with the rural population in order to scale up the quantum of goods produced especially that pertaining to Vividh Karyakari Society.
 Enhancement of the membership base of the workforce through raising the inclusion bar of the traditional outsiders i.e. those who are not relatives of the Tata Motors employee.
-To open up additional selling unit in order to scale up the sale. Currently, 20% of the revenue comes from sale to customers other than Tata Motors. This shall be raised.ocess.
+
 
 
 </div>
