@@ -245,9 +245,9 @@
 					<div style="left:0;">
 						<ul style="width:200px;">
 							<li class="oe_heading">Order Management</li>
-							<%--<li><a href="Admin_Order_View.aspx">Product Order View</a></li>--%>
+							<li><a href="Admin_Order_View.aspx">Product Order View</a></li>
                             <li><a href="MonthWiseUserOrder.aspx">Monthwise Billing</a></li>
-                            <li><a href="Products_Order_Confirm.aspx">Track Order</a></li>
+                            <%--<li><a href="Track_My_Order.aspx">Track Order</a></li>--%>
 							
                         </ul>
                     </div>

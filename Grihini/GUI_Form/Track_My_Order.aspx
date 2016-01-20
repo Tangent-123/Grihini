@@ -202,12 +202,12 @@ ul#thumblist li a.zoomThumbActive{
 
 <div style="margin-top:5px; float:left;">
 <div style="float:left; width:1024px;">
-<div class="t_order_products_one">
+<%--<div class="t_order_products_one">
 <div class="t_order_products_orderno">ORDER NO :</div>
 <div class="t_order_products_orderno_area"></div>
 <div class="t_order_products_orderno">ORDER PLACED ON :</div>
 <div class="t_order_products_orderno_area"></div>
-</div>
+</div>--%>
 <%--<div style="float:left; width:1024px; background-color:#cceef9;">
 <div style="float:left; width:169px; height:122px; margin:0 0 0 0;"><img src="../Images/c4.png" /></div>
 
@@ -225,34 +225,38 @@ ul#thumblist li a.zoomThumbActive{
      AllowSorting="false" Visible="true" Width="1024px">
 
         <Columns>
-           
-               
-
-            <asp:TemplateField HeaderText="" ControlStyle-Font-Size="12px">
+           <asp:TemplateField HeaderText="PRODUCT IMAGE" ControlStyle-Font-Size="12px">
             <ItemTemplate>
-
-              <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl='<%# Eval("ImageName3") %>' Height="150" Width="180"  />
+             <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl='<%# Eval("ImageName3") %>' Height="150" Width="180"  />
             </ItemTemplate>
             </asp:TemplateField>
 
-       
-                        
-
-            <asp:TemplateField HeaderText=""   ControlStyle-Font-Size="12px" ControlStyle-Width="780px" >
+       <asp:TemplateField HeaderText="ORDER DESCRIPTION"   ControlStyle-Font-Size="12px" ControlStyle-Width="780px" >
             <ItemTemplate>
-           
-            <asp:Label ID="lbl_price" runat="server" text='<%#Eval("Product_name") %>'></asp:Label>
-                  <br />
-            <asp:Label ID="lbl_Quantity" runat="server" text='<%#Eval("Order_Status") %>'></asp:Label>
-                  <br />
-            <asp:Label ID="lbl_discount" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label>
-            
-            </ItemTemplate>
+            <div class="t_order_products_one" style="float:left; width:850px;">
+            <div class="t_order_products_orderno">ORDER NO :</div>
+            <div class="t_order_products_orderno_area"><asp:LinkButton ID="LinkBtnOrderId" runat="server" CommandArgument='<%#Eval("Order_Id")%>' 
+                               Font-Bold="True"  ForeColor="#000" Text='<%#Eval("Order_Id")%>'></asp:LinkButton></div>
+            <div class="t_order_products_orderno">ORDER PLACED ON :</div>
+            <div class="t_order_products_orderno_area"><asp:Label ID="LblOrderPlacedOn" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label></div>
+            </div>
+             <div><asp:Label ID="LblProductName" runat="server" Text="PRODUCT NAME :"></asp:Label></div>
+             <div><asp:Label ID="lbl_price" runat="server" text='<%#Eval("Product_name") %>'></asp:Label></div>
+             <div><asp:Label ID="LblQuantity" runat="server" Text="QUANTITY :"></asp:Label></div>
+             <div><asp:Label ID="LblQty" runat="server" text='<%#Eval("Quantity") %>'></asp:Label></div>
+             <div><asp:Label ID="LabelSize" runat="server" Text="SIZE :"></asp:Label></div>
+             <div><asp:Label ID="Label1" runat="server" text='<%#Eval("size") %>'></asp:Label></div>
+             <div><asp:Label ID="LblStatus" runat="server" Text="ORDER STATUS :"></asp:Label></div>
+             <div><asp:Label ID="lbl_Quantity" runat="server" text='<%#Eval("Order_Status") %>'></asp:Label></div>
+             <div><asp:Label ID="Lbl_OrderDate" runat="server" Text="ORDER DATE :"></asp:Label></div>
+             <div><asp:Label ID="LabelOrderDate" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label></div>
+             <%-- <br />
+             <asp:Label ID="lbl_discount" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label>--%>
+             </ItemTemplate>
             </asp:TemplateField>
-
-                  
-            </Columns>
-          </asp:GridView>
+        
+        </Columns>
+      </asp:GridView>
 
 </div>
 <div class="t_order_border"></div>

@@ -226,10 +226,9 @@ ul#thumblist li a.zoomThumbActive{
    <div class="wrapper" style="background:none;">
    <div class="product">
    <div style="width:auto; height:25px; float:right; margin:10px 10px 10px 0;">
-       <asp:Button ID="Btn_View" runat="server" Text="View User" CssClass="btn_submit"
+       <asp:Button ID="Btn_View" runat="server" Text="View User" CssClass="btn_submit" Visible="false"
        BackColor="Black" Font-Bold="True" ForeColor="White" 
-           style="float:left; margin:0 0 20px 0; width:100px; height:25px; font-family:Arial; font-size:13px; color:White; background-color:#fc8332; border:none; cursor:pointer;" onclick="Btn_View_Click1" 
-          />
+           style="float:left; margin:0 0 20px 0; width:100px; height:25px; font-family:Arial; font-size:13px; color:White; background-color:#fc8332; border:none; cursor:pointer;" onclick="Btn_View_Click1"/>
                         </div>
    <div class="Insert">
    <div class="reg-toptxt" style="float:left; margin:20px 0 0 20px;">User Registration</div>
@@ -532,10 +531,10 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
          <div class="wrapper" style="background-color:White;">
          
          <div style="width:auto; height:25px; float:right; margin:10px 10px 10px 0;">
-                    <asp:Button ID="Btn_Add" runat="server" Text="Add New" CssClass="btn_submit" 
+                    <asp:Button ID="Btn_Add" runat="server" Text="Add New" CssClass="btn_submit"
                         BackColor="Black" Font-Bold="True" ForeColor="White" 
                         style="float:left; margin:0 50 20px 0; width:100px; height:25px; font-family:Arial; font-size:13px; color:White; background-color:#fc8332; border:none; cursor:pointer;" 
-                        onclick="Btn_Add_Click"/>
+                        onclick="Btn_Add_Click" Visible="false"/>
 
                   
                </div>
