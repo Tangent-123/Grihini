@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grihini", "Grihini\Grihini.csproj", "{4EFC0E55-BE86-4C8D-A3BC-C23C497C64CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grihini_BL.BL", "Grihini_BL.BL\Grihini_BL.BL.csproj", "{53C04D7E-D28C-4278-9239-A48CBB34B79D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Grihini_DL.DL", "Grihini_DL.DL\Grihini_DL.DL.csproj", "{50FE82B7-57A6-471B-9DCD-220F9A987177}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4EFC0E55-BE86-4C8D-A3BC-C23C497C64CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EFC0E55-BE86-4C8D-A3BC-C23C497C64CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EFC0E55-BE86-4C8D-A3BC-C23C497C64CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EFC0E55-BE86-4C8D-A3BC-C23C497C64CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53C04D7E-D28C-4278-9239-A48CBB34B79D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53C04D7E-D28C-4278-9239-A48CBB34B79D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53C04D7E-D28C-4278-9239-A48CBB34B79D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53C04D7E-D28C-4278-9239-A48CBB34B79D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50FE82B7-57A6-471B-9DCD-220F9A987177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50FE82B7-57A6-471B-9DCD-220F9A987177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50FE82B7-57A6-471B-9DCD-220F9A987177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50FE82B7-57A6-471B-9DCD-220F9A987177}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
