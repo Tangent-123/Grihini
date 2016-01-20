@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master1.master.cs" Inherits="Grihini.GUI_Form.Master1" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="~/GUI_Form/Master1.master.cs" Inherits="Grihini.GUI_Form.Master1" %>
 <%--
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" TagPrefix="cc1" %>

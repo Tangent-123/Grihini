@@ -630,7 +630,4 @@ E:\Grihini\Grihini_16_01_2016\Grihini\obj\Debug\RdlCompile.cache
 E:\Grihini\Grihini_16_01_2016\Grihini\obj\Debug\RdlCompile.compiled
 E:\Grihini\Grihini_16_01_2016\Grihini\obj\Debug\Grihini.dll
 E:\Grihini\Grihini_16_01_2016\Grihini\obj\Debug\Grihini.pdb
-<<<<<<< HEAD
-=======
 D:\My project work\Grihini\Grihini\obj\Debug\Grihini.csprojResolveAssemblyReference.cache
->>>>>>> 8d4cbb21e906a7a549f2a3957d78ca87b37d84ba
