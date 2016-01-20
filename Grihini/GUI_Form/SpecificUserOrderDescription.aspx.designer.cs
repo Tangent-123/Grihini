@@ -31,24 +31,6 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.Label LabelUser;
         
         /// <summary>
-        /// Panel000 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Panel000;
-        
-        /// <summary>
-        /// GridView_Specific_OrderDetails control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView_Specific_OrderDetails;
-        
-        /// <summary>
         /// Btn_Excel_Export1 control.
         /// </summary>
         /// <remarks>
@@ -65,5 +47,23 @@ namespace Grihini.GUI_Form {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ImageButton Btn_Pdf_Export1;
+        
+        /// <summary>
+        /// Panel000 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Panel000;
+        
+        /// <summary>
+        /// GridView_Specific_OrderDetails control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView GridView_Specific_OrderDetails;
     }
 }

@@ -200,6 +200,15 @@ ul#thumblist li a.zoomThumbActive{
 <div><asp:Label ID="LabelUserName" runat="server" Text="User Name"></asp:Label></div>
 <div><asp:Label ID="LabelUser" runat="server" Text=""></asp:Label></div>
 
+<div style="width:auto; height:auto; float:right; margin:3px 10px 10px 0; ">
+                <asp:ImageButton ID="Btn_Excel_Export1" runat="server" Width="25px"  Height="25px"
+                    ImageUrl="~/Images/NewExcel_Download.png" ToolTip="Download Excel" onclick="Btn_Excel_Export1_Click"/>
+
+
+  <asp:ImageButton ID="Btn_Pdf_Export1" runat="server" Width="25px"  Height="25px"
+                    ImageUrl="~/Images/NewPDF_Download.png" ToolTip="Download Pdf" onclick="Btn_Pdf_Export1_Click"/>
+           </div>
+
 <div style="width:1024px; float:left; height:35px; margin:10px 0 0 0; background-color:#0099CC;">
 <div class="add2main-txt">USER ORDER DETAILS</div>
         </div>
@@ -289,19 +298,8 @@ ul#thumblist li a.zoomThumbActive{
           </div>
           
           
-           <div style="width:auto; height:auto; float:right; margin:3px 10px 10px 0; ">
-                <asp:ImageButton ID="Btn_Excel_Export1" runat="server" Width="50px"  Height="50px"
-                    ImageUrl="~/Images/NewExcel_Download.png" ToolTip="Download Excel" onclick="Btn_Excel_Export1_Click" 
-                    />
+           
 
-
-  <asp:ImageButton ID="Btn_Pdf_Export1" runat="server" Width="50px"  Height="50px"
-                    ImageUrl="~/Images/NewPDF_Download.png" ToolTip="Download Pdf" onclick="Btn_Pdf_Export1_Click" 
-                   />
-                    
-          
-          
-          </div>
    <div style="float:right; margin:20px 0 0 0;">
 <%--<asp:Button ID="BtnDownloadExcel" runat="server" Text="Download Excel" 
            style="padding:5px 15px 5px 15px; background-color:#ea9b12; border:none; color:White; cursor:pointer;" 
