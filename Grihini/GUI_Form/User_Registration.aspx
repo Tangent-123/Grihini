@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-<<<<<<< HEAD
+
 <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/addtocart_jqzoom.css" rel="stylesheet" type="text/css" />
     <script src="../JS/addtocart_one.js" type="text/javascript"></script>
@@ -12,10 +12,10 @@
     <script src="../JS/addtocart_three.js" type="text/javascript"></script>
     <script src="../JS/addtocart_four.js" type="text/javascript"></script>
 
-=======
+
 
     <link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
->>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0
+
  <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
   <link href="../CSS/style.css" rel="stylesheet" type="text/css" />

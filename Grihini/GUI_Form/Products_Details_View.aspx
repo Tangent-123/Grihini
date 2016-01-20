@@ -124,66 +124,40 @@ ul#thumblist li a.zoomThumbActive{
 
     <div class="button">
     <div class="add2cart">
-<<<<<<< HEAD
-        <asp:Button ID="Btn_AddtoCart" runat="server" Text="ADD TO CART" onclick="Btn_addtocart22_Click" Visible="true" cssclass="button-0"/>
-   
-=======
-     <asp:LinkButton ID="LinkButtonAddTocart" runat="server" OnClick="Btn_addtocart22_Click" class="btn btn-5 btn-5a icon-cart"><span> ADD TO CART</span></asp:LinkButton>
-        <%--<asp:Button ID="Btn_AddtoCart" runat="server" Text="ADD TO CART" onclick="Btn_addtocart22_Click" Visible="true" cssclass="button-0" style="background-color:#77cc6d;"/>--%>
-        <%--<asp:ImageButton ID="Btn_addtocart22"  runat="server" 
-                           onclick="Btn_addtocart22_Click" Visible="true" --%>
-                           
-                         <%--  cssclass="button-0"/>--%>
 
-                           <%--ImageUrl="../Images/addtocart2.png" --%>
-       <%-- <asp:Button ID="Btn_Addtocartfalse" runat="server" Text="ADD TO CART(false)" Visible="false" Enabled="false" cssclass="button-0"
-                            onclick="Btn_addtocart22_Click"/>--%>
->>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0
-                            <asp:ImageButton ID="ImageButton2"  runat="server" ImageUrl="../Images/addtocart_false.png"
+     <asp:LinkButton ID="LinkButtonAddTocart" runat="server" OnClick="Btn_addtocart22_Click" class="btn btn-5 btn-5a icon-cart"><span> ADD TO CART</span></asp:LinkButton>
+       
+                          <asp:ImageButton ID="ImageButton2"  runat="server" ImageUrl="../Images/addtocart_false.png"
                            onclick="Btn_addtocart22_Click" Visible="false" Enabled="false"/>
     </div>
 
-<<<<<<< HEAD
+
       
     <div class="buy2now">
-        <asp:Button ID="btn_buynoww" runat="server" Text="BUY NOW" Visible="true" OnClick="Btn_buynow_Click" CssClass="button-0"/>
-=======
+ 
+
     <div class="buy2now"> 
 
         <asp:LinkButton ID="LinkButto_buynoww" runat="server" onclick="Btn_buynow_Click" class="btn btn-50 btn-50a icon-cart"><span> BUY NOW</span></asp:LinkButton>
 
-<%--        <asp:Button ID="btn_buynoww" runat="server" Text="BUY NOW" Visible="true"  CssClass="button-0"/>--%>
-    <%--<a href="#"><img src="../Images/buynow.png"/></a>--%>
-       <%-- <asp:ImageButton ID="Btn_buynow" runat="server" Visible="true" 
-            ImageUrl="../Images/buynow.png" onclick="Btn_buynow_Click" />--%>
-        <asp:Button ID="btn_buynow_false" runat="server" Text="BUY NOW (false)" Visible="true" Enabled="false" CssClass="button-0"/>
->>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0
+        <%--<asp:Button ID="btn_buynow_false" runat="server" Text="BUY NOW (false)" Visible="true" Enabled="false" CssClass="button-0"/>--%>
+
 
     </div>
 
 
-<<<<<<< HEAD
-    <div class="buy2now">
-    <asp:Button ID="Button3" runat="server" Text="CHOOSE MORE ITEMS" OnClick="buymore_click" CssClass="button-0" />
+
+    <%--<div class="buy2now">
+   <%-- <asp:Button ID="Button3" runat="server" Text="CHOOSE MORE ITEMS" OnClick="buymore_click" CssClass="button-0" />--%>
               
-=======
+
         <div class="buy2now_2">
             <asp:LinkButton ID="LinkButton_choosemore" OnClick="buymore_click" runat="server" class="btn btn-51 btn-51a glyphicon-plus"><span> CHOOSE MORE PRODUCTS</span></asp:LinkButton>
 
-           <%-- <asp:Button ID="Button3" runat="server" Text="CHOOSE MORE PRODUCTS"  CssClass="btn btn-5 btn-5a glyphicon-plus" style="width:254px;" />--%>
+          
    
   <%--      <asp:ImageButton ID="ImageButton4" runat="server" Visible="true" style="margin:-36.2px 0 0 160px;"
             ImageUrl="../Images/buymore.png" OnClick="buymore_click"/>--%>
->>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0
-    </div>
-
-
-
-
-       
-
-
-
 
     </div>
 

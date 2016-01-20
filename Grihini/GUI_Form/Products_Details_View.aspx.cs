@@ -46,7 +46,7 @@ namespace Grihini.GUI_Form
                 {
                     LinkButtonAddTocart.Visible = false;
                     ImageButton2.Visible = true;
-                    btn_buynoww.Visible = true;
+                    LinkButto_buynoww.Visible = true;
                     //btn_buynow_false.Visible = false;
 
                 }
@@ -54,7 +54,7 @@ namespace Grihini.GUI_Form
                 {
                     LinkButtonAddTocart.Visible = true;
                     ImageButton2.Visible = false;
-                    btn_buynoww.Visible = true;
+                    LinkButto_buynoww.Visible = true;
                     //btn_buynow_false.Visible = false;
                 }
 
@@ -63,7 +63,7 @@ namespace Grihini.GUI_Form
                 {
                     LinkButtonAddTocart.Visible = true;
                     ImageButton2.Visible = false;
-                    btn_buynoww.Visible = true;
+                    LinkButto_buynoww.Visible = true;
                     //btn_buynow_false.Visible = false;
 
                 }
