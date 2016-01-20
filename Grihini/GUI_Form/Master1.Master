@@ -185,7 +185,7 @@
  <div id="Div1" runat="server" visible="true" style="margin:0 0 0 0; float:right;">
 <a href="Addtocarttt.aspx">
 <div id="Div2" runat="server" visible="true" style="width:100px; height:33px; float:right; background-image:url(../Images/addtocart.png);">
-<div style="margin:12px 0 0 78px; float:left; color:Black; font-size:13px;"><asp:Label ID="Label1" runat="server" Text="" ></asp:Label></div>
+<div style="margin:12px 0 0 78px; float:left; color:Black; font-size:13px;"><asp:Label ID="lblcartcount" runat="server" Text="" ></asp:Label></div>
 </div>
 </a>
 </div>   

@@ -13,7 +13,9 @@
     <script src="../JS/addtocart_four.js" type="text/javascript"></script>
 
 
-
+      <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js" type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="Stylesheet" type="text/css" />
     <link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
 
  <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
@@ -51,6 +53,16 @@
 
     });
 </script>
+
+<script type="text/javascript">
+    $(function () {
+        $("[id$=Text_Dob]").datepicker({
+            showOn: 'button',
+            buttonImageOnly: true,
+            buttonImage: 'http://virtualstaff.co.nz/wp-content/uploads/2015/10/calendar-icon.png'
+        });
+    });
+    </script>
 
 
 <style type"text/css">
@@ -356,8 +368,8 @@ ul#thumblist li a.zoomThumbActive{
         <asp:Label ID="Label5" runat="server" Text="Date Of Birth" Visible="true"></asp:Label>
 
         <asp:TextBox ID="Text_Dob" runat="server" style="width:200px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;" Visible="true"></asp:TextBox>
-         <asp:ImageButton ID="Img_Pres" runat="server" ImageUrl="~/Images/CalenderIcon.jpg" Width="22px" Height="22px" style=""
-         CssClass="imgbutton" onmouseover="this.style.cursor='hand'" ToolTip="Click to Open Calender"/>           
+       <%--  <asp:ImageButton ID="Img_Pres" runat="server" ImageUrl="~/Images/CalenderIcon.jpg" Width="22px" Height="22px" style=""
+         CssClass="imgbutton" onmouseover="this.style.cursor='hand'" ToolTip="Click to Open Calender"/>--%>           
          <%--<ajaxToolkit:CalendarExtender ID="CalendarExtender1" runat="server" Enabled="True" PopupButtonID="Img_Pres" TargetControlID="Text_Dob" Format="dd-MM-yyyy"
          CssClass="cal_Theme1" ></ajaxToolkit:CalendarExtender> --%>
          <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" 

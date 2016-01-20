@@ -94,6 +94,7 @@ namespace Grihini.GUI_Form
                 int CountryId=Convert.ToInt32(Ddl_Country.SelectedValue);
                 int StateId = Convert.ToInt32(Ddl_State.SelectedValue);
                 string LocationName = null;
+                string Date = Request.Form[Text_Dob.UniqueID];
 
                 if (Ddl_Location.SelectedValue == "1000")
                 {
@@ -108,7 +109,7 @@ namespace Grihini.GUI_Form
 
 
                 int reg = ud.Insert_Data(1, Convert.ToString(DdlTitle.SelectedValue), Text_First_Name.Text, Text_Middle_Name.Text, Text_Last_Name.Text,
-                   Ddl_Gender.SelectedValue, Text_Dob.Text, Text_MobileNo.Text, Text_Email.Text, CountryId,
+                   Ddl_Gender.SelectedValue, Date, Text_MobileNo.Text, Text_Email.Text, CountryId,
                    StateId, LocationName, Text_Emp_Id.Text);
 
                 if (reg > 0)
