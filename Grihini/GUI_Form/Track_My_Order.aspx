@@ -197,7 +197,7 @@ ul#thumblist li a.zoomThumbActive{
 </script>--%>
 
 
-<div class="wrapper" style="background-color:White; height:500px;">
+<div class="wrapper" style="background-color:White; height:auto;">
 <div class="main-wrapper">
 
 <div style="margin-top:5px; float:left;">
