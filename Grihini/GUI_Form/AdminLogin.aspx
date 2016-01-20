@@ -3,15 +3,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+
+    <link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+
     <link href="http://localhost:56654/CSS/style.css" rel="stylesheet" type="text/css" />
     <link href="http://localhost:56654/CSS/login.css" rel="stylesheet" type="text/css" />
 
 <div class="wrapper" style="background-image:url(../Images/login_bck_texture.png); 	background-repeat:repeat; padding-top:20px;">
-<div class="sportsproduct" style="height:414px;">
 <div class="main-wrapper">
 <div class="sportsproduct-one">
 
-<div style="text-align:center; background-color:White; width:370px; height:230px; margin-top:20px; box-shadow:0px 1px 5px #222;">
+<div style="margin-top:100px;">
+<div style="text-align:center; background-color:White; width:370px; height:230px; box-shadow:0px 1px 5px #222; margin:0 auto;">
 <div style="width:370px;" >
 
     <div style="float:left; margin:28px 0 0 30px;"> 
@@ -48,9 +52,8 @@
 </div>
 
 </div>
-
-
 </div>
+
 </div>
 </div>
 </div>

@@ -7,10 +7,10 @@
     <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 
 <div class="wrapper" style="background-image:url(../Images/login_bck_texture.png); 	background-repeat:repeat; padding-top:30px;">
-<div class="sportsproduct" style="min-height:500px;">
 <div class="main-wrapper">
 <div class="sportsproduct-one">
 
+<div style="margin-top:100px;">
 <div style="text-align:center; background-color:White; width:370px; height:230px; margin-top:20px; box-shadow:0px 1px 5px #222; margin:0 auto;">
 <div style="width:370px;" >
     <div>
@@ -53,11 +53,11 @@
 </div>
 
 </div>
+</div>
 
+</div>
+</div>
 
-</div>
-</div>
-</div>
 </div>
 
 </asp:Content>

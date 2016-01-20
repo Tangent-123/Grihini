@@ -46,7 +46,7 @@ ul#thumblist li a.zoomThumbActive{
 </style>
 
 
-    <link href="../CSS/button2.css" rel="stylesheet" type="text/css" />
+<link href="../CSS/button2.css" rel="stylesheet" type="text/css" />
 
 
 <div class="wrapper">
@@ -194,14 +194,6 @@ ul#thumblist li a.zoomThumbActive{
 
 
 </div>
-
-
-
-
-
-
-        
-
 
 </div>
 

@@ -12,6 +12,9 @@
     <script src="../JS/addtocart_three.js" type="text/javascript"></script>
     <script src="../JS/addtocart_four.js" type="text/javascript"></script>
 
+    <link href="../CSS/button2.css" rel="stylesheet" type="text/css" />
+
+
 <script type="text/javascript">
 
     $(function () {
