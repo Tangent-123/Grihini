@@ -8,9 +8,9 @@
 
 
 <div class="wrapper"> 
-<div class="main-wrapper" style="height:890px; border:1px solid #eae6db;">
+<div class="main-wrapper" style="min-height:900px; border:1px solid #eae6db;">
 
-<div style="float:left; width:1024px; height:180px; margin:0 0 20px 0;"><img src="../Images/about_grihini_bar.png" /></div>
+<div style="float:left; width:1024px; height:180px; margin:0 0 20px 0;"><img src="../Images/about_us_banner.jpg" /></div>
 
 <div class="ourvalues" style="margin-top:20px;">
 <div class="ourvalues_img"><img src="../Images/aboutus_page_img.png" /></div>
@@ -80,6 +80,6 @@ Enhancement of the membership base of the workforce through raising the inclusio
 </div>
 </div>
 
-
+</div>
 
 </asp:Content>

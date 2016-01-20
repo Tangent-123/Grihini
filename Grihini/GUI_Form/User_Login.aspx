@@ -6,8 +6,8 @@
     <link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 
-<div class="wrapper" style="background-image:url(../Images/login_bck_texture.png); 	background-repeat:repeat; padding-top:20px;">
-<div class="sportsproduct" style="height:414px;">
+<div class="wrapper" style="background-image:url(../Images/login_bck_texture.png); 	background-repeat:repeat; padding-top:30px;">
+<div class="sportsproduct" style="min-height:500px;">
 <div class="main-wrapper">
 <div class="sportsproduct-one">
 

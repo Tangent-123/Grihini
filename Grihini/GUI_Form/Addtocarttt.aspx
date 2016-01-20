@@ -205,11 +205,10 @@ ul#thumblist li a.zoomThumbActive{
 
 
 
-<div class="wrapper" style="background:none;">
-<div class="product">
-<div class="main-wrapper" style="height:425px;">
+<div class="wrapper">
+<div class="main-wrapper" style="min-height:490px; border:1px solid #eae6db;">
 
-<div style="width:1024px; float:left; height:35px; margin:5px 0 0 0; background-color:#0099CC;">
+<div style="width:1024px; float:left; height:35px; margin:0 0 0 0; background-color:#0099CC;">
 <div class="add2main-txt">ADD TO CART</div>
         </div>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Products In Cart"
@@ -271,9 +270,11 @@ ul#thumblist li a.zoomThumbActive{
 
     <asp:Button ID="Button1" runat="server" Text="Confirm" OnClick="Button1_click" CssClass="button-0" />
     
+
+
+
     </div>
 
-</div>
 </div>
 </div>
 

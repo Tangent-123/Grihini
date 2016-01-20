@@ -138,39 +138,28 @@ ul#thumblist li a.zoomThumbActive{
                            onclick="Btn_addtocart22_Click" Visible="false" Enabled="false"/>
         </div>
 
-       
-
     <div class="buy2now"> 
 
-        <asp:LinkButton ID="LinkButto_buynoww" runat="server" onclick="Btn_buynow_Click" class="btn btn-50 btn-50a icon-cart"><span> BUY NOW</span></asp:LinkButton>
+        <asp:LinkButton ID="LinkButto_buynoww" runat="server" onclick="Btn_buynow_Click" class="btn btn-50 btn-50a glyphicon-heart"><span> BUY NOW</span></asp:LinkButton>
 
 <%--        <asp:Button ID="btn_buynoww" runat="server" Text="BUY NOW" Visible="true"  CssClass="button-0"/>--%>
     <%--<a href="#"><img src="../Images/buynow.png"/></a>--%>
        <%-- <asp:ImageButton ID="Btn_buynow" runat="server" Visible="true" 
             ImageUrl="../Images/buynow.png" onclick="Btn_buynow_Click" />--%>
-        <asp:Button ID="btn_buynow_false" runat="server" Text="BUY NOW (false)" Visible="true" Enabled="false" CssClass="button-0"/>
+        <asp:Button ID="btn_buynow_false" runat="server" Text="BUY NOW (false)" Enabled="false" CssClass="button-0" Visible="false"/>
 
            <%-- <asp:ImageButton ID="ImageButton3" runat="server" Visible="true" 
             ImageUrl="../Images/buynow_FALSE.png"  onclick="Btn_buynow_Click" Enabled="false"/>--%>
     </div>
 
-
-        <div class="buy2now_2">
-            <asp:LinkButton ID="LinkButton_choosemore" OnClick="buymore_click" runat="server" class="btn btn-51 btn-51a glyphicon-plus"><span> CHOOSE MORE PRODUCTS</span></asp:LinkButton>
+    <div class="buy2now_2">
+            <asp:LinkButton ID="LinkButton_choosemore" OnClick="buymore_click" runat="server" class="btn btn-51 btn-51a glyphicon-plus"><span> CHOOSE MORE</span></asp:LinkButton>
 
            <%-- <asp:Button ID="Button3" runat="server" Text="CHOOSE MORE PRODUCTS"  CssClass="btn btn-5 btn-5a glyphicon-plus" style="width:254px;" />--%>
    
   <%--      <asp:ImageButton ID="ImageButton4" runat="server" Visible="true" style="margin:-36.2px 0 0 160px;"
             ImageUrl="../Images/buymore.png" OnClick="buymore_click"/>--%>
     </div>
-
-
-
-
-       
-
-
-
 
     </div>
 

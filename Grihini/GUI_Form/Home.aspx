@@ -48,23 +48,21 @@
 <div class="slide" data-blurred="../Images/slide1_blurred.jpg">
 <div class="content">
 <h2><a href="#" target="_blank">Besan Laddu</a></h2>
-<p>Laddu or laddoo are ball-shaped sweets popular in the Indian Subcontinent. Laddus are made of flour, minced dough and sugar with other ingredients that vary by recipe. They are often served at festive or religious occasions.</p>
+<p></p>
 </div>
 <div class="image"> <a href="#" target="_blank"> <img src="../Images/slide1.jpg" alt="Slider 1"> </a> </div>
 </div>
 <div class="slide" data-blurred="../Images/slide2_blurred.jpg">
 <div class="content">
-<h2><a href="#" target="_blank">BucketListly Apps</a></h2>
-<p>It’s never been easier to watch YouTube on the big screen
-              Send your favorite YouTube videos from your Android phone or tablet to TV with the touch of a button. It’s easy. No wires, no setup, no nothing. Find out more here.</p>
+<h2><a href="#" target="_blank">Single Women Handbags </a></h2>
+<p></p>
 </div>
 <div class="image"> <a href="#" target="_blank"> <img src="../Images/slide2.jpg" alt="Slider 1"></a> </div>
 </div>
 <div class="slide" data-blurred="../Images/slide3_blurred.jpg">
 <div class="content">
-<h2><a href="#" target="_blank">The Pete Design</a></h2>
-<p>It’s never been easier to watch YouTube on the big screen
-              Send your favorite YouTube videos from your Android phone or tablet to TV with the touch of a button. It’s easy. No wires, no setup, no nothing. Find out more here.</p>
+<h2><a href="#" target="_blank">Casual Men Cap</a></h2>
+<p></p>
 </div>
 <div class="image"> <a href="#" target="_blank"><img src="../Images/slide3.jpg" alt="Slider 1"></a> </div>
 </div>

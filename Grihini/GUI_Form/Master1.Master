@@ -133,7 +133,7 @@
 <div id="Sign_Up" runat="server" class="giftcart-one" style="cursor: pointer;"><a href="User_Registration.aspx"><strong>Sign Up</strong></a></div>
 </div>
 
-<div class="giftcart" style="margin:0 25px 0 0;">
+<div class="giftcart" style="margin:-10px 15px 0 0;">
 <div id="LogOut" runat="server" class="giftcart-one" style="cursor: pointer;">
 <asp:ImageButton ID="ImageButton1" runat="server" Width="20" Height="20" ImageUrl="~/Images/logout-icon.png" OnClick="Logout_Click"/>
     </div>
@@ -146,13 +146,13 @@
 
 <div id="Track" runat="server" visible="false" class="trackorder">
 <div class="trackorder-logo" style="cursor: pointer;"><a href="Track_My_Order.aspx"><strong>Track Order</strong></a></div>
-<div class="giftcart-two"><img src="../Images/trackorder.png" /></div>
+<div class="trackorder_logo_png"><img src="../Images/trackorder.png.png" /></div>
 </div>
 
 <div id="Div_Username" runat="server" visible="false" class="trackorder">
-<div class="trackorder-logo" style="cursor: pointer;"><strong>
-    <asp:Label ID="Lbl_Username" runat="server" Text=""></asp:Label></strong></div>
-
+<div class="profile_username" style="cursor: pointer;"><strong>
+    <asp:Label ID="Lbl_Username" runat="server" Text="" ForeColor="White"></asp:Label></strong></div>
+    <div class="profilename_logo_png"><img src="../Images/profile_username.png" /></div>
 </div>
 
 

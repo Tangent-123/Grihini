@@ -40,10 +40,9 @@
 
 
 
-   <div class="wrapper" style="background:none;">
-   <div class="product">
+   <div class="wrapper">
    <div class="main-wrapper" style="height:auto;">
-   <div class="reg-main" style="float:left; height:auto; background-color:#edf8ff; margin:20px 0 0 0; border: 1px solid #dbdbdb;">
+   <div class="reg-main" style="float:left; height:auto; background-color:#edf8ff; margin:0 0 0 0; border: 1px solid #dbdbdb;">
 
     <div class="clear"></div>
     <div class="del-textarea" style="height:40px; width:1024px;  margin:0 0 0 0; border:0px 1px 5px #222;  background-color:#0099CC; ">
@@ -230,7 +229,7 @@
 
 </div>
 </div>
-</div>
+
 </div>
 
 </asp:Content>

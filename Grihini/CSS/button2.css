@@ -60,6 +60,11 @@
 
 .icon-cart:before {
 	content: "\e007";
+	
+}
+.glyphicon-heart:before {
+  content: "";
+  background-image:url(../Images/c_buynow.png);
 }
 
 .icon-camera:before {
@@ -69,7 +74,8 @@
   content: "\2709";
 }
 .glyphicon-plus:before {
-  content: "\2b";
+  content: "";
+  background-image:url(../Images/c_choosemore.png);
 }
 
 .icon-heart:before {
@@ -812,7 +818,7 @@
 	background: #f38627;
 	color: #fff;
 	height: 25px;
-	min-width: 250px;
+	min-width: 100px;
 	line-height: 24px;
 	font-size: 14px;
 	overflow: hidden;

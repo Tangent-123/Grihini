@@ -199,11 +199,10 @@ ul#thumblist li a.zoomThumbActive{
 
 
 
-<div class="wrapper" style="background:none;">
-<div class="product">
-<div class="main-wrapper" style="height:425px;">
+<div class="wrapper">
+<div class="main-wrapper" style="height:auto; border:1px solid #eae6db;">
 
-<div style="width:1024px; float:left; height:35px; margin:5px 0 0 0; background-color:#0189b6;">
+<div style="width:1024px; float:left; height:35px; margin:0 0 0 0; background-color:#0189b6;">
 <div class="add2main-txt">PRODUCT DETAILS</div>
         </div>
 
@@ -390,6 +389,6 @@ ul#thumblist li a.zoomThumbActive{
         onclick="Btn_Confirm_Click" />
 </div>
 </div>
-</div>
+
 </div>
 </asp:Content>
