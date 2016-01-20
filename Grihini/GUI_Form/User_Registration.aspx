@@ -17,6 +17,8 @@
     <link href="../CSS/mgrid.css" rel="stylesheet" type="text/css" />
 <link href="../CSS/addtocart_jqzoom.css" rel="stylesheet" type="text/css" />
 
+<link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/mgrid.css" rel="stylesheet" type="text/css" />
 
     <script src="../JS/addtocart_one.js" type="text/javascript"></script>
     <script src="../JS/addtocart_two.js" type="text/javascript"></script>
@@ -555,8 +557,9 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
        <div class="add2main-txt">USER DETAILS</div>
 </div>
        
-            <div id="Panel3" runat="server" class="grid"  style="width:1024px; min-height:30px; margin:0 0 0 0px; float:left; border:1px solid #ccc; overflow:auto; background-color:White; text-align:center;">
-            <asp:GridView ID="GridView_User_Details" runat="server" AutoGenerateColumns="False" CssClass="mGrid"                  
+            <%--<div id="Panel3" runat="server" class="grid"  style="width:1024px; min-height:30px; margin:0 0 0 0px; float:left; border:1px solid #ccc; overflow:auto; background-color:White; text-align:center;">--%>
+            <div id="Panel3" runat="server" class="grid" style="width:1024px; min-height:30px; float:left; border:1px solid #ccc; overflow:auto; background-color:White; text-align:center;">
+            <asp:GridView ID="GridView_User_Details" runat="server" AutoGenerateColumns="False"                  
             EnableModelValidation="True" DataKeyNames="User_Id" EmptyDataRowStyle-BackColor="Azure" EmptyDataRowStyle-ForeColor="Red"
                       Width="1024px" EmptyDataRowStyle-Font-Bold="true" EmptyDataRowStyle-BorderColor="Red">
                

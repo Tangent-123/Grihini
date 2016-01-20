@@ -32,7 +32,7 @@ namespace Grihini.GUI_Form
 
                     if (Request.QueryString["target"] == "AddProduct")
                     {
-                        Label13.Text = "Add Product Details";
+                        //Label13.Text = "Add Product Details";
                         MultiView1.ActiveViewIndex = 0;
                         Btn_View.Visible = true;
                         Btn_Add.Visible = false;
@@ -42,7 +42,7 @@ namespace Grihini.GUI_Form
                     }
                     else if (Request.QueryString["target"] == "ViewAllProduct")
                     {
-                        Label13.Text = "View Product Details";
+                        //Label13.Text = "View Product Details";
                         fetchAllProduct();
                         MultiView1.ActiveViewIndex = 1;
                         Btn_View.Visible = false;
@@ -440,6 +440,12 @@ namespace Grihini.GUI_Form
         {
             int val = Convert.ToInt32(Ddl_Pro_Photo.SelectedValue);
 
+            if (val==1)
+            {
+                //CheckBox_Pic.Checked==true;
+            }
+
+
             DataTable dtDetails = new DataTable();
             dtDetails = pr.getCountValues(11, val);
             if (dtDetails.Rows.Count > 0)
@@ -489,7 +495,7 @@ namespace Grihini.GUI_Form
                     dt = pr.Fetch_Product_By_ID(18, id);
                     if (dt.Rows.Count > 0)
                     {
-                        Label13.Text = "Add Product Details";
+                        //Label13.Text = "Add Product Details";
                         MultiView1.ActiveViewIndex = 0;
                         Btn_View.Visible = true;
                         Btn_Add.Visible = false;
@@ -595,9 +601,9 @@ namespace Grihini.GUI_Form
 
         protected void Btn_Cancle_Click(object sender, EventArgs e)
         {
-            Response.Redirect("Product_Reg.aspx?target=AddProduct");
+            Response.Redirect("Product_Reg.aspx?target=ViewAllProduct");
 
-            // MultiView1.ActiveViewIndex = 0;
+            
         }
 
         protected void Btn_Excel_Export2_Click(object sender, ImageClickEventArgs e)

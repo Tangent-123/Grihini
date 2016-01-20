@@ -139,7 +139,7 @@ ul#thumblist li a.zoomThumbActive{
 
 
     <div class="buy2now">
-    <asp:Button ID="Button3" runat="server" Text="Choose More Items" OnClick="buymore_click" CssClass="button-0" />
+    <asp:Button ID="Button3" runat="server" Text="CHOOSE MORE ITEMS" OnClick="buymore_click" CssClass="button-0" />
               
     </div>
 

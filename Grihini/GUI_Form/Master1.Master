@@ -218,7 +218,7 @@
 					<div style="left:0;">
 						<ul style="width:200px;">
 							<li class="oe_heading">User Details</li>
-							<li><a href="User_Registration.aspx?target=AddUserDetails">Add User Details</a></li>
+							<li><a href="User_Registration.aspx?target=AddUserDetails">User Registration</a></li>
 							<li><a href="User_Registration.aspx?target=ViewUserDetails">View User Details</a></li>
 
 
@@ -231,10 +231,10 @@
 					<div style="left:-112px;"><!-- -112px -->
 						<ul style="width:170px;">
 							<li class="oe_heading">Product Management</li>
-							<li id="Addprod" runat="server"><a href="Product_Reg.aspx?target=AddProduct">Add Product</a></li>
+							<li id="Addprod" runat="server"><a href="Product_Reg.aspx?target=AddProduct">Add Product Details</a></li>
 						
-							<li id="View_Products" runat="server"><a href="Products_View.aspx">View Product</a></li>
-                            <li id="View_Products1" runat="server"><a href="Product_Reg.aspx?target=ViewAllProduct">View Product</a></li>
+							<li id="View_Products" runat="server"><a href="Products_View.aspx">View Product Details</a></li>
+                            <li id="View_Products1" runat="server"><a href="Product_Reg.aspx?target=ViewAllProduct">View Product Details</a></li>
                             <%--<li id="View_Products2" runat="server"><a href="Admin_Order_View.aspx">Product Order View</a></li>--%>
 
 						</ul>
@@ -245,7 +245,7 @@
 					<div style="left:0;">
 						<ul style="width:200px;">
 							<li class="oe_heading">Order Management</li>
-							<li><a href="Admin_Order_View.aspx">Product Order View</a></li>
+							<%--<li><a href="Admin_Order_View.aspx">Product Order View</a></li>--%>
                             <li><a href="MonthWiseUserOrder.aspx">Monthwise Billing</a></li>
                             <li><a href="Products_Order_Confirm.aspx">Track Order</a></li>
 							

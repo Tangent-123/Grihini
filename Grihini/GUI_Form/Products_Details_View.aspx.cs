@@ -300,7 +300,7 @@ namespace Grihini.GUI_Form
 
         protected void Btncancel_click(object sender, EventArgs e)
         {
-            
+            Response.Redirect("Products_View.aspx");
         }
     }
 }

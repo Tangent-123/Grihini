@@ -439,9 +439,9 @@ ul#thumblist li a.zoomThumbActive{
              <asp:ListItem Value="1">1</asp:ListItem>
              <asp:ListItem Value="2">2</asp:ListItem>
              <asp:ListItem Value="3">3</asp:ListItem>
-              <asp:ListItem Value="4">4</asp:ListItem>
-               <asp:ListItem Value="5">5</asp:ListItem>
-                <asp:ListItem Value="6">6</asp:ListItem>
+             <asp:ListItem Value="4">4</asp:ListItem>
+             <asp:ListItem Value="5">5</asp:ListItem>
+             <asp:ListItem Value="6">6</asp:ListItem>
         </asp:DropDownList>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" Display="None" ControlToValidate="Ddl_Size"
         runat="server" ErrorMessage="Choose Number of Size!" ValidationGroup="Valid1"></asp:RequiredFieldValidator>
@@ -449,14 +449,14 @@ ul#thumblist li a.zoomThumbActive{
      
 
      <div> 
-        <asp:DropDownList ID="Ddl_Weight" runat="server" Visible="false"  OnSelectedIndexChanged="ddl_Weight_Ev" AutoPostBack="true" style="width:110px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 10px; border: 1px solid #dbdbdb;">
+        <asp:DropDownList ID="Ddl_Weight" runat="server" Visible="false" OnSelectedIndexChanged="ddl_Weight_Ev" AutoPostBack="true" style="width:110px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 10px; border: 1px solid #dbdbdb;">
              <asp:ListItem Value="0">Select Weight</asp:ListItem>
              <asp:ListItem Value="1">1</asp:ListItem>
              <asp:ListItem Value="2">2</asp:ListItem>
              <asp:ListItem Value="3">3</asp:ListItem>
-              <asp:ListItem Value="4">4</asp:ListItem>
-               <asp:ListItem Value="5">5</asp:ListItem>
-                <asp:ListItem Value="6">6</asp:ListItem>
+             <asp:ListItem Value="4">4</asp:ListItem>
+             <asp:ListItem Value="5">5</asp:ListItem>
+             <asp:ListItem Value="6">6</asp:ListItem>
         </asp:DropDownList>
         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" Display="None" ControlToValidate="Ddl_Weight"
         runat="server" ErrorMessage="Choose Number of Weight!" ValidationGroup="Valid1"></asp:RequiredFieldValidator>
@@ -485,7 +485,7 @@ ul#thumblist li a.zoomThumbActive{
            </div>
 
     <div class="grid" runat="server" id="div_Grid_Weight" visible="false"  style="width:227px; min-height:30px; height:auto; margin:10px 100px 5px 0; float:left; border:1px solid #ccc; border-radius:4px; overflow:auto;">
-            <asp:GridView ID="Grid_Weight" runat="server" AutoGenerateColumns="False" CssClass="gGrid"                 
+            <asp:GridView ID="Grid_Weight" runat="server" AutoGenerateColumns="False" CssClass="mGrid"                 
             EnableModelValidation="True"  Width="100%" EmptyDataText="">
                
             <Columns>             
@@ -745,7 +745,7 @@ ul#thumblist li a.zoomThumbActive{
              </asp:TemplateField>
            </Columns>
              
-<%--                  <HeaderStyle BackColor="#00ccff" CssClass="gridheader" ForeColor="White" 
+    <%-- <HeaderStyle BackColor="#00ccff" CssClass="gridheader" ForeColor="White" 
                     Wrap="False" Font-Names="Arial" Font-Size="16px" 
                     HorizontalAlign="Center" Height="20px"/>--%>
                                    

@@ -193,11 +193,12 @@ ul#thumblist li a.zoomThumbActive{
 
 
 
-<div>
+<%--<div>--%>
 
 <div class="wrapper" style="background:none;">
+
 <div class="product">
-<div id="View1" runat="server" class="main-wrapper" style="height:425px;">
+<div id="View1" runat="server" class="main-wrapper" style="height:auto;">
 
 <div style="width:1024px; float:left; height:35px; margin:15px 0 0 0; background-color:#0099CC;">
 <div class="add2main-txt">ORDER LIST</div>
@@ -404,7 +405,7 @@ ul#thumblist li a.zoomThumbActive{
            <asp:Button ID="Button2" runat="server" Text="REJECT ORDER" 
             CssClass="button-0" OnClick="reject_onclick" />
 
-            <asp:Button ID="Button3" runat="server" Text="Process Order" 
+            <asp:Button ID="Button3" runat="server" Text="PROCESS ORDER" 
             CssClass="button-0" OnClick="Process_onclick" Visible=false />
     </div>
 
@@ -485,7 +486,7 @@ ul#thumblist li a.zoomThumbActive{
 </div>
 
 </div>
-</div>
+
 
 
 </div>
