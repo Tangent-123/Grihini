@@ -4,7 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
+<link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
 <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/addtocart_jqzoom.css" rel="stylesheet" type="text/css" />
     <script src="../JS/addtocart_one.js" type="text/javascript"></script>
@@ -235,12 +235,11 @@ ul#thumblist li a.zoomThumbActive{
         <asp:View ID="View_UserInsert" runat="server">
 
         
-   
+   <div class="wrapper">  
    <div class="main-wrapper" style="height:auto;">
 
-   <div class="reg-main" style="float:left; height:auto; background-color:#edf8ff; margin:20px 0 0 0; border: 1px solid #dbdbdb;">
+   <div class="reg-main" style="float:left; height:auto; background-color:#edf8ff; margin:0 0 0 0; border: 1px solid #dbdbdb;">
 
-   <div class="wrapper" style="background:none;">
    <div class="product">
    <div style="width:auto; height:25px; float:right; margin:10px 10px 10px 0;">
        <asp:Button ID="Btn_View" runat="server" Text="View User" CssClass="btn_submit"
@@ -531,7 +530,6 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
    </div>
    </div>
    </div>
-   </div>
 
      
 
@@ -546,7 +544,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
 
          
 
-         <div class="wrapper" style="background-color:White;">
+
          
          <div style="width:auto; height:25px; float:right; margin:10px 10px 10px 0;">
                     <asp:Button ID="Btn_Add" runat="server" Text="Add New" CssClass="btn_submit" 

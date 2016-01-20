@@ -108,6 +108,7 @@
     <Content Include="GUI_Form\User_Login.aspx" />
     <Content Include="GUI_Form\User_Registration.aspx" />
     <Content Include="GUI_Form\Welcome.aspx" />
+    <Content Include="Images\about_us_banner.jpg" />
     <Content Include="Images\add.png" />
     <Content Include="Images\add1.png" />
     <Content Include="Images\add2small2.png" />
@@ -150,6 +151,8 @@
     <Content Include="Images\color.png" />
     <Content Include="Images\conform.png" />
     <Content Include="Images\Cross.png" />
+    <Content Include="Images\c_buynow.png" />
+    <Content Include="Images\c_choosemore.png" />
     <Content Include="Images\discount.png" />
     <Content Include="Images\footer.png" />
     <Content Include="Images\founder.png" />
@@ -193,6 +196,7 @@
     <Content Include="Images\NewPDF_Download.png" />
     <Content Include="Images\NIT_0326.jpg" />
     <Content Include="Images\notification.png" />
+    <Content Include="Images\ourorigin_banner.jpg" />
     <Content Include="Images\p1.jpg" />
     <Content Include="Images\p1.png" />
     <Content Include="Images\p2.jpg" />
@@ -214,6 +218,7 @@
     <Content Include="Images\po8.png" />
     <Content Include="Images\price.png" />
     <Content Include="Images\Profile.png" />
+    <Content Include="Images\profile_username.png" />
     <Content Include="Images\Right.png" />
     <Content Include="Images\saveicon.png" />
     <Content Include="Images\SignOut.png" />
@@ -237,6 +242,7 @@
     <Content Include="Images\small5.jpg" />
     <Content Include="Images\small6.jpg" />
     <Content Include="Images\trackorder.png" />
+    <Content Include="Images\trackorder.png.png" />
     <Content Include="Images\trash-icon.png" />
     <Content Include="Images\trtad.png" />
     <Content Include="Images\Truck1.png" />

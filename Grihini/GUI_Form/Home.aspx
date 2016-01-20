@@ -231,7 +231,7 @@
 
 <div class="home-product">
 <div class="home-product-one"><a href="Products_View.aspx"><img src="../Images/p1.jpg" width="195" height="303" /></a></div>
-<div class="home-product-two"><a href="Products_View.aspx"><img src="../Images/p3.jpg" width="347" height="303" /></a></div>
+<div class="home-product-two"><a href="Products_View.aspx"><img src="../Images/p3.jpg" width="341" height="303" /></a></div>
 <div class="home-product-three"><a href="Products_View.aspx"><img src="../Images/p2.jpg" width="195" height="303" /></a></div>
 </div>
 

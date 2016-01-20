@@ -64,9 +64,7 @@ ul#thumblist li a.zoomThumbActive{
 
 </style>
 <style type="text/css">
-	body {
-		font: normal 14px/21px Arial, serif;
-	}
+
 	.example {
 		float: left;
 		width: 1024px;
@@ -192,9 +190,6 @@ ul#thumblist li a.zoomThumbActive{
 
 
 </script>
-
-
-
 
 <%--<div>
 <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>

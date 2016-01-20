@@ -78,7 +78,7 @@
     <div class="wrapper">
 <div class="header">
 <div class="main-wrapper">
-<div id="Home" runat="server" style="float:left; height:20px; width:20px;"><a href="Home.aspx"><img src="../Images/Home.png" height="20" width="20" /></a></div>
+<div id="Home" runat="server" style="float:left; height:25px; width:25px; margin:-3px 0 0 0;"><a href="Home.aspx"><img src="../Images/Home.png" height="25" width="25" /></a></div>
 <div class="header-one" style="width:600px;">
 
     
@@ -133,9 +133,9 @@
 <div id="Sign_Up" runat="server" class="giftcart-one" style="cursor: pointer;"><a href="User_Registration.aspx?target=AddUserDetails"><strong>Sign Up</strong></a></div>
 </div>
 
-<div class="giftcart" style="margin:-7px 25px 0 0;">
+<div class="giftcart" style="margin:-14px 0 0 0;">
 <div id="LogOut" runat="server" class="giftcart-one" style="cursor: pointer;">
-<asp:ImageButton ID="ImageButton1" runat="server" Width="20" Height="20" ImageUrl="~/Images/logout-icon.png" OnClick="Logout_Click"/>
+<asp:ImageButton ID="ImageButton1" runat="server" Width="26" Height="26" ImageUrl="~/Images/logout-icon.png" OnClick="Logout_Click"/>
     </div>
 </div>
 
@@ -145,14 +145,14 @@
 </div>
 
 <div id="Track" runat="server" visible="false" class="trackorder">
-<div class="trackorder-logo" style="cursor: pointer;"><a href="Track_My_Order.aspx"><strong>Track Order</strong></a></div>
-<div class="giftcart-two"><img src="../Images/trackorder.png" /></div>
+<div class="c_trackorder_text" style="cursor: pointer;"><a href="Track_My_Order.aspx"><strong>Track Order</strong></a></div>
+<div class="c_trackorder_logo"><img src="../Images/trackorder.png.png" /></div>
 </div>
 
-<div id="Div_Username" runat="server" visible="false" class="trackorder" style="margin:0 0 0 300px; float:left;">
-<div class="trackorder-logo" style="cursor: pointer; color:White;"><strong>
+<div id="Div_Username" runat="server" visible="false" class="trackorder" style="margin:0 0 0 290px; float:left;">
+<div class="c_profile_username" style="cursor: pointer; color:White;"><strong>
     <asp:Label ID="Lbl_Username" runat="server" Text=""></asp:Label></strong></div>
-
+    <div class="c_profilename_logo"><img src="../Images/profile_username.png" /></div>
 </div>
 
 
@@ -235,7 +235,7 @@
 						
 							<li id="View_Products" runat="server"><a href="Products_View.aspx">View Product Details</a></li>
                             <li id="View_Products1" runat="server"><a href="Product_Reg.aspx?target=ViewAllProduct">View Product Details</a></li>
-                            <%--<li id="View_Products2" runat="server"><a href="Admin_Order_View.aspx">Product Order View</a></li>--%>
+                            <li id="View_Products2" runat="server"><a href="Admin_Order_View.aspx">Product Order View</a></li>
 
 						</ul>
 

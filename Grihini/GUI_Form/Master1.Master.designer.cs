@@ -220,6 +220,15 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl View_Products1;
         
         /// <summary>
+        /// View_Products2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl View_Products2;
+        
+        /// <summary>
         /// Add2cart control.
         /// </summary>
         /// <remarks>

@@ -125,8 +125,8 @@
                         <li class="plan">
                             <ul class="planContainer">
                
-        <li class="title" style="margin:8px 0 0 0;">
-                <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl='<%# Eval("Image_path") %>' OnCommand="image_command" CommandArgument='<%#Eval("Product_id")%>'  Height="280" Width="243" />
+        <li class="title" style="margin:8px;">
+                <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl='<%# Eval("Image_path") %>' OnCommand="image_command" CommandArgument='<%#Eval("Product_id")%>'  Height="280" Width="240" />
                 
         </li>                
 

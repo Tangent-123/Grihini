@@ -207,12 +207,12 @@ ul#thumblist li a.zoomThumbActive{
 
   <asp:ImageButton ID="Btn_Pdf_Export1" runat="server" Width="25px"  Height="25px"
                     ImageUrl="~/Images/NewPDF_Download.png" ToolTip="Download Pdf" onclick="Btn_Pdf_Export1_Click"/>
-<<<<<<< HEAD
+<%--<<<<<<< HEAD--%>
                     
           </div>
-=======
+<%--=======--%>
            </div>
->>>>>>> 605f25e617f3a53606536b78d98d22ea042db043
+<%-->>>>>>> 605f25e617f3a53606536b78d98d22ea042db043--%>
 
 <div style="width:1024px; float:left; height:35px; margin:10px 0 0 0; background-color:#0099CC;">
 <div class="add2main-txt">USER ORDER DETAILS</div>

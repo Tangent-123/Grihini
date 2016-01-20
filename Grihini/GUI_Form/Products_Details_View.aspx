@@ -60,11 +60,10 @@ ul#thumblist li a.zoomThumbActive{
 </div>
 
     </div>
-<div class="main-wrapper" style="border:1px solid #eae6db; background-color:White; height:580px;">
+<div class="main-wrapper" style="border:1px solid #eae6db; background-color:White; height:550px;">
 <div class="product-one"><img src="../Images/add1.png" /></div>
 
 <div class="product-two">    
-
 
 <div class="productdetails">
 
@@ -138,7 +137,7 @@ ul#thumblist li a.zoomThumbActive{
 
     <div class="buy2now"> 
 
-        <asp:LinkButton ID="LinkButto_buynoww" runat="server" onclick="Btn_buynow_Click" class="btn btn-50 btn-50a icon-cart"><span> BUY NOW</span></asp:LinkButton>
+        <asp:LinkButton ID="LinkButto_buynoww" runat="server" onclick="Btn_buynow_Click" class="btn btn-50 btn-50a icon-buy"><span> BUY NOW</span></asp:LinkButton>
 
         <%--<asp:Button ID="btn_buynow_false" runat="server" Text="BUY NOW (false)" Visible="true" Enabled="false" CssClass="button-0"/>--%>
 
@@ -152,7 +151,7 @@ ul#thumblist li a.zoomThumbActive{
               
 
         <div class="buy2now_2">
-            <asp:LinkButton ID="LinkButton_choosemore" OnClick="buymore_click" runat="server" class="btn btn-51 btn-51a glyphicon-plus"><span> CHOOSE MORE PRODUCTS</span></asp:LinkButton>
+            <asp:LinkButton ID="LinkButton_choosemore" OnClick="buymore_click" runat="server" class="btn btn-51 btn-51a icon-choosemore"><span> CHOOSE MORE </span></asp:LinkButton>
 
           
    
@@ -164,11 +163,29 @@ ul#thumblist li a.zoomThumbActive{
     </div>  
 
 
+
+
+
+
+
+
+
+        
+
+
+</div>
+
+
+
+</div>
+
+</div>
+
 <div class="product-three">
 
     <div  id="zoom1">
     
-        <asp:Image ID="Product_Image" runat="server" style="height:300px; width:350px; border: 3px solid #666; margin:0 0 0 0;" data-big-image="../Images/imgProd/triumph_big1.jpg"   class="tiksluszoom" />
+        <asp:Image ID="Product_Image" runat="server" style="height:280px; width:330px;  margin:10px 0 0 5px;" data-big-image="../Images/imgProd/triumph_big1.jpg"   class="tiksluszoom" />
         
     </div>
 
@@ -181,29 +198,25 @@ ul#thumblist li a.zoomThumbActive{
 
         <div style="margin:5px 0 0 0;">
         <asp:DataList ID="DataList_Image" runat="server" RepeatDirection="Horizontal">
-         <ItemStyle BackColor="White" ForeColor="Black" BorderWidth="2px" />
+         <ItemStyle BackColor="White" ForeColor="Black" />
             <ItemTemplate>
 
-                <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl='<%# Eval("Image_path") %>' Height="70" Width="100"  />
-                
+
+
+            <ul style="list-style-type: none;">
+            <li class="title" style="margin:5px;">
+                <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl='<%# Eval("Image_path") %>' Height="70" Width="75"  />
+                </li>
+                </ul>
+     
+ 
+
             </ItemTemplate>
         </asp:DataList>
     </div>
 
 
 </div>
-
-
-
-
-
-
-        
-
-
-</div>
-
-
 
 </div>
 </div>

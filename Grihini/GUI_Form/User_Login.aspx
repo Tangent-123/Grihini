@@ -7,11 +7,12 @@
     <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 
 <div class="wrapper" style="background-image:url(../Images/login_bck_texture.png); 	background-repeat:repeat; padding-top:20px;">
-<div class="sportsproduct" style="height:414px;">
+<div class="sportsproduct" style="height:500px;">
 <div class="main-wrapper">
 <div class="sportsproduct-one">
 
-<div style="text-align:center; background-color:White; width:370px; height:230px; margin-top:20px; box-shadow:0px 1px 5px #222; margin:0 auto;">
+<div style="margin:120px;">
+<div style="text-align:center; background-color:White; width:370px; height:230px; box-shadow:0px 1px 5px #222; margin:0 auto;">
 <div style="width:370px;" >
     <div>
     
@@ -23,7 +24,7 @@
     <asp:Label ID="Label1" runat="server" Text="Email Id"></asp:Label> 
     </div>
 
-    <div style="float:left; margin:55px 0 0 -80px;">
+    <div style="float:left; margin:55px 0 0 -57px;">
     <div>
     <asp:TextBox ID="Text_UserName1" runat="server" style="width:300px; height:25px;"></asp:TextBox>
     
@@ -69,7 +70,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
 </div>
 
 </div>
-
+</div>
 
 </div>
 </div>

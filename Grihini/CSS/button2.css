@@ -62,6 +62,14 @@
 	content: "\e007";
 }
 
+.icon-buy:before {
+	content: "";
+	background-image:url(../Images/c_buynow.png);
+}
+.icon-choosemore:before {
+	content: "";
+	background-image:url(../Images/c_choosemore.png);
+}
 .icon-camera:before {
   content: "\e046";
 }
@@ -684,6 +692,7 @@
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
+	margin:0 0 0 -2px;
 }
 
 .btn-5:active {
@@ -812,7 +821,7 @@
 	background: #f38627;
 	color: #fff;
 	height: 25px;
-	min-width: 250px;
+	min-width: 100px;
 	line-height: 24px;
 	font-size: 14px;
 	overflow: hidden;

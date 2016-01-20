@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 
         <link href="../CSS/addtocart_jqzoom.css" rel="stylesheet" type="text/css" />
     <script src="../JS/addtocart_one.js" type="text/javascript"></script>
@@ -200,16 +200,16 @@ ul#thumblist li a.zoomThumbActive{
 <div class="product">
 <div class="main-wrapper" style="height:425px;">
 
-<<<<<<< HEAD
+<%--<<<<<<< HEAD--%>
 <div style="width:1024px; float:left; height:35px; margin:10px 0 0 0; background-color:#0099CC;">
 <div class="add2main-txt">MONTHWISE BILLING</div>
         </div>
-=======
+<%--=======--%>
 <div style="width:auto; height:auto; float:right; margin:3px 10px 10px 0; ">
                 <asp:ImageButton ID="Btn_Excel_Export4" runat="server" Width="25px"  Height="25px"
                     ImageUrl="~/Images/NewExcel_Download.png" ToolTip="Download Excel" 
                     onclick="Btn_Excel_Export4_Click"/>
->>>>>>> 605f25e617f3a53606536b78d98d22ea042db043
+<%-->>>>>>> 605f25e617f3a53606536b78d98d22ea042db043--%>
 
 
   <asp:ImageButton ID="Btn_Pdf_Export4" runat="server" Width="25px"  Height="25px"
@@ -217,9 +217,9 @@ ul#thumblist li a.zoomThumbActive{
                     onclick="Btn_Pdf_Export4_Click"/>
            </div>
 
-<div style="width:1024px; float:left; height:35px; margin:10px 0 0 0; background-color:#0099CC;">
+<%--<div style="width:1024px; float:left; height:35px; margin:10px 0 0 0; background-color:#0099CC;">
 <div class="add2main-txt">MONTHWISE BILLING</div>
-        </div>
+        </div>--%>
 
         <div runat="server" id="Panel1" style="margin:2px 0 0 0px; float:left;">
     <asp:GridView ID="GridViewMonthWiseUserOrder" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Recoreds To Dispplay!"
@@ -269,17 +269,7 @@ ul#thumblist li a.zoomThumbActive{
         </Columns>
     </asp:GridView>
     </div>
-<div style="float:right; margin:20px 0 0 0;">
-<%--<asp:Button ID="BtnDownloadExcel" runat="server" Text="Download Excel" 
-        style="padding:5px 15px 5px 15px; background-color:#ea9b12; border:none; color:White; cursor:pointer;" 
-        onclick="BtnDownloadExcel_Click" />--%>
-    </div>
 
-    <div style="float:right; margin:20px 0 0 0;">
-<%--<asp:Button ID="BtnDownloadPdf" runat="server" Text="Download Pdf" 
-            style="padding:5px 15px 5px 15px; background-color:#ea9b12; border:none; color:White; cursor:pointer;" 
-            onclick="BtnDownloadPdf_Click" />--%>
-    </div>
 
 </div>
 </div>
