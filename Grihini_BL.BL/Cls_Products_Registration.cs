@@ -62,7 +62,7 @@ namespace Grihini_BL.BL
             return dt;
         }
 
-        public DataTable Insert_Products(int OperationId, int Category, int SubCategory, string Product_Name, string Description, string Text_Price, string Max_quantity, string Discount)
+        public DataTable Insert_Products(int OperationId, string Category, string SubCategory, string Product_Name, string Description, string Text_Price, string Max_quantity, string Discount)
         {
 
             SqlParameter[] param = new SqlParameter[8];
@@ -71,11 +71,11 @@ namespace Grihini_BL.BL
             param[0].Direction = ParameterDirection.Input;
             param[0].Value = OperationId;
 
-            param[1] = new SqlParameter("@Category_id", SqlDbType.Int);
+            param[1] = new SqlParameter("@Category_name", SqlDbType.VarChar, 100);
             param[1].Direction = ParameterDirection.Input;
             param[1].Value = Category;
 
-            param[2] = new SqlParameter("@Subcategory_id", SqlDbType.Int);
+            param[2] = new SqlParameter("@SubCategory_name", SqlDbType.VarChar, 100);
             param[2].Direction = ParameterDirection.Input;
             param[2].Value = SubCategory;
 
@@ -220,8 +220,8 @@ namespace Grihini_BL.BL
             return dt;
         }
 
-        public DataTable Insert_Products(int OperationId, int userid, string Name, int Country, int State, int City, 
-                                        string Pincode,string Address,string Landmark, string Phone)
+        public DataTable Insert_Products(int OperationId, int userid, string Name, int Country_Id, int State_Id, string Location,
+                                        string Pincode, string Address, string Landmark, string Phone)
         {
             SqlParameter[] param = new SqlParameter[10];
 
@@ -233,22 +233,21 @@ namespace Grihini_BL.BL
             param[1].Direction = ParameterDirection.Input;
             param[1].Value = userid;
 
-
             param[2] = new SqlParameter("@Name", SqlDbType.VarChar, 100);
             param[2].Direction = ParameterDirection.Input;
             param[2].Value = Name;
 
             param[3] = new SqlParameter("@Country_Id", SqlDbType.Int);
             param[3].Direction = ParameterDirection.Input;
-            param[3].Value = Country;
+            param[3].Value = Country_Id;
 
             param[4] = new SqlParameter("@State_Id", SqlDbType.Int);
             param[4].Direction = ParameterDirection.Input;
-            param[4].Value = State;
+            param[4].Value = State_Id;
 
-            param[5] = new SqlParameter("@City_Id", SqlDbType.Int);
+            param[5] = new SqlParameter("@Location", SqlDbType.VarChar, 100);
             param[5].Direction = ParameterDirection.Input;
-            param[5].Value = City;
+            param[5].Value = Location;
 
             param[6] = new SqlParameter("@Pincode", SqlDbType.VarChar, 100);
             param[6].Direction = ParameterDirection.Input;
@@ -267,12 +266,6 @@ namespace Grihini_BL.BL
             param[9] = new SqlParameter("@PhoneNo", SqlDbType.VarChar, 100);
             param[9].Direction = ParameterDirection.Input;
             param[9].Value = Phone;
-
-           
-
-            //int dt = ogde.Insert_Update_Del("usp_Txn_Cart", param);
-
-            //return dt;
 
             DataTable dt = new DataTable();
             dt = ogde.Return_DataTable("usp_Txn_Cart", param);
@@ -451,7 +444,7 @@ namespace Grihini_BL.BL
             param[1] = new SqlParameter("@User_Id", SqlDbType.VarChar, 100);
             param[1].Direction = ParameterDirection.Input;
             param[1].Value = userid;
-            
+
             DataTable dt = new DataTable();
             dt = ogde.Return_DataTable("usp_User_Registration", param);
             return dt;
@@ -470,6 +463,39 @@ namespace Grihini_BL.BL
             param[1].Value = ProductId;
 
             int dt = ogde.Insert_Update_Del("usp_Product_Registration", param);
+            return dt;
+        }
+        public DataTable fetchStateAgainstCountry(int OperationId, int CountryId)
+        {
+            SqlParameter[] param = new SqlParameter[2];
+
+            param[0] = new SqlParameter("@OperationId", SqlDbType.Int);
+            param[0].Direction = ParameterDirection.Input;
+            param[0].Value = OperationId;
+
+            param[1] = new SqlParameter("@Country_id", SqlDbType.Int);
+            param[1].Direction = ParameterDirection.Input;
+            param[1].Value = CountryId;
+
+            DataTable dt = new DataTable();
+            dt = ogde.Return_DataTable("usp_mst_Location", param);
+            return dt;
+        }
+
+        public DataTable fetchCiryAgaginstState(int OperationId, int StateId)
+        {
+            SqlParameter[] param = new SqlParameter[2];
+
+            param[0] = new SqlParameter("@OperationId", SqlDbType.Int);
+            param[0].Direction = ParameterDirection.Input;
+            param[0].Value = OperationId;
+
+            param[1] = new SqlParameter("@state_id", SqlDbType.Int);
+            param[1].Direction = ParameterDirection.Input;
+            param[1].Value = StateId;
+
+            DataTable dt = new DataTable();
+            dt = ogde.Return_DataTable("usp_mst_Location", param);
             return dt;
         }
     }

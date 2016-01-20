@@ -18,11 +18,15 @@ namespace Grihini.GUI_Form
         Cls_Master clm = new Cls_Master();
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (!IsPostBack)
-            //{
+            
                 string User_Name = (Convert.ToString(Session["UserName"]));
                 string Role_Id = (Convert.ToString(Session["Role_Id"]));
                 string first_name = (Convert.ToString(Session["First_Name"]));
+
+                string EmailId = (Convert.ToString(Session["EmailId"]));
+                string FirstNm = (Convert.ToString(Session["FirstName"]));
+                string LastNm = (Convert.ToString(Session["LastName"]));
+
                 if (!this.IsPostBack)
                 {
                     Session["Reset"] = true;
@@ -35,28 +39,25 @@ namespace Grihini.GUI_Form
                 {
                     Response.Redirect("~/GUI_Form/Products_View.aspx");
                 }
+
                 if (User_Name == "")
                 {
-
-                    
                     LogOut.Visible = false;
-                    Sign_Up.Visible = true;
-                    Sign_In.Visible = true;
+                    signupid.Visible = true;
+                    signinid.Visible = true;
                     Menu1.Visible = false;
                     View_Products.Visible = true;
                     View_Products1.Visible = false;
                     Addprod.Visible = false;
-                    
-
                 }
                 else
                 {
-                    Sign_In.Visible = false;
+                    signinid.Visible = false;
                     LogOut.Visible = true;
-                    Sign_Up.Visible = false;
+                    signupid.Visible = false;
                     Menu1.Visible = false;
                     Div_Username.Visible = true;
-                    Lbl_Username.Text = first_name;
+                    Lbl_Username.Text = "Welcome " + first_name;
 
                     if (Role_Id == "1")
                     {
@@ -64,10 +65,11 @@ namespace Grihini.GUI_Form
                         Home.Visible = false;
                         View_Products.Visible = false;
                         View_Products1.Visible = true;
-                        View_Products2.Visible = true;
+                       //View_Products2.Visible = true;
                         Addprod.Visible = true;
                         Menu1.Visible = true;
-                        welcome.Visible = false;
+                        main_menu.Visible = true;
+                        Div2.Visible = false;
 
                     }
                     else
@@ -76,21 +78,33 @@ namespace Grihini.GUI_Form
                         Home.Visible = true;
                         View_Products.Visible = true;
                         View_Products1.Visible = false;
-                        View_Products2.Visible = false;
+                        //View_Products2.Visible = false;
                         Addprod.Visible = false;
                         fetchtrack();
                         fetchcartcount();
+                        signupid.Visible = false;
+                        signinid.Visible = false;
                     }
                 }
+                if (EmailId != "" && FirstNm != "" && LastNm!="")
+            {
+                signinid.Visible = false;
+                signupid.Visible = false;
+                Lbl_Username.Visible = true;
+                LogOut.Visible = true;
+                Track.Visible = true;
+                Div_Username.Visible = true;
+                Lbl_Username.Visible = true;
 
-               
+                Lbl_Username.Text = "Welcome " + FirstNm;
+                Lbl_Cart.Visible = true;
+                Lbl_Cart.Text = "0";
 
-              
-
-                
-
+                    
+            }
+            
         }
-
+        
         private void fetchcartcount()
         {
             int User_Id = Convert.ToInt32(Session["UserId"]);
@@ -124,11 +138,19 @@ namespace Grihini.GUI_Form
 
         protected void Logout_Click(object sender, EventArgs e)
         {
+            Session.Clear();
+            Session.Abandon();
+
             Session["UserName"] = "";
             Session["Role_Id"] = "";
             Session["UserId"] = "";
             Session["First_Name"] = "";
             Lbl_Cart.Text = "";
+            Track.Visible = false;
+            LogOut.Visible = false;
+            Sign_In.Visible = true;
+            Sign_Up.Visible = true;
+           
             Response.Redirect("Products_View.aspx?target=fg");
         }
     }

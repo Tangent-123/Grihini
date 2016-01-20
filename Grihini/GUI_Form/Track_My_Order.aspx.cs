@@ -22,7 +22,7 @@ namespace Grihini.GUI_Form
         Cls_Track_My_Order tmo = new Cls_Track_My_Order();
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
             fetchorder();
             fetchorderAddr();
             bindgrid();
@@ -58,7 +58,7 @@ namespace Grihini.GUI_Form
         private void fetchorderAddr()
         {
             int userid = Convert.ToInt32(Session["UserId"]);
-            
+
             DataTable dt = new DataTable();
 
             dt = tmo.fetchAddress(16, userid);
@@ -80,8 +80,8 @@ namespace Grihini.GUI_Form
         {
             int userid = Convert.ToInt32(Session["UserId"]);
             DataTable dt = new DataTable();
-           dt = tmo.fetchcartdetails(15, userid);
-            
+            dt = tmo.fetchcartdetails(15, userid);
+
             if (dt.Rows.Count > 0)
             {
                 //DataList_Product.DataSource = dt;

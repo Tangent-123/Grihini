@@ -81,13 +81,17 @@
     <Content Include="CSS\track_order.css" />
     <Content Include="CSS\viewstyle.css" />
     <Content Include="Default.aspx" />
+    <Content Include="GUI_Form\aboutus.aspx" />
     <Content Include="GUI_Form\Addtocarttt.aspx" />
     <Content Include="GUI_Form\Add_ToCart.aspx" />
     <Content Include="GUI_Form\AdminLogin.aspx" />
     <Content Include="GUI_Form\Admin_Order_View.aspx" />
+    <Content Include="GUI_Form\contact.aspx" />
     <Content Include="GUI_Form\Delivery_Address.aspx" />
     <Content Include="GUI_Form\Home.aspx" />
     <Content Include="GUI_Form\MonthWiseUserOrder.aspx" />
+    <Content Include="GUI_Form\ourvalues.aspx" />
+    <Content Include="GUI_Form\OUR_ORIGIN.aspx" />
     <Content Include="GUI_Form\Products_Details_View.aspx" />
     <Content Include="GUI_Form\Products_Order_Confirm.aspx" />
     <Content Include="GUI_Form\Products_View.aspx" />
@@ -309,6 +313,13 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GrihiniDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="GUI_Form\aboutus.aspx.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI_Form\aboutus.aspx.designer.cs">
+      <DependentUpon>aboutus.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI_Form\Addtocarttt.aspx.cs">
       <DependentUpon>Addtocarttt.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -337,6 +348,13 @@
     <Compile Include="GUI_Form\Admin_Order_View.aspx.designer.cs">
       <DependentUpon>Admin_Order_View.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GUI_Form\contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI_Form\contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="GUI_Form\Delivery_Address.aspx.cs">
       <DependentUpon>Delivery_Address.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -364,6 +382,20 @@
     </Compile>
     <Compile Include="GUI_Form\MonthWiseUserOrder.aspx.designer.cs">
       <DependentUpon>MonthWiseUserOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Form\ourvalues.aspx.cs">
+      <DependentUpon>ourvalues.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI_Form\ourvalues.aspx.designer.cs">
+      <DependentUpon>ourvalues.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_Form\OUR_ORIGIN.aspx.cs">
+      <DependentUpon>OUR_ORIGIN.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GUI_Form\OUR_ORIGIN.aspx.designer.cs">
+      <DependentUpon>OUR_ORIGIN.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI_Form\Products_Details_View.aspx.cs">
       <DependentUpon>Products_Details_View.aspx</DependentUpon>
@@ -485,7 +517,7 @@
         <WebProjectProperties>
           <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>56654</DevelopmentServerPort>
+          <DevelopmentServerPort>57484</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>
           </IISUrl>

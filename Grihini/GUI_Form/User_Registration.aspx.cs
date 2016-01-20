@@ -32,19 +32,16 @@ namespace Grihini.GUI_Form
                 //------------Query String to redirect Add User details---------//
                 if (Request.QueryString["target"] == "AddUserDetails")
                 {
-                    //Label13.Text = "Add Product Details";
+
                     MultiView1.ActiveViewIndex = 0;
-                    Btn_View.Visible = true;
                     Btn_Add.Visible = false;
                     Button1.Visible = true;
                     CountryAll();
                     Ddl_State.Enabled = false;
                     Ddl_Location.Enabled = false;
                 }
-                //--------- and View User Details-------//
-                else if (Request.QueryString["target"] == "ViewUserDetails")
+                else if(Request.QueryString["target"] == "ViewUserDetails")
                 {
-                    //Label13.Text = "View Product Details";
                     fetchUserDetailsInGridView();
                     MultiView1.ActiveViewIndex = 1;
                     Btn_View.Visible = false;
@@ -54,13 +51,12 @@ namespace Grihini.GUI_Form
             }
         }
 
-        
+
         private void CountryAll()
         {
             Ddl_Country.Items.Clear();
             try
             {
-
                 DataTable dt = new DataTable();
                 dt = ud.getCountry(4);
 
@@ -76,14 +72,14 @@ namespace Grihini.GUI_Form
                 else
                 {
                 }
-
-           
-            }
+             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
         }
+
         //-----------Button Click Event of resset button-------------//
         protected void Btn_Reset_Click(object sender, EventArgs e)
         {
@@ -93,15 +89,41 @@ namespace Grihini.GUI_Form
         //-----------------Button click event for Submit button for User Details-------------//
         protected void Button1_Click(object sender, EventArgs e)
         {
-            int reg = ud.Insert_Data(1,Convert.ToString(DdlTitle.SelectedValue), Text_First_Name.Text, Text_Middle_Name.Text, Text_Last_Name.Text,
-               Ddl_Gender.SelectedValue, Text_Dob.Text, Text_MobileNo.Text, Text_Email.Text, Ddl_Country.SelectedValue,
-               Ddl_State.SelectedValue, Ddl_Location.SelectedValue, Text_Emp_Id.Text);
-
-            if (reg > 0)
+            try
             {
-                Response.Redirect("User_Registration.aspx?target=ViewUserDetails");
+                int CountryId=Convert.ToInt32(Ddl_Country.SelectedValue);
+                int StateId = Convert.ToInt32(Ddl_State.SelectedValue);
+                string LocationName = null;
+
+                if (Ddl_Location.SelectedValue == "1000")
+                {
+                    LocationName = Convert.ToString(TextLocationOther.Text);
+
+                }
+                else
+                
+                {
+                    LocationName = Ddl_Location.SelectedItem.Text;
+                }
 
 
+                int reg = ud.Insert_Data(1, Convert.ToString(DdlTitle.SelectedValue), Text_First_Name.Text, Text_Middle_Name.Text, Text_Last_Name.Text,
+                   Ddl_Gender.SelectedValue, Text_Dob.Text, Text_MobileNo.Text, Text_Email.Text, CountryId,
+                   StateId, LocationName, Text_Emp_Id.Text);
+
+                if (reg > 0)
+                {
+                    Session["EmailId"] = Convert.ToString(Text_Email.Text);
+                    Session["FirstName"] = Convert.ToString(Text_First_Name.Text);
+                    Session["LastName"] = Convert.ToString(Text_Last_Name.Text);
+                    Response.Redirect("Home.aspx");
+
+                }
+            }
+            catch (Exception ex)
+            {
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
 
         }
@@ -109,9 +131,9 @@ namespace Grihini.GUI_Form
         //---------------Binding Location in Location Dropdownlist Against selected State-------//
         protected void ddState_SelectedIndexchanged(object sender, EventArgs e)
         {
-
             Ddl_Location.Items.Clear();
             Ddl_Location.Enabled = true;
+            TextLocationOther.Visible = false;
             try
             {
 
@@ -123,7 +145,7 @@ namespace Grihini.GUI_Form
                     Ddl_Location.DataTextField = "location_name";
                     Ddl_Location.DataValueField = "location_id";
                     Ddl_Location.DataBind();
-                
+
                 }
                 else
                 {
@@ -133,22 +155,23 @@ namespace Grihini.GUI_Form
 
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
-
 
         }
 
         //---------------Binding State in State Dropdownlist Against selected country-------//
         protected void Ddl_Country_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-
             Ddl_State.Items.Clear();
             Ddl_State.Enabled = true;
+            Ddl_State.SelectedValue = "0";
+            Ddl_Location.SelectedValue = "0";
+            Ddl_Location.Enabled = false;
             Ddl_Location.Items.Clear();
-            //ListItem li = new ListItem("Select Location", "0");
-            //Ddl_Location.Items.Add(li);
+            TextLocationOther.Visible = false;
+
             try
             {
 
@@ -160,8 +183,7 @@ namespace Grihini.GUI_Form
                     Ddl_State.DataTextField = "StateName";
                     Ddl_State.DataValueField = "Stateid";
                     Ddl_State.DataBind();
-                    //ListItem li = new ListItem("Others", "1000");
-                    //ddDistrict.Items.Add(li);
+                    
                 }
                 else
                 {
@@ -171,10 +193,11 @@ namespace Grihini.GUI_Form
 
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
-
         }
+
         //------------Buttton Click event for View User Details in GridView---------//
         protected void Btn_View_Click(object sender, EventArgs e)
         {
@@ -206,7 +229,8 @@ namespace Grihini.GUI_Form
             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
         }
 
@@ -284,7 +308,8 @@ namespace Grihini.GUI_Form
             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
         }
 
@@ -388,6 +413,33 @@ namespace Grihini.GUI_Form
         public override void VerifyRenderingInServerForm(Control control)
         {
 
+        }
+
+        protected void Ddl_Location_SelectedIndexChanged(object sender, EventArgs e)
+        {
+             try
+            {
+                if (Ddl_Location.SelectedValue == "1000")
+                {
+                    TextLocationOther.Visible = true;
+
+                }
+                else
+                {
+                    TextLocationOther.Visible = false;
+
+                    
+                }
+            }
+
+            catch (Exception ex)
+            {
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
+            }
+
+
+    
         }
 
 

@@ -6,13 +6,13 @@
     <link href="../CSS/track_order_style.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 
-    <link href="../CSS/addtocart_jqzoom.css" rel="stylesheet" type="text/css" />
-    <script src="../JS/addtocart_one.js" type="text/javascript"></script>
+  <%--  <link href="../CSS/addtocart_jqzoom.css" rel="stylesheet" type="text/css" />--%>
+    <%--<script src="../JS/addtocart_one.js" type="text/javascript"></script>
     <script src="../JS/addtocart_two.js" type="text/javascript"></script>
     <script src="../JS/addtocart_three.js" type="text/javascript"></script>
-    <script src="../JS/addtocart_four.js" type="text/javascript"></script>
+    <script src="../JS/addtocart_four.js" type="text/javascript"></script>--%>
 
-<script type="text/javascript">
+<%--<script type="text/javascript">
 
     $(function () {
 
@@ -32,10 +32,10 @@
         });
 
     });
-</script>
+</script>--%>
 
 
-<style type"text/css">
+<%--<style type"text/css">
 
 body{margin:0px;padding:0px;font-family:Arial;}
 a img,:link img,:visited img { border: none; }
@@ -64,9 +64,9 @@ ul#thumblist li a.zoomThumbActive{
 	float:left;
 }
 
-</style>
+</style>--%>
 
-<style type="text/css">
+<%--<style type="text/css">
 	body {
 		font: normal 14px/21px Arial, serif;
 	}
@@ -180,8 +180,8 @@ ul#thumblist li a.zoomThumbActive{
 					font-weight:bold;
 				}
 	
-	</style>
-<script type="text/javascript">
+	</style>--%>
+<%--<script type="text/javascript">
 
     $(document).ready(function () {
         $('.jqzoom').jqzoom({
@@ -194,10 +194,10 @@ ul#thumblist li a.zoomThumbActive{
     });
 
 
-</script>
+</script>--%>
 
 
-<div class="wrapper" style="background-color:White; height:500px;">
+<div class="wrapper" style="background-color:White; height:auto;">
 <div class="main-wrapper">
 
 <div style="margin-top:5px; float:left;">
@@ -208,7 +208,7 @@ ul#thumblist li a.zoomThumbActive{
 <div class="t_order_products_orderno">ORDER PLACED ON :</div>
 <div class="t_order_products_orderno_area"></div>
 </div>
-<div style="float:left; width:1024px; background-color:#cceef9;">
+<%--<div style="float:left; width:1024px; background-color:#cceef9;">
 <div style="float:left; width:169px; height:122px; margin:0 0 0 0;"><img src="../Images/c4.png" /></div>
 
 <div class="t_order_products_name_area">
@@ -217,10 +217,7 @@ ul#thumblist li a.zoomThumbActive{
 <div class="t_order_products_date">Delivered On Sat,Dec 2016</div>
 
 </div>
-</div>
-<div class="t_order_border"></div>
-</div>
-</div>
+</div>--%>
 
 <div>
 
@@ -228,64 +225,41 @@ ul#thumblist li a.zoomThumbActive{
      AllowSorting="false" Visible="true" Width="1024px">
 
         <Columns>
-            
-                           
-
-            <asp:TemplateField HeaderText="Colour"   ControlStyle-Font-Size="12px"  >
-            <ItemTemplate>
-
-             <asp:ImageButton ID="ImageColour" runat="server" />
-            </ItemTemplate>
-            </asp:TemplateField>
-
-         
-
-            <asp:TemplateField HeaderText="Product Price(Rs.)"   ControlStyle-Font-Size="12px"  >
-            <ItemTemplate>
-            <asp:Label ID="lbl_price" runat="server" text='<%#Eval("Product_price") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>
-
-              <asp:TemplateField HeaderText="Quantity"   ControlStyle-Font-Size="12px"  >
-            <ItemTemplate>
-            <asp:Label ID="lbl_Quantity" runat="server" text='<%#Eval("Quantity") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>
-
-
-              <asp:TemplateField HeaderText="Discount(%)"   ControlStyle-Font-Size="12px"  >
-            <ItemTemplate>
-            <asp:Label ID="lbl_discount" runat="server" text='<%#Eval("Discount") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>
-
-        
-
-            <asp:TemplateField HeaderText="Order Date"   ControlStyle-Font-Size="12px"  >
-            <ItemTemplate>
-            <asp:Label ID="lbl_orderdate" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>
-         
-
-
-            <asp:TemplateField HeaderText="Status"   ControlStyle-Font-Size="12px"  >
-            <ItemTemplate>
-            <asp:Label ID="lbl_Status" runat="server" text='<%#Eval("Order_Status") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>
-
-            <asp:TemplateField HeaderText="Month"   ControlStyle-Font-Size="12px"  >
-            <ItemTemplate>
-             <asp:Label ID="lbl_month" runat="server" text='<%#Eval("month") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>
-
            
+               
+
+            <asp:TemplateField HeaderText="" ControlStyle-Font-Size="12px">
+            <ItemTemplate>
+
+              <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl='<%# Eval("ImageName3") %>' Height="150" Width="180"  />
+            </ItemTemplate>
+            </asp:TemplateField>
+
+       
+                        
+
+            <asp:TemplateField HeaderText=""   ControlStyle-Font-Size="12px" ControlStyle-Width="780px" >
+            <ItemTemplate>
+           
+            <asp:Label ID="lbl_price" runat="server" text='<%#Eval("Product_name") %>'></asp:Label>
+                  <br />
+            <asp:Label ID="lbl_Quantity" runat="server" text='<%#Eval("Order_Status") %>'></asp:Label>
+                  <br />
+            <asp:Label ID="lbl_discount" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label>
+            
+            </ItemTemplate>
+            </asp:TemplateField>
+
+                  
             </Columns>
           </asp:GridView>
 
 </div>
+<div class="t_order_border"></div>
+</div>
+</div>
+
+
 
 </div>
 </div>

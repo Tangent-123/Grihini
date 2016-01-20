@@ -12,13 +12,15 @@ using System.Security.Cryptography;
 using System.Text;
 using System.IO;
 using System.Data.OleDb;
+using iTextSharp.text;
+using iTextSharp.text.html.simpleparser;
+using iTextSharp.text.pdf;
 using System.Configuration;
 using Grihini_BL.BL;
 
 namespace Grihini.GUI_Form
 {
     public partial class Delivery_Address : System.Web.UI.Page
-        
     {
         Cls_Products_Registration pr = new Cls_Products_Registration();
         protected void Page_Load(object sender, EventArgs e)
@@ -26,8 +28,8 @@ namespace Grihini.GUI_Form
             if (!IsPostBack)
             {
                 CountryAll();
-                fetchAllLocation();
-                fetchAllState();
+                dropdownstate.Enabled = false;
+                dropdowncity.Enabled = false;
                 fetchAddress();
 
             }
@@ -35,77 +37,27 @@ namespace Grihini.GUI_Form
 
         private void fetchAddress()
         {
-            string userid = Convert.ToString(Session["UserId"]);
-            DataTable dtadd = new DataTable();
-            dtadd = pr.fetchAdd(2, userid);
-
-            if (dtadd.Rows.Count > 0)
-            {
-                DataList_Address.DataSource = dtadd;
-                DataList_Address.DataBind();
-            }
-
-        }
-
-        private void fetchAllState()
-        {
             try
             {
+                string userid = Convert.ToString(Session["UserId"]);
+                DataTable dtadd = new DataTable();
+                dtadd = pr.fetchAdd(2, userid);
 
-                DataTable dt = new DataTable();
-                dt = pr.getState(6);
-
-                if (dt.Rows.Count > 0)
+                if (dtadd.Rows.Count > 0)
                 {
-
-                    dropdownstate.DataSource = dt;
-                    dropdownstate.DataTextField = "StateName";
-                    dropdownstate.DataValueField = "Stateid";
-                    dropdownstate.DataBind();
-
+                    DataList_Address.DataSource = dtadd;
+                    DataList_Address.DataBind();
                 }
-                else
-                {
-                }
-
-                ListItem li = new ListItem("Select State", "0");
-                dropdownstate.Items.Insert(0, li);
             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
+
         }
 
-        private void fetchAllLocation()
-        {
-            try
-            {
 
-                DataTable dt = new DataTable();
-                dt = pr.getLocation(5);
-
-                if (dt.Rows.Count > 0)
-                {
-
-                    dropdowncity.DataSource = dt;
-                    dropdowncity.DataTextField = "location_name";
-                    dropdowncity.DataValueField = "location_id";
-                    dropdowncity.DataBind();
-
-                }
-                else
-                {
-                }
-
-                ListItem li = new ListItem("Select City", "0");
-                dropdowncity.Items.Insert(0, li);
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
 
         private void CountryAll()
         {
@@ -129,66 +81,93 @@ namespace Grihini.GUI_Form
 
                 }
 
-                ListItem li = new ListItem("Select Country", "0");
-                dropdowncountry.Items.Insert(0, li);
+               
             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
         }
 
         protected void ImageButton100_Click(object sender, ImageClickEventArgs e)
         {
-            
+
             try
             {
-                int location = (Convert.ToInt32(dropdowncity.SelectedValue));
-                int country = (Convert.ToInt32(dropdowncountry.SelectedValue));
-                int state = (Convert.ToInt32(dropdownstate.SelectedValue));
 
+                int  Country_Id = Convert.ToInt32(dropdowncountry.SelectedValue);
+                int State_Id = Convert.ToInt32(dropdownstate.SelectedValue);
+                string Location_Name = null;
+
+                if (dropdowncity.SelectedValue == "1000")
+                {
+                    Location_Name = Convert.ToString(TextOtherLocation.Text);
+
+                }
+                else
+                {
+                    Location_Name = dropdowncity.SelectedItem.Text;
+                }
+                
                 int userid = Convert.ToInt32(Session["UserId"]);
                 DataTable dt = new DataTable();
 
-                dt = pr.Insert_Products(4, Convert.ToInt32(userid), txtname.Text, country, state,
-                                        location,txtpincode.Text, txtaddress.InnerText, txtlandmark.InnerText,
+                dt = pr.Insert_Products(4, Convert.ToInt32(userid), txtname.Text, Country_Id, State_Id,
+                                        Location_Name, txtpincode.Text, txtaddress.InnerText, txtlandmark.InnerText,
                                         txtphone.Text);
 
-               if (dt.Rows.Count > 0)
-               {
-                   string Address_Id = Convert.ToString(dt.Rows[0]["ID"]);
-                   Session["Address_Id"] = Address_Id;
-                   Session["Delivery_Id"] = "";
+                if (dt.Rows.Count > 0)
+                {
+                    string Address_Id = Convert.ToString(dt.Rows[0]["ID"]);
+                    Session["Address_Id"] = Address_Id;
+                    Session["Delivery_Id"] = "";
 
-                   Response.Redirect("Products_Order_Confirm.aspx");
-               }
-              
+                    Response.Redirect("Products_Order_Confirm.aspx");
+                }
+
             }
 
 
-            catch
+            catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
 
-        
+
         }
 
         protected void ddState_SelectedIndexchanged(object sender, EventArgs e)
         {
-            //dropdowncity.Items.Clear();
-            //int id = Convert.ToInt32(dropdownstate.SelectedValue);
-            //DataTable dt = new DataTable();
-            //dt = pr.fetchlocation(7, Convert.ToInt32(dropdownstate.SelectedValue));
-            //if (dt.Rows.Count > 0)
-            //{
-            //    dropdowncity.DataSource = dt;
-            //    dropdowncity.DataTextField = "location_name";
-            //    dropdowncity.DataValueField = "location_id";
-            //    dropdowncity.DataBind();
-            //    //ListItem li = new ListItem("Others", "1000");
-            //    //ddDistrict.Items.Add(li);
-            //}
+            
+            dropdowncity.Items.Clear();
+            dropdowncity.Enabled = true;
+            TextOtherLocation.Visible = false;
+            try
+            {
+
+                DataTable dt = new DataTable();
+                dt = pr.fetchCiryAgaginstState(10, Convert.ToInt32(dropdownstate.SelectedValue));
+                if (dt.Rows.Count > 0)
+                {
+                    dropdowncity.DataSource = dt;
+                    dropdowncity.DataTextField = "location_name";
+                    dropdowncity.DataValueField = "location_id";
+                    dropdowncity.DataBind();
+
+                }
+                else
+                {
+
+                }
+            }
+
+            catch (Exception ex)
+            {
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
+            }
 
         }
 
@@ -203,6 +182,71 @@ namespace Grihini.GUI_Form
             Session["Address_Id"] = "";
 
             Response.Redirect("Products_Order_Confirm.aspx");
+        }
+
+        protected void dropdowncountry_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dropdownstate.Items.Clear();
+            dropdownstate.Enabled = true;
+            dropdownstate.SelectedValue = "0";
+            dropdowncity.SelectedValue = "0";
+            dropdowncity.Enabled = false;
+            dropdowncity.Items.Clear();
+            TextOtherLocation.Visible = false;
+            try
+            {
+
+                DataTable dt = new DataTable();
+                dt = pr.fetchStateAgainstCountry(9, Convert.ToInt32(dropdowncountry.SelectedValue));
+                if (dt.Rows.Count > 0)
+                {
+                    dropdownstate.DataSource = dt;
+                    dropdownstate.DataTextField = "StateName";
+                    dropdownstate.DataValueField = "Stateid";
+                    dropdownstate.DataBind();
+
+                }
+                else
+                {
+                    dropdownstate.Enabled = false;
+                    dropdowncity.Enabled = false;
+                }
+
+            }
+
+            catch (Exception ex)
+            {
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
+            }
+
+
+        }
+
+        protected void dropdowncity_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dropdowncity.SelectedValue == "1000")
+                {
+                    TextOtherLocation.Visible = true;
+                    dropdowncity.Enabled = false;
+
+                }
+                else
+                {
+                    TextOtherLocation.Visible = false;
+                 }
+            }
+
+            catch (Exception ex)
+            {
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
+            }
+
+
+    
         }
     }
 }

@@ -211,33 +211,30 @@ ul#thumblist li a.zoomThumbActive{
 
 
     <Columns>
-  <asp:TemplateField HeaderText="ITEM"   ControlStyle-Font-Size="12px"  >
+            <asp:TemplateField HeaderText="PRODUCT NAME"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_Item" runat="server" Text='<%#Eval("Product_name") %>'></asp:Label>
-            
-
             </ItemTemplate>
             </asp:TemplateField>
 
             <asp:ImageField DataImageUrlField="ImageName2" ControlStyle-Width="100"
-        ControlStyle-Height = "100" HeaderText = "Preview Image"/>
+        ControlStyle-Height = "100" HeaderText = "PRODUCT IMAGE"/>
 
       
 
-  <asp:TemplateField HeaderText="QTY"   ControlStyle-Font-Size="12px"  >
+            <asp:TemplateField HeaderText="QUANTITY"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_QTY" runat="server" Text='<%#Eval("Quantity") %>'></asp:Label>
-
             </ItemTemplate>
             </asp:TemplateField>
 
-  <asp:TemplateField HeaderText="PRICE (Rs.)"   ControlStyle-Font-Size="12px"  >
+         <asp:TemplateField HeaderText="PRICE (Rs.)"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_PRICE" runat="server" text='<%#Eval("Product_price") %>'></asp:Label>
             </ItemTemplate>
             </asp:TemplateField>
 
-  <asp:TemplateField HeaderText="Subtotal (Rs.)"   ControlStyle-Font-Size="12px"  >
+        <asp:TemplateField HeaderText="SUBTOTAL (Rs.)"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_Subtotal" runat="server" text='<%#Eval("Subtotal") %>'></asp:Label>
             </ItemTemplate>
@@ -320,6 +317,7 @@ ul#thumblist li a.zoomThumbActive{
     </asp:GridView>--%>
 
    <%-- <div style="width:300px; height:480px; float:right; background-color:White; margin:0 150px 0 0;">--%>
+
    <div style="float:left; background-color:#2dc6f9; width:1024px;">
 <asp:DataList ID="DataList_Address" runat="server" 
            
@@ -350,6 +348,7 @@ ul#thumblist li a.zoomThumbActive{
                  <br />
                  Pincode:                 
                 <asp:Label ID="lbl_Pincode" runat="server" text='<%#Eval("Pincode") %>'></asp:Label>,
+                <br>
                 </br>
                  <asp:Label ID="lbl_State" runat="server" text='<%#Eval("State_Id") %>'></asp:Label>,                
                   <asp:Label ID="lbl_Country" runat="server" Text='<%#Eval("Country_Id") %>'></asp:Label>

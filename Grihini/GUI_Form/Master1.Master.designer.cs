@@ -58,6 +58,15 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.ScriptManager ScriptManager1;
         
         /// <summary>
+        /// signinid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl signinid;
+        
+        /// <summary>
         /// Sign_In control.
         /// </summary>
         /// <remarks>
@@ -65,6 +74,15 @@ namespace Grihini.GUI_Form {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Sign_In;
+        
+        /// <summary>
+        /// signupid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl signupid;
         
         /// <summary>
         /// Sign_Up control.
@@ -130,13 +148,40 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.Label Lbl_Username;
         
         /// <summary>
-        /// welcome control.
+        /// Div1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl welcome;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div1;
+        
+        /// <summary>
+        /// Div2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl Div2;
+        
+        /// <summary>
+        /// Label1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label1;
+        
+        /// <summary>
+        /// main_menu control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl main_menu;
         
         /// <summary>
         /// Menu1 control.
@@ -146,15 +191,6 @@ namespace Grihini.GUI_Form {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl Menu1;
-        
-        /// <summary>
-        /// ViewUser control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ViewUser;
         
         /// <summary>
         /// Addprod control.
@@ -182,15 +218,6 @@ namespace Grihini.GUI_Form {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl View_Products1;
-        
-        /// <summary>
-        /// View_Products2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl View_Products2;
         
         /// <summary>
         /// Add2cart control.

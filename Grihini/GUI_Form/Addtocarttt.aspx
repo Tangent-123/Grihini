@@ -210,7 +210,7 @@ ul#thumblist li a.zoomThumbActive{
 <div class="main-wrapper" style="height:425px;">
 
 <div style="width:1024px; float:left; height:35px; margin:5px 0 0 0; background-color:#0099CC;">
-<div class="add2main-txt">ADD TO CART</div>
+<div class="add2main-txt">CART DETAILS</div>
         </div>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Products In Cart"
      AllowSorting="false" Visible="true" Width="1024px" EnableModelValidation="True" EmptyDataRowStyle-Font-Bold="true" EmptyDataRowStyle-BorderColor="Red"
@@ -219,7 +219,7 @@ ul#thumblist li a.zoomThumbActive{
      
 
     <Columns>
-  <asp:TemplateField HeaderText="ITEM"   ControlStyle-Font-Size="12px"  >
+  <asp:TemplateField HeaderText="PRODUCT"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_Item" runat="server" Text='<%#Eval("Product_name") %>'></asp:Label>
             
@@ -228,11 +228,11 @@ ul#thumblist li a.zoomThumbActive{
             </asp:TemplateField>
 
             <asp:ImageField DataImageUrlField="ImageName2" ControlStyle-Width="100"
-        ControlStyle-Height = "100" HeaderText = "Preview Image"/>
+        ControlStyle-Height = "100" HeaderText = "PRODUCT IMAGE"/>
 
       
 
-  <asp:TemplateField HeaderText="QTY"   ControlStyle-Font-Size="12px"  >
+  <asp:TemplateField HeaderText="QUANTITY"   ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_QTY" runat="server" Text='<%#Eval("Quantity") %>'></asp:Label>
 
@@ -245,16 +245,15 @@ ul#thumblist li a.zoomThumbActive{
             </ItemTemplate>
             </asp:TemplateField>
 
-  <asp:TemplateField HeaderText="Subtotal (Rs.)" ControlStyle-Font-Size="12px"  >
+  <asp:TemplateField HeaderText="SUBTOTAL (Rs.)" ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
             <asp:Label ID="lbl_Subtotal" runat="server" text='<%#Eval("Subtotal") %>'></asp:Label>
             </ItemTemplate>
             </asp:TemplateField>
 
-            <asp:TemplateField HeaderText="Delete" ControlStyle-Font-Size="12px"  >
+            <asp:TemplateField HeaderText="ACTION" ControlStyle-Font-Size="12px"  >
             <ItemTemplate>
-           
-            <asp:ImageButton ID="btndelete" ImageUrl="~/Images/trash-icon.png" Height="25px" Width="25px" ToolTip="Delete" runat="server"
+           <asp:ImageButton ID="btndelete" ImageUrl="~/Images/trash-icon.png" Height="25px" Width="25px" ToolTip="Delete" runat="server"
              CommandName="Delete" CommandArgument='<%# Eval("Cart_Id") %>'/>                                      
             </ItemTemplate>
             </asp:TemplateField>

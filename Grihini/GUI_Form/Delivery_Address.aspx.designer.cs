@@ -94,6 +94,24 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator req_city;
         
         /// <summary>
+        /// TextOtherLocation control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextOtherLocation;
+        
+        /// <summary>
+        /// RequiredFieldValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
         /// txtpincode control.
         /// </summary>
         /// <remarks>

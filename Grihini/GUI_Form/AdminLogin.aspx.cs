@@ -45,13 +45,18 @@ namespace Grihini.GUI_Form
             }
             catch (Exception ex)
             {
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
         }
 
-        protected void Btn_Reset_Click(object sender, EventArgs e)
+
+
+        protected void Btn_Reset_Click1(object sender, EventArgs e)
         {
             Text_Username.Text = "";
             Text_Password.Text = "";
+            Response.Redirect("AdminLogin.aspx");
         }
     }
 }

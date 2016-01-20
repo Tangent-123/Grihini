@@ -126,39 +126,21 @@ ul#thumblist li a.zoomThumbActive{
     <div class="button">
     <div class="add2cart">
         <asp:Button ID="Btn_AddtoCart" runat="server" Text="ADD TO CART" onclick="Btn_addtocart22_Click" Visible="true" cssclass="button-0"/>
-        <%--<asp:ImageButton ID="Btn_addtocart22"  runat="server" 
-                           onclick="Btn_addtocart22_Click" Visible="true" --%>
-                           
-                         <%--  cssclass="button-0"/>--%>
-
-                           <%--ImageUrl="../Images/addtocart2.png" --%>
-       <%-- <asp:Button ID="Btn_Addtocartfalse" runat="server" Text="ADD TO CART(false)" Visible="false" Enabled="false" cssclass="button-0"
-                            onclick="Btn_addtocart22_Click"/>--%>
+   
                             <asp:ImageButton ID="ImageButton2"  runat="server" ImageUrl="../Images/addtocart_false.png"
                            onclick="Btn_addtocart22_Click" Visible="false" Enabled="false"/>
-        </div>
+    </div>
 
-       
-
+      
     <div class="buy2now">
         <asp:Button ID="btn_buynoww" runat="server" Text="BUY NOW" Visible="true" OnClick="Btn_buynow_Click" CssClass="button-0"/>
-    <%--<a href="#"><img src="../Images/buynow.png"/></a>--%>
-       <%-- <asp:ImageButton ID="Btn_buynow" runat="server" Visible="true" 
-            ImageUrl="../Images/buynow.png" onclick="Btn_buynow_Click" />--%>
-        <asp:Button ID="btn_buynow_false" runat="server" Text="BUY NOW (false)" Visible="true" onclick="Btn_buynow_Click" Enabled="false" CssClass="button-0"/>
 
-           <%-- <asp:ImageButton ID="ImageButton3" runat="server" Visible="true" 
-            ImageUrl="../Images/buynow_FALSE.png"  onclick="Btn_buynow_Click" Enabled="false"/>--%>
     </div>
 
 
-        <div class="buy2now" >
-            <asp:Button ID="Button3" runat="server" Text="Choose More Items" OnClick="buymore_click" CssClass="button-0" />
-   
-  <%--      <asp:ImageButton ID="ImageButton4" runat="server" Visible="true" style="margin:-36.2px 0 0 160px;"
-            ImageUrl="../Images/buymore.png" OnClick="buymore_click"/>--%>
-
-           
+    <div class="buy2now">
+    <asp:Button ID="Button3" runat="server" Text="CHOOSE MORE ITEMS" OnClick="buymore_click" CssClass="button-0" />
+              
     </div>
 
     </div>

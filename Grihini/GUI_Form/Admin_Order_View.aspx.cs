@@ -27,6 +27,7 @@ namespace Grihini.GUI_Form
             if (!IsPostBack)
             {
                 fetchProductDet();
+                Button3.Visible = false;
             }
 
         }
@@ -61,10 +62,57 @@ namespace Grihini.GUI_Form
 
                 DataTable dt = new DataTable();
                 dt = aov.rejectproduct(22, order_id);
-                if (dt.Rows.Count>0)
+                if (dt.Rows.Count > 0)
                 {
                     Response.Redirect("Admin_Order_View.aspx");
+                    Button1.Visible = false;
+                    Button3.Visible = false;
                 }
+
+
+
+            }
+
+            catch (Exception ex)
+            {
+
+            }
+
+        }
+
+        protected void Process_onclick(object sender, EventArgs e)
+        {
+            try
+            {
+
+
+                int userid = Convert.ToInt32(Session["UserId"]);
+                int order_id = Convert.ToInt32(Session["order_id"]);
+
+                DataTable dt = new DataTable();
+                dt = aov.processorder(26, order_id);
+                Session["Order_Status"] = Convert.ToString(dt.Rows[0]["Order_Status"]);
+                int orderstatus = Convert.ToInt32(Session["Order_Status"]);
+
+                if (orderstatus == 2)
+                {
+                    dt = aov.processorderdetails(25, order_id, txt_dispatchdetails.Text, txt_dispatchstatus.Text);
+
+                    if (dt.Rows.Count > 0)
+                    {
+
+                        lblmsgshow.Visible = true;
+                        lblmsgshow.Text = "Your Order is processed, thanks!!";
+                        txt_dispatchdetails.Visible = false;
+                        txt_dispatchstatus.Visible = false;
+                        lbl_dispatchdetails.Visible = false;
+                        Lbl_dispatchstatus.Visible = false;
+
+                    }
+
+
+                }
+
 
 
 
@@ -82,14 +130,21 @@ namespace Grihini.GUI_Form
         {
             try
             {
-                 int userid = Convert.ToInt32(Session["UserId"]);
+                int userid = Convert.ToInt32(Session["UserId"]);
                 int order_id = Convert.ToInt32(Session["order_id"]);
                 DataTable dt = new DataTable();
                 dt = aov.confirmproduct(23, order_id);
                 if (dt.Rows.Count > 0)
                 {
 
-                    Response.Redirect("Admin_Order_View.aspx");
+                    //Response.Redirect("Admin_Order_View.aspx");
+                    Button3.Visible = true;
+                    Button1.Visible = false;
+                    Button2.Visible = false;
+                    txt_dispatchdetails.Visible = true;
+                    txt_dispatchstatus.Visible = true;
+                    lbl_dispatchdetails.Visible = true;
+                    Lbl_dispatchstatus.Visible = true;
                 }
 
 
@@ -114,7 +169,7 @@ namespace Grihini.GUI_Form
                     int userid = Convert.ToInt32(commandArgs[1]);
                     int product_Id = Convert.ToInt32(commandArgs[2]);
                     int order_id = Convert.ToInt32(commandArgs[3]);
-                   // int Address_id = Convert.ToInt32(e.CommandArgument);
+                    // int Address_id = Convert.ToInt32(e.CommandArgument);
                     view_pro.Visible = true;
                     Session["order_id"] = order_id;
 
@@ -161,57 +216,59 @@ namespace Grihini.GUI_Form
                     View1.Visible = false;
 
                 }
-                
+
             }
 
         }
 
-       //protected void Downloadadress_click(object sender, EventArgs e)
-       
-           
+        //protected void Downloadadress_click(object sender, EventArgs e)
 
-       // {
-       //     DataTable dtformat = new DataTable();
-       //     dtformat = aov.adddressdownload(21);
-       //     if (dtformat.Rows.Count > 0)
-       //     {               
 
-       //         Warning[] warnings; string[] streamids; string mimeType = ""; string encoding; string filenameExtension;
 
-       //         ReportViewer ReportViewer2 = new ReportViewer();
-       //         ReportViewer2.Visible = true;
-       //         ReportViewer2.LocalReport.EnableExternalImages = true;
-       //         ReportDataSource rdss = new ReportDataSource();
+        // {
+        //     DataTable dtformat = new DataTable();
+        //     dtformat = aov.adddressdownload(21);
+        //     if (dtformat.Rows.Count > 0)
+        //     {               
 
-       //         rdss.Name = "DataSet1";
-       //         rdss.Value = dtformat;
+        //         Warning[] warnings; string[] streamids; string mimeType = ""; string encoding; string filenameExtension;
 
-       //         ReportViewer2.LocalReport.ReportPath = Server.MapPath("~/GUI_Form/Address.rdlc");
+        //         ReportViewer ReportViewer2 = new ReportViewer();
+        //         ReportViewer2.Visible = true;
+        //         ReportViewer2.LocalReport.EnableExternalImages = true;
+        //         ReportDataSource rdss = new ReportDataSource();
 
-       //         ReportViewer2.LocalReport.DataSources.Clear();
-       //         ReportViewer2.LocalReport.DataSources.Add(rdss);
-       //         ReportViewer2.LocalReport.Refresh();
+        //         rdss.Name = "DataSet1";
+        //         rdss.Value = dtformat;
 
-       //         string deviceInfo1 = "<DeviceInfo>" + "  <PageWidth>10.26in</PageWidth>" + "  <PageHeight>12.2in</PageHeight>" + "  <MarginTop>0.1in</MarginTop>" + "  <MarginLeft>.5in</MarginLeft>" +
-       //         "  <MarginRight>0in</MarginRight>" + "  <MarginBottom>0in</MarginBottom>" + "</DeviceInfo>";
+        //         ReportViewer2.LocalReport.ReportPath = Server.MapPath("~/GUI_Form/Address.rdlc");
 
-       //         byte[] bytes = ReportViewer2.LocalReport.Render("PDF", deviceInfo1, out mimeType, out encoding, out filenameExtension, out streamids, out warnings);
+        //         ReportViewer2.LocalReport.DataSources.Clear();
+        //         ReportViewer2.LocalReport.DataSources.Add(rdss);
+        //         ReportViewer2.LocalReport.Refresh();
 
-       //         Response.Buffer = true;
+        //         string deviceInfo1 = "<DeviceInfo>" + "  <PageWidth>10.26in</PageWidth>" + "  <PageHeight>12.2in</PageHeight>" + "  <MarginTop>0.1in</MarginTop>" + "  <MarginLeft>.5in</MarginLeft>" +
+        //         "  <MarginRight>0in</MarginRight>" + "  <MarginBottom>0in</MarginBottom>" + "</DeviceInfo>";
 
-       //         Response.Clear();
+        //         byte[] bytes = ReportViewer2.LocalReport.Render("PDF", deviceInfo1, out mimeType, out encoding, out filenameExtension, out streamids, out warnings);
 
-       //         Response.ContentType = mimeType;
+        //         Response.Buffer = true;
 
-       //         Response.AddHeader("content-disposition", ("attachment; filename=" + "Payment_Format" + ".") + "pdf");
+        //         Response.Clear();
 
-       //         Response.BinaryWrite(bytes);
+        //         Response.ContentType = mimeType;
 
-       //         Response.Flush();
-       //     }
-       // }
-       }
-    
+        //         Response.AddHeader("content-disposition", ("attachment; filename=" + "Payment_Format" + ".") + "pdf");
 
-   
+        //         Response.BinaryWrite(bytes);
+
+        //         Response.Flush();
+        //     }
+        // }
+    }
+
+
+
+
+
 }

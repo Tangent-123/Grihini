@@ -1,13 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/GUI_Form/Master1.Master" AutoEventWireup="true" CodeBehind="User_Registration.aspx.cs" Inherits="Grihini.GUI_Form.User_Registration" %>
-<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
-<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp_Ajax" %>
-
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+<link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/addtocart_jqzoom.css" rel="stylesheet" type="text/css" />
+    <script src="../JS/addtocart_one.js" type="text/javascript"></script>
+    <script src="../JS/addtocart_two.js" type="text/javascript"></script>
+    <script src="../JS/addtocart_three.js" type="text/javascript"></script>
+    <script src="../JS/addtocart_four.js" type="text/javascript"></script>
 
  <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
@@ -15,6 +17,8 @@
     <link href="../CSS/mgrid.css" rel="stylesheet" type="text/css" />
 <link href="../CSS/addtocart_jqzoom.css" rel="stylesheet" type="text/css" />
 
+<link href="../CSS/style.css" rel="stylesheet" type="text/css" />
+    <link href="../CSS/mgrid.css" rel="stylesheet" type="text/css" />
 
     <script src="../JS/addtocart_one.js" type="text/javascript"></script>
     <script src="../JS/addtocart_two.js" type="text/javascript"></script>
@@ -222,7 +226,7 @@ ul#thumblist li a.zoomThumbActive{
    <div class="wrapper" style="background:none;">
    <div class="product">
    <div style="width:auto; height:25px; float:right; margin:10px 10px 10px 0;">
-       <asp:Button ID="Btn_View" runat="server" Text="View All" CssClass="btn_submit"
+       <asp:Button ID="Btn_View" runat="server" Text="View User" CssClass="btn_submit"
        BackColor="Black" Font-Bold="True" ForeColor="White" 
            style="float:left; margin:0 0 20px 0; width:100px; height:25px; font-family:Arial; font-size:13px; color:White; background-color:#fc8332; border:none; cursor:pointer;" onclick="Btn_View_Click1" 
           />
@@ -332,8 +336,8 @@ ul#thumblist li a.zoomThumbActive{
    <div class="form_box_right">
              <asp:DropDownList ID="Ddl_Gender" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;">
                         <asp:ListItem Value="0">Select Gender</asp:ListItem>
-                        <asp:ListItem Value="1">MALE</asp:ListItem>
-                        <asp:ListItem Value="2">FEMALE</asp:ListItem>
+                        <asp:ListItem Value="MALE">MALE</asp:ListItem>
+                        <asp:ListItem Value="FEMALE">FEMALE</asp:ListItem>
                        
              </asp:DropDownList>
               <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" 
@@ -424,6 +428,8 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
            <asp:RequiredFieldValidator ID="RequiredFieldValidator8" runat="server" 
                         ErrorMessage="Select Country!" ControlToValidate="Ddl_Country" InitialValue="0" 
                         ValidationGroup="Valid1" Display="None"></asp:RequiredFieldValidator>
+                        
+                        
          </div>
    </div>
 
@@ -439,6 +445,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
               <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" 
                         ErrorMessage="Select State!" ControlToValidate="Ddl_State" 
                         ValidationGroup="Valid1" Display="None" InitialValue="0"></asp:RequiredFieldValidator>
+      
          </div>
 
    </div>
@@ -453,11 +460,21 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
         </div>
 
    <div class="form_box_right">
-             <asp:DropDownList ID="Ddl_Location" runat="server" AutoPostBack="true" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;">
+             <asp:DropDownList ID="Ddl_Location" runat="server" AutoPostBack="true" 
+                 style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;" 
+                 onselectedindexchanged="Ddl_Location_SelectedIndexChanged">
              </asp:DropDownList>
              <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" 
                         ErrorMessage="Select Location!" ControlToValidate="Ddl_Location" 
                         ValidationGroup="Valid1" Display="None" InitialValue="0"></asp:RequiredFieldValidator>
+                        <asp:TextBox ID="TextLocationOther" runat="server" Visible="false" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;"></asp:TextBox>
+                        
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+                        ErrorMessage="Enter Other Location!" ControlToValidate="TextLocationOther" 
+                        ValidationGroup="Valid1" Display="None"></asp:RequiredFieldValidator>
+                    &nbsp;&nbsp;&nbsp;
+                    
+                    
          </div>
    </div>
 
@@ -508,21 +525,43 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
         </asp:View>
 
          <asp:View ID="ViewUserFetch" runat="server">
-         <div class="wrapper" style="background-color:White; height:480px;">
+         
+
+         
+
+         <div class="wrapper" style="background-color:White;">
+         
          <div style="width:auto; height:25px; float:right; margin:10px 10px 10px 0;">
                     <asp:Button ID="Btn_Add" runat="server" Text="Add New" CssClass="btn_submit" 
                         BackColor="Black" Font-Bold="True" ForeColor="White" 
-                        
-                        style="float:left; margin:0 0 20px 0; width:100px; height:25px; font-family:Arial; font-size:13px; color:White; background-color:#fc8332; border:none; cursor:pointer;" 
+                        style="float:left; margin:0 50 20px 0; width:100px; height:25px; font-family:Arial; font-size:13px; color:White; background-color:#fc8332; border:none; cursor:pointer;" 
                         onclick="Btn_Add_Click"/>
 
                   
                </div>
-          <div class="main-wrapper">
-        <%--<div id="Div1" runat="server" class="grid"  style="width:1024px; min-height:30px; margin:5px 0 0 8px; float:left; border:1px solid #ccc; overflow:auto; background-color:White; text-align:center;">--%>
-            <div id="Panel3" runat="server" class="grid"  style="width:1024px; min-height:30px; margin:5px 0 0 8px; float:left; border:1px solid #ccc; overflow:auto; background-color:White; text-align:center;">
-            <asp:GridView ID="GridView_User_Details" runat="server" AutoGenerateColumns="False" CssClass="mGrid"                  
-            EnableModelValidation="True" DataKeyNames="User_Id" Width="100%" CellSpacing="10" CellPadding="8" ForeColor="#464747">
+               <div style="width:auto; height:auto; float:right; margin:3px 90px 10px 0; ">
+                
+                <asp:ImageButton ID="Btn_Excel_Export2" runat="server" Width="25px"  Height="25px"
+                    ImageUrl="~/Images/NewExcel_Download.png" ToolTip="Download Excel" 
+                    onclick="Btn_Excel_Export2_Click"/>
+
+
+  <asp:ImageButton ID="Btn_Pdf_Export2" runat="server" Width="25px"  Height="25px"
+                    ImageUrl="~/Images/NewPDF_Download.png" ToolTip="Download Pdf" 
+                    onclick="Btn_Pdf_Export2_Click"/>
+             </div>
+             
+ 
+          <div id="View1" runat="server" class="main-wrapper" style="height:425px;">
+          <div style="width:1024px; float:left; height:35px; margin:15px 0 0 0; background-color:#0099CC;">
+       <div class="add2main-txt">USER DETAILS</div>
+</div>
+       
+            <%--<div id="Panel3" runat="server" class="grid"  style="width:1024px; min-height:30px; margin:0 0 0 0px; float:left; border:1px solid #ccc; overflow:auto; background-color:White; text-align:center;">--%>
+            <div id="Panel3" runat="server" class="grid" style="width:1024px; min-height:30px; float:left; border:1px solid #ccc; overflow:auto; background-color:White; text-align:center;">
+            <asp:GridView ID="GridView_User_Details" runat="server" AutoGenerateColumns="False"                  
+            EnableModelValidation="True" DataKeyNames="User_Id" EmptyDataRowStyle-BackColor="Azure" EmptyDataRowStyle-ForeColor="Red"
+                      Width="1024px" EmptyDataRowStyle-Font-Bold="true" EmptyDataRowStyle-BorderColor="Red">
                
             <Columns>      
             
@@ -600,25 +639,15 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
 
            </Columns>
              
-                  <HeaderStyle BackColor="#00ccff" CssClass="gridheader" ForeColor="White" 
+                 <%-- <HeaderStyle BackColor="#00ccff" CssClass="gridheader" ForeColor="White" 
                     Wrap="False" Font-Names="Arial" Font-Size="16px" 
-                    HorizontalAlign="Center" Height="20px"/>
+                    HorizontalAlign="Center" Height="20px"/>--%>
                                    
            </asp:GridView>
            </div>
-         <div style="width:auto; height:auto; float:right; margin:3px 10px 10px 0; ">
-                
-                <asp:ImageButton ID="Btn_Excel_Export2" runat="server" Width="25px"  Height="25px"
-                    ImageUrl="~/Images/NewExcel_Download.png" ToolTip="Download Excel" 
-                    onclick="Btn_Excel_Export2_Click"/>
-
-
-  <asp:ImageButton ID="Btn_Pdf_Export2" runat="server" Width="25px"  Height="25px"
-                    ImageUrl="~/Images/NewPDF_Download.png" ToolTip="Download Pdf" 
-                    onclick="Btn_Pdf_Export2_Click"/>
-             </div>
+        
          
-          <%-- </div>--%>
+        
            <div>
               
            </div>

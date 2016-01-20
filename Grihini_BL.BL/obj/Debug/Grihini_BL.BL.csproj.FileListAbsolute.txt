@@ -180,6 +180,15 @@ D:\Soumya\Daily Project\Grihini\16.1.2016\Grihini_16_01_2016\Grihini_BL.BL\bin\D
 D:\Soumya\Daily Project\Grihini\16.1.2016\Grihini_16_01_2016\Grihini_BL.BL\obj\Debug\ResolveAssemblyReference.cache
 D:\Soumya\Daily Project\Grihini\16.1.2016\Grihini_16_01_2016\Grihini_BL.BL\obj\Debug\Grihini_BL.BL.dll
 D:\Soumya\Daily Project\Grihini\16.1.2016\Grihini_16_01_2016\Grihini_BL.BL\obj\Debug\Grihini_BL.BL.pdb
+<<<<<<< HEAD
+=======
+D:\My project work\Grihini\Grihini_BL.BL\bin\Debug\Grihini_BL.BL.dll
+D:\My project work\Grihini\Grihini_BL.BL\bin\Debug\Grihini_BL.BL.pdb
+D:\My project work\Grihini\Grihini_BL.BL\bin\Debug\Grihini_DL.DL.dll
+D:\My project work\Grihini\Grihini_BL.BL\bin\Debug\Grihini_DL.DL.pdb
+D:\My project work\Grihini\Grihini_BL.BL\obj\Debug\Grihini_BL.BL.dll
+D:\My project work\Grihini\Grihini_BL.BL\obj\Debug\Grihini_BL.BL.pdb
+>>>>>>> 8d4cbb21e906a7a549f2a3957d78ca87b37d84ba
 E:\Grihini\Grihini_16_01_2016\Grihini_BL.BL\bin\Debug\Grihini_BL.BL.dll
 E:\Grihini\Grihini_16_01_2016\Grihini_BL.BL\bin\Debug\Grihini_BL.BL.pdb
 E:\Grihini\Grihini_16_01_2016\Grihini_BL.BL\bin\Debug\Grihini_DL.DL.dll
@@ -187,3 +196,7 @@ E:\Grihini\Grihini_16_01_2016\Grihini_BL.BL\bin\Debug\Grihini_DL.DL.pdb
 E:\Grihini\Grihini_16_01_2016\Grihini_BL.BL\obj\Debug\ResolveAssemblyReference.cache
 E:\Grihini\Grihini_16_01_2016\Grihini_BL.BL\obj\Debug\Grihini_BL.BL.dll
 E:\Grihini\Grihini_16_01_2016\Grihini_BL.BL\obj\Debug\Grihini_BL.BL.pdb
+<<<<<<< HEAD
+=======
+D:\My project work\Grihini\Grihini_BL.BL\obj\Debug\Grihini_BL.BL.csprojResolveAssemblyReference.cache
+>>>>>>> 8d4cbb21e906a7a549f2a3957d78ca87b37d84ba
