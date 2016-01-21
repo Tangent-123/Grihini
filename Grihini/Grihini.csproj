@@ -88,7 +88,6 @@
     <Content Include="fonts\icomoon\Read Me.txt" />
     <Content Include="GUI_Form\aboutus.aspx" />
     <Content Include="GUI_Form\Addtocarttt.aspx" />
-    <Content Include="GUI_Form\Add_ToCart.aspx" />
     <Content Include="GUI_Form\AdminLogin.aspx" />
     <Content Include="GUI_Form\Admin_Order_View.aspx" />
     <Content Include="GUI_Form\contact.aspx" />
@@ -337,13 +336,6 @@
     </Compile>
     <Compile Include="GUI_Form\Addtocarttt.aspx.designer.cs">
       <DependentUpon>Addtocarttt.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="GUI_Form\Add_ToCart.aspx.cs">
-      <DependentUpon>Add_ToCart.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="GUI_Form\Add_ToCart.aspx.designer.cs">
-      <DependentUpon>Add_ToCart.aspx</DependentUpon>
     </Compile>
     <Compile Include="GUI_Form\AdminLogin.aspx.cs">
       <DependentUpon>AdminLogin.aspx</DependentUpon>

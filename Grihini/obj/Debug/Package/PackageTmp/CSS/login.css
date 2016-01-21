@@ -1,0 +1,9 @@
+﻿.login_wrapper
+{
+    width:100%;
+    float:left;
+    margin:0 auto;
+	padding:0;
+    background-image:url(../Images/login_bck_texture.png");
+    background-repeat:repeat;
+}
