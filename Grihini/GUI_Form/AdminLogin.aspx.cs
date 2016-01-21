@@ -40,7 +40,8 @@ namespace Grihini.GUI_Form
                     Session["Role_Id"] = Convert.ToString(dtuser.Rows[0]["Role_Id"]);
                     Session["First_Name"] = Convert.ToString(dtuser.Rows[0]["First_Name"]);
 
-                    Response.Redirect("Product_Reg.aspx?target=ViewAllProduct");
+                    Response.Redirect("AdminWelcomePage.aspx");
+                    Response.Redirect("Product_Reg.aspx");
                 }
             }
             catch (Exception ex)

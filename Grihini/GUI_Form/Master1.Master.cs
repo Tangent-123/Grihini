@@ -113,11 +113,11 @@ namespace Grihini.GUI_Form
             dt = clm.fetchCount(2, User_Id);
             if (dt.Rows.Count > 0)
             {
-                Lbl_Cart.Text = Convert.ToString(dt.Rows[0]["Count"]);
+                lblcartcount.Text = Convert.ToString(dt.Rows[0]["Count"]);
             }
             else
             {
-                Lbl_Cart.Text = "";
+                lblcartcount.Text = "";
             }
         }
 

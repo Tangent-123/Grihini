@@ -37,13 +37,12 @@
     }
 </script> 
 
+    <link href="../CSS/button2.css" rel="stylesheet" type="text/css" />
 
 
-
-   <div class="wrapper" style="background:none;">
-   <div class="product">
-   <div class="main-wrapper" style="height:auto;">
-   <div class="reg-main" style="float:left; height:auto; background-color:#edf8ff; margin:20px 0 0 0; border: 1px solid #dbdbdb;">
+   <div class="wrapper">
+   <div class="main-wrapper" style="min-height:520px;">
+   <div class="reg-main" style="float:left; height:auto; background-color:#edf8ff; margin:0 0 0 0; border: 1px solid #dbdbdb;">
 
     <div class="clear"></div>
     <div class="del-textarea" style="height:40px; width:1024px;  margin:0 0 0 0; border:0px 1px 5px #222;  background-color:#0099CC; ">
@@ -66,7 +65,7 @@
     </div>
     </div>
 
-    <div class="del-name-area" style="margin:16px 0 0 0;">
+    <div class="del-name-area" style="margin:10px 0 0 0;">
     <div class="del-name-txt">Country &nbsp; &nbsp;:</div>
     <div style="float:right;">
     <asp:DropDownList ID="dropdowncountry" runat="server" AutoPostBack="true" style="width:230px; float:left; background-color:#FFF; 
@@ -79,7 +78,7 @@
     </div>
     </div>
 
-    <div class="del-name-area" style="margin:16px 0 0 0;">
+    <div class="del-name-area" style="margin:10px 0 0 0;">
     <div class="del-name-txt">State &nbsp; &nbsp;:</div>
     <div style="float:right;">
     <asp:DropDownList ID="dropdownstate" AutoPostBack="true" runat="server" OnSelectedIndexChanged="ddState_SelectedIndexchanged" style="width:230px; float:left; background-color:#FFF; 
@@ -90,8 +89,7 @@
     </div>
     </div>
     
-
-    <div class="del-name-area" style="margin:16px 0 0 0;">
+    <div class="del-name-area" style="margin:10px 0 0 0;">
     <div class="del-name-txt">Location &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:</div>
     <div style="float:right;">
     <asp:DropDownList ID="dropdowncity" AutoPostBack="true" runat="server" style="width:230px; float:left; background-color:#FFF; 
@@ -108,11 +106,7 @@
     </div>
     </div>
 
-    
-
-    
-
-    <div class="del-name-area" style="margin:16px 0 0 0;">
+    <div class="del-name-area" style="margin:10px 0 0 0;">
     <div class="del-name-txt">Pincode &nbsp; &nbsp;:</div>
     <div style="float:right;">
     <asp:TextBox ID="txtpincode" runat="server" style="width:230px; float:left; 
@@ -124,31 +118,31 @@
     </div>
     </div>
 
-    <div class="del-name-area" style="margin:16px 0 0 0;">
+    <div class="del-name-area" style="margin:8px 0 0 0;">
     <div class="del-name-txt">Address  &nbsp; &nbsp:</div>
-    <div style="float:left; margin:-18px 0 0 88px;">
+    <div style="float:left; margin:-18px 0 0 148px;">
     <textarea id="txtaddress" runat="server" onkeyup="SentenceCase(this);" onkeydown="LimtCharacters(this,200,'lblsize_address');" 
     style="width:230px; height:50px;"></textarea>
-    <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="10pt" Text="Chars left" style="float:left; margin:6px 0 0 0;"></asp:Label>
-    <label ID="lblsize_address" Font-Names="Arial" Font-Size="10pt" style="float:left; margin:5px 0 0 10px;">200</label>
+    <label ID="lblsize_address" Font-Names="Arial" Font-Size="10pt" style="float:right; margin:4px 0 0 10px;">200</label>
+    <asp:Label ID="Label1" runat="server" Font-Names="Arial" Font-Size="10pt" Text="Chars left" style="float:right; margin:6px 6px 0 0;"></asp:Label>
     <asp:RequiredFieldValidator ID="req_address" runat="server" ErrorMessage="Please Enter Address!" 
     ControlToValidate="txtaddress" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>
     </div>
     </div>
 
-    <div class="del-name-area" style="margin:16px 0 0 0;">
+    <div class="del-name-area" style="margin:8px 0 0 0;">
     <div class="del-name-txt">Landmark &nbsp; &nbsp;:</div>
-    <div style="float:left; margin:-18px 0 0 88px;">
+    <div style="float:left; margin:-18px 0 0 148px;">
     <textarea ID="txtlandmark" runat="server" onkeyup="SentenceCase(this);" onkeydown="LimtCharacters(this,200,'lblsize_landmark');" 
-    style="width:230px; height:50px;"></textarea>
-    <asp:Label ID="Label2" runat="server" Font-Names="Arial" Font-Size="10pt" Text="Chars left" style="float:left; margin:6px 0 0 0;"></asp:Label>
-    <label ID="lblsize_landmark" Font-Names="Arial" Font-Size="10pt" style="float:left; margin:5px 0 0 10px;">200</label>
+    style="width:230px; height:50px;"></textarea>    
+    <label ID="lblsize_landmark" Font-Names="Arial" Font-Size="10pt" style="float:right; margin:5px 0 0 10px;">200</label>
+    <asp:Label ID="Label2" runat="server" Font-Names="Arial" Font-Size="10pt" Text="Chars left" style="float:right; margin:6px 0 0 0;"></asp:Label>
     <asp:RequiredFieldValidator ID="req_landmark" runat="server" ErrorMessage="Please Enter Landmark!" 
     ControlToValidate="txtlandmark" ForeColor="Red" ValidationGroup="Delivery_Group" Display="None"></asp:RequiredFieldValidator>
     </div>
     </div>
 
-    <div class="del-name-area" style="margin:16px 0 0 0;">
+    <div class="del-name-area" style="margin:8px 0 0 0;">
     <div class="del-name-txt">Contact &nbsp; &nbsp;:</div>
     <div style="float:right;">
     <asp:TextBox ID="txtphone" runat="server" style="width:230px; float:left; background-color:#FFF; height:25px; 
@@ -160,17 +154,20 @@
     </div>
     </div>
 
-    <div class="del-name-area" style="margin:25px 0 25px 89px; width:230px;">
-    <asp:ImageButton ID="ImageButton100" runat="server" 
+    <div class="del-name-area" style="margin:25px 0 15px 139px; width:230px;">
+<%--<asp:ImageButton ID="ImageButton100" runat="server" 
             ImageUrl="~/Images/saveicon.png" ValidationGroup="Delivery_Group" height="30" 
-            width="230" onclick="ImageButton100_Click"  />
+            width="230" onclick="ImageButton100_Click"  />--%>
+
+    <asp:LinkButton ID="ImageButton100" runat="server" onclick="ImageButton100_Click" ValidationGroup="Delivery_Group" class="btn btn-53 btn-53a icon-cart" ><span>SAVE & CONTINUE</span></asp:LinkButton>
+
     <asp:ValidationSummary ID="popmgs" runat="server" ValidationGroup="Delivery_Group" ShowMessageBox="true" ShowSummary="false" />
     </div>
 
 
 </div>
 
-<div style="width:300px; height:480px; float:right; background-color:White; margin:0 150px 0 0;">
+<div style="width:300px; height:464px; float:right; background-color:White; margin:0 150px 0 0;">
 
 <asp:DataList ID="DataList_Address" runat="server" 
            
@@ -216,7 +213,10 @@
                 <div class="btn-continue-with">
                 
                 <%--<asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/conform.png"  Height="280" Width="243" style="margin:5px 0 0 0; height:25px; width:130px; padding:0 0 10px 0;"/>--%>
-                   <asp:Button ID="Button1" runat="server" class="button-0" OnCommand="Delivery_Add_Id" CommandArgument='<%#Eval("Delivery_Id")%>'  Text="CONTINUE WITH THIS" />
+<%--                   <asp:Button ID="Button1" runat="server" class="button-0" OnCommand="Delivery_Add_Id" CommandArgument='<%#Eval("Delivery_Id")%>'  Text="CONTINUE WITH THIS" />--%>
+                   
+                    <asp:LinkButton ID="Button1" runat="server" OnCommand="Delivery_Add_Id" CommandArgument='<%#Eval("Delivery_Id")%>' class="btn btn-54 btn-54a icon-cart" ><span>CONTINUE WITH THIS</span></asp:LinkButton>
+                   
                    </div>
                 <br />     
                                 
@@ -234,7 +234,6 @@
 </div>
 
 
-</div>
 </div>
 </div>
 </div>

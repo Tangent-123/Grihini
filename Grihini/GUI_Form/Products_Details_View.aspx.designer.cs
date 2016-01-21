@@ -136,18 +136,6 @@ namespace Grihini.GUI_Form {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
-=======
-        protected global::System.Web.UI.WebControls.Button btn_buynow_false;
-        
-        /// <summary>
-        /// LinkButton_choosemore control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
->>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0
         protected global::System.Web.UI.WebControls.LinkButton LinkButton_choosemore;
         
         /// <summary>

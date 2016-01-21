@@ -90,53 +90,53 @@ namespace Grihini.GUI_Form
             }
         }
 
-        protected void ImageButton100_Click(object sender, ImageClickEventArgs e)
-        {
+        //protected void ImageButton100_Click(object sender, ImageClickEventArgs e)
+        //{
 
-            try
-            {
+        //    try
+        //    {
 
-                int  Country_Id = Convert.ToInt32(dropdowncountry.SelectedValue);
-                int State_Id = Convert.ToInt32(dropdownstate.SelectedValue);
-                string Location_Name = null;
+        //        int  Country_Id = Convert.ToInt32(dropdowncountry.SelectedValue);
+        //        int State_Id = Convert.ToInt32(dropdownstate.SelectedValue);
+        //        string Location_Name = null;
 
-                if (dropdowncity.SelectedValue == "1000")
-                {
-                    Location_Name = Convert.ToString(TextOtherLocation.Text);
+        //        if (dropdowncity.SelectedValue == "1000")
+        //        {
+        //            Location_Name = Convert.ToString(TextOtherLocation.Text);
 
-                }
-                else
-                {
-                    Location_Name = dropdowncity.SelectedItem.Text;
-                }
+        //        }
+        //        else
+        //        {
+        //            Location_Name = dropdowncity.SelectedItem.Text;
+        //        }
                 
-                int userid = Convert.ToInt32(Session["UserId"]);
-                DataTable dt = new DataTable();
+        //        int userid = Convert.ToInt32(Session["UserId"]);
+        //        DataTable dt = new DataTable();
 
-                dt = pr.Insert_Products(4, Convert.ToInt32(userid), txtname.Text, Country_Id, State_Id,
-                                        Location_Name, txtpincode.Text, txtaddress.InnerText, txtlandmark.InnerText,
-                                        txtphone.Text);
+        //        dt = pr.Insert_Products(4, Convert.ToInt32(userid), txtname.Text, Country_Id, State_Id,
+        //                                Location_Name, txtpincode.Text, txtaddress.InnerText, txtlandmark.InnerText,
+        //                                txtphone.Text);
 
-                if (dt.Rows.Count > 0)
-                {
-                    string Address_Id = Convert.ToString(dt.Rows[0]["ID"]);
-                    Session["Address_Id"] = Address_Id;
-                    Session["Delivery_Id"] = "";
+        //        if (dt.Rows.Count > 0)
+        //        {
+        //            string Address_Id = Convert.ToString(dt.Rows[0]["ID"]);
+        //            Session["Address_Id"] = Address_Id;
+        //            Session["Delivery_Id"] = "";
 
-                    Response.Redirect("Products_Order_Confirm.aspx");
-                }
+        //            Response.Redirect("Products_Order_Confirm.aspx");
+        //        }
 
-            }
-
-
-            catch (Exception ex)
-            {
-                string strError = ex.Message.Replace("'", "");
-                Response.Write("<script>alert('" + strError + "');</script>");
-            }
+        //    }
 
 
-        }
+        //    catch (Exception ex)
+        //    {
+        //        string strError = ex.Message.Replace("'", "");
+        //        Response.Write("<script>alert('" + strError + "');</script>");
+        //    }
+
+
+        //}
 
         protected void ddState_SelectedIndexchanged(object sender, EventArgs e)
         {
@@ -247,6 +247,52 @@ namespace Grihini.GUI_Form
 
 
     
+        }
+
+        protected void ImageButton100_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                int Country_Id = Convert.ToInt32(dropdowncountry.SelectedValue);
+                int State_Id = Convert.ToInt32(dropdownstate.SelectedValue);
+                string Location_Name = null;
+
+                if (dropdowncity.SelectedValue == "1000")
+                {
+                    Location_Name = Convert.ToString(TextOtherLocation.Text);
+
+                }
+                else
+                {
+                    Location_Name = dropdowncity.SelectedItem.Text;
+                }
+
+                int userid = Convert.ToInt32(Session["UserId"]);
+                DataTable dt = new DataTable();
+
+                dt = pr.Insert_Products(4, Convert.ToInt32(userid), txtname.Text, Country_Id, State_Id,
+                                        Location_Name, txtpincode.Text, txtaddress.InnerText, txtlandmark.InnerText,
+                                        txtphone.Text);
+
+                if (dt.Rows.Count > 0)
+                {
+                    string Address_Id = Convert.ToString(dt.Rows[0]["ID"]);
+                    Session["Address_Id"] = Address_Id;
+                    Session["Delivery_Id"] = "";
+
+                    Response.Redirect("Products_Order_Confirm.aspx");
+                }
+
+            }
+
+
+            catch (Exception ex)
+            {
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
+            }
+
         }
     }
 }

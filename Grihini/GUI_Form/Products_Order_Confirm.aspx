@@ -198,6 +198,9 @@ ul#thumblist li a.zoomThumbActive{
 </script>
 
 
+    <link href="../CSS/button2.css" rel="stylesheet" type="text/css" />
+
+
 
 <div class="wrapper" style="background:none;">
 <div class="product">
@@ -319,12 +322,13 @@ ul#thumblist li a.zoomThumbActive{
     </asp:GridView>--%>
 
    <%-- <div style="width:300px; height:480px; float:right; background-color:White; margin:0 150px 0 0;">--%>
-<<<<<<< HEAD
+<%--<<<<<<< HEAD--%>
 
    <div style="float:left; background-color:#2dc6f9; width:1024px;">
-=======
+<%--=======
    <div style="float:left; background-color:#dbe4ea; width:1024px;">
->>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0
+>>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0--%>
+
 <asp:DataList ID="DataList_Address" runat="server" 
            
             Font-Names="Verdana" Font-Size="Small" RepeatColumns="1" RepeatDirection="Horizontal"
@@ -355,8 +359,7 @@ ul#thumblist li a.zoomThumbActive{
                  Pincode:                 
                 <asp:Label ID="lbl_Pincode" runat="server" text='<%#Eval("Pincode") %>'></asp:Label>,
                 <br>
-                </br>
-                 <asp:Label ID="lbl_State" runat="server" text='<%#Eval("State_Id") %>'></asp:Label>,                
+                <asp:Label ID="lbl_State" runat="server" text='<%#Eval("State_Id") %>'></asp:Label>,                
                   <asp:Label ID="lbl_Country" runat="server" Text='<%#Eval("Country_Id") %>'></asp:Label>
                    
                     

@@ -226,7 +226,7 @@ namespace Grihini.GUI_Form {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ImageButton ImageButton100;
+        protected global::System.Web.UI.WebControls.LinkButton ImageButton100;
         
         /// <summary>
         /// popmgs control.

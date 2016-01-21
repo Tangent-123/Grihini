@@ -62,6 +62,14 @@
 	content: "\e007";
 }
 
+.icon-buy:before {
+	content: "";
+	background-image:url(../Images/c_buynow.png);
+}
+.icon-choosemore:before {
+	content: "";
+	background-image:url(../Images/c_choosemore.png);
+}
 .icon-camera:before {
   content: "\e046";
 }
@@ -684,6 +692,7 @@
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 	backface-visibility: hidden;
+	margin:0 0 0 -2px;
 }
 
 .btn-5:active {
@@ -812,7 +821,7 @@
 	background: #f38627;
 	color: #fff;
 	height: 25px;
-	min-width: 250px;
+	min-width: 100px;
 	line-height: 24px;
 	font-size: 14px;
 	overflow: hidden;
@@ -874,17 +883,203 @@
 
 
 
+/* Button 52 */
+.btn-52 {
+	background: #823aa0;
+	color: #fff;
+	height: 15px;
+	width:90px;
+	min-width: 10px;
+	line-height: 15px;
+	font-size: 14px;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+    left: 0px;
+}
+
+.btn-52:active {
+	background: #9053a9;
+}
+
+.btn-52 span {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: all 0.3s;
+	-moz-backface-visibility: hidden;
+	transition: all 0.3s;
+	backface-visibility: hidden;
+}
+
+.btn-52:before {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	line-height: 1.8;
+	font-size: 150%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-52:active:before {
+	color: #703b87;
+}
+
+/* Button 52a */
+.btn-52a:hover span {
+	-webkit-transform: translateY(300%);
+	-moz-transform: translateY(300%);
+	-ms-transform: translateY(300%);
+	transform: translateY(300%);
+}
+
+.btn-52a:before {
+	left: 0;
+	top: -100%;
+}
+
+.btn-52a:hover:before {
+	top: 0;
+}
 
 
 
 
+/* Button 53 */
+.btn-53 {
+	background: #823aa0;
+	color: #fff;
+	height: 15px;
+	width:210px;
+	min-width: 10px;
+	line-height: 15px;
+	font-size: 14px;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+}
+
+.btn-53:active {
+	background: #9053a9;
+}
+
+.btn-53 span {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: all 0.3s;
+	-moz-backface-visibility: hidden;
+	transition: all 0.3s;
+	backface-visibility: hidden;
+}
+
+.btn-53:before {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	line-height: 1.8;
+	font-size: 150%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-53:active:before {
+	color: #703b87;
+}
+
+/* Button 53a */
+.btn-53a:hover span {
+	-webkit-transform: translateY(300%);
+	-moz-transform: translateY(300%);
+	-ms-transform: translateY(300%);
+	transform: translateY(300%);
+}
+
+.btn-53a:before {
+	left: 0;
+	top: -100%;
+}
+
+.btn-53a:hover:before {
+	top: 0;
+}
 
 
 
 
+/* Button 54 */
+.btn-54 {
+	background: #77cc6d;
+	color: #fff;
+	height: 15px;
+	width:210px;
+	min-width: 10px;
+	line-height: 15px;
+	font-size: 14px;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
 
+}
 
+.btn-54:active {
+	background: #9053a9;
+}
 
+.btn-54 span {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 0.3s;
+	-webkit-backface-visibility: hidden;
+	-moz-transition: all 0.3s;
+	-moz-backface-visibility: hidden;
+	transition: all 0.3s;
+	backface-visibility: hidden;
+}
+
+.btn-54:before {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	line-height: 1.8;
+	font-size: 150%;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	transition: all 0.3s;
+}
+
+.btn-54:active:before {
+	color: #703b87;
+}
+
+/* Button 54a */
+.btn-54a:hover span {
+	-webkit-transform: translateY(300%);
+	-moz-transform: translateY(300%);
+	-ms-transform: translateY(300%);
+	transform: translateY(300%);
+}
+
+.btn-54a:before {
+	left: 0;
+	top: -100%;
+}
+
+.btn-54a:hover:before {
+	top: 0;
+}
 
 
 

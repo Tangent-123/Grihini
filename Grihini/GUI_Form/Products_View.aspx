@@ -121,12 +121,12 @@
             <ItemStyle BackColor="White" ForeColor="Black"/>
             <ItemTemplate>               
                     <div id="pricePlans">
-                    <ul id="plans">
+                    <ul id="plans" style="margin:7px;">
                         <li class="plan">
-                            <ul class="planContainer">
+                            <ul class="planContainer" >
                
-        <li class="title" style="margin:8px 0 0 0;">
-                <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl='<%# Eval("Image_path") %>' OnCommand="image_command" CommandArgument='<%#Eval("Product_id")%>'  Height="280" Width="243" />
+        <li class="title" style="margin:8px;">
+                <asp:ImageButton ID="ImageButton1" runat="server"  ImageUrl='<%# Eval("Image_path") %>' OnCommand="image_command" CommandArgument='<%#Eval("Product_id")%>'  Height="280" Width="225" />
                 
         </li>                
 

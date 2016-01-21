@@ -12,6 +12,7 @@
     <script src="../JS/addtocart_three.js" type="text/javascript"></script>
     <script src="../JS/addtocart_four.js" type="text/javascript"></script>
 
+
 <script type="text/javascript">
 
     $(function () {
@@ -64,9 +65,7 @@ ul#thumblist li a.zoomThumbActive{
 
 </style>
 <style type="text/css">
-	body {
-		font: normal 14px/21px Arial, serif;
-	}
+
 	.example {
 		float: left;
 		width: 1024px;
@@ -193,7 +192,7 @@ ul#thumblist li a.zoomThumbActive{
 
 </script>
 
-
+    <link href="../CSS/button2.css" rel="stylesheet" type="text/css" />
 
 
 <%--<div>
@@ -205,11 +204,10 @@ ul#thumblist li a.zoomThumbActive{
 
 
 
-<div class="wrapper" style="background:none;">
-<div class="product">
-<div class="main-wrapper" style="height:425px;">
+<div class="wrapper">
+<div class="main-wrapper" style="min-height:522px;">
 
-<div style="width:1024px; float:left; height:35px; margin:5px 0 0 0; background-color:#0099CC;">
+<div style="width:1024px; float:left; height:35px; margin:0 0 0 0; background-color:#0099CC;">
 <div class="add2main-txt">CART DETAILS</div>
         </div>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Products In Cart"
@@ -265,14 +263,15 @@ ul#thumblist li a.zoomThumbActive{
 
     </asp:GridView>
 
-<div style="float:right; margin:20px 0 0 0;">
+<div style="float:right; margin:20px 10px 0 0;">
 
 
-    <asp:Button ID="Button1" runat="server" Text="Confirm" OnClick="Button1_click" CssClass="button-0" />
+    <%--<asp:Button ID="Button1" runat="server" Text="Confirm" OnClick="Button1_click" CssClass="button-0" />--%>
+
+    <asp:LinkButton ID="Button1" runat="server" OnClick="Button1_click" class="btn btn-52 btn-52a icon-cart" ><span> CONFIRM</span></asp:LinkButton>
     
     </div>
 
-</div>
 </div>
 </div>
 
