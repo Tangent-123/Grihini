@@ -59,7 +59,7 @@
         $("[id$=Text_Dob]").datepicker({
             showOn: 'button',
             buttonImageOnly: true,
-            buttonImage: 'http://virtualstaff.co.nz/wp-content/uploads/2015/10/calendar-icon.png'
+            buttonImage: ''
         });
     });
     </script>
@@ -523,6 +523,8 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
          &nbsp;
                  <asp:Button ID="Btn_Reset" runat="server" Text="Reset"  
                  CssClass="btn_submit" onclick="Btn_Reset_Click" style="float:left; margin:0 0 20px 10px; width:100px; height:25px; font-family:Arial; font-size:13px; color:White; background-color:#fc8332; border:none;"/>
+
+                 
                          
          </div>
    </div>

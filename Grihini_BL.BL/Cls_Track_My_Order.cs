@@ -85,9 +85,9 @@ namespace Grihini_BL.BL
             return dt;
         }
 
-        public DataTable orderstatus(int OperationId, int userid)
+        public DataTable orderstatus(int OperationId, int userid, int Order_Id)
         {
-            SqlParameter[] param = new SqlParameter[2];
+            SqlParameter[] param = new SqlParameter[3];
 
             param[0] = new SqlParameter("@OperationId", SqlDbType.Int);
             param[0].Direction = ParameterDirection.Input;
@@ -96,6 +96,10 @@ namespace Grihini_BL.BL
             param[1] = new SqlParameter("@User_Id", SqlDbType.Int);
             param[1].Direction = ParameterDirection.Input;
             param[1].Value = userid;
+
+            param[2] = new SqlParameter("@Order_Id", SqlDbType.Int);
+            param[2].Direction = ParameterDirection.Input;
+            param[2].Value = Order_Id;
 
             DataTable dt = new DataTable();
             dt = ogde.Return_DataTable("usp_Order_Management", param);

@@ -89,6 +89,9 @@ ul#thumblist li a.zoomThumbActive{
     <div>
         <asp:DropDownList ID="Ddl_Size" runat="server" style="width:130px; height:31px;">
         </asp:DropDownList>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" 
+                        ErrorMessage="Select Product Size!" ControlToValidate="Ddl_Size" 
+                        ValidationGroup="Valid1" Display="None" InitialValue="0"></asp:RequiredFieldValidator>
     </div>
     </div>
     </div>
@@ -99,6 +102,9 @@ ul#thumblist li a.zoomThumbActive{
     <div>
         <asp:DropDownList ID="Ddl_Quantity" runat="server" style="width:130px; height:31px;">
         </asp:DropDownList>
+        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                        ErrorMessage="Select Quantity!" ControlToValidate="Ddl_Quantity" 
+                        ValidationGroup="Valid1" Display="None" InitialValue="0"></asp:RequiredFieldValidator>
     </div>
     </div>
     </div>   
@@ -124,8 +130,10 @@ ul#thumblist li a.zoomThumbActive{
     <div class="button">
     <div class="add2cart">
 
-     <asp:LinkButton ID="LinkButtonAddTocart" runat="server" OnClick="Btn_addtocart22_Click" class="btn btn-5 btn-5a icon-cart"><span> ADD TO CART</span></asp:LinkButton>
-       
+     <asp:LinkButton ID="LinkButtonAddTocart" runat="server" OnClick="Btn_addtocart22_Click" ValidationGroup="Valid1" class="btn btn-5 btn-5a icon-cart"><span> ADD TO CART</span></asp:LinkButton>
+       <asp:ValidationSummary ID="ValidationSummary1" runat="server"  ValidationGroup="Valid1" 
+                    ShowMessageBox="true" ShowSummary="false"/>
+                     
                           <asp:ImageButton ID="ImageButton2"  runat="server" ImageUrl="../Images/addtocart_false.png"
                            onclick="Btn_addtocart22_Click" Visible="false" Enabled="false"/>
     </div>

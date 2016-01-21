@@ -70,6 +70,7 @@ namespace Grihini.GUI_Form
                         Menu1.Visible = true;
                         main_menu.Visible = true;
                         Div2.Visible = false;
+                       
 
                     }
                     else

@@ -22,15 +22,28 @@ namespace Grihini.GUI_Form
         Cls_Track_My_Order tmo = new Cls_Track_My_Order();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if(!IsPostBack)
+            {
+            
+            
             bindgrid();
             int UserID = Convert.ToInt32(Session["UserID"]);
+            int Order_Id = Convert.ToInt32(Session["Order_Id"]);
+            
+            lbl_order.Text=Convert.ToString(Order_Id);
+             
+
+
             DataTable dt = new DataTable();
-            dt = tmo.orderstatus(29, UserID);
+            dt = tmo.orderstatus(29, UserID, Order_Id);
 
             if (dt.Rows.Count>0)
                 {
-                    Session["Product_Id"] = Convert.ToString(dt.Rows[0]["Product_Id"]);
-                    int productid = Convert.ToInt32(Session["Product_Id"]);
+                    //Session["Product_Id"] = Convert.ToString(dt.Rows[0]["Product_Id"]);
+                    //int productid = Convert.ToInt32(Session["Product_Id"]);
+
+                    //Session["Product_Id"] = Convert.ToString(dt.Rows[0]["Product_Id"]);
+                    int productid = Convert.ToInt32(dt.Rows[0]["Product_Id"]);
 
                     DataTable dt1 = new DataTable();
                     dt1 = tmo.orderstatuswithproduct(28, UserID, productid);
@@ -38,22 +51,26 @@ namespace Grihini.GUI_Form
                     {
                         string orderdate = Convert.ToString(dt.Rows[0]["Created_date"]);
                         string items = Convert.ToString(dt.Rows[0]["Quantity"]);
-                        string grandtotal = Convert.ToString(dt.Rows[0]["Subtotal"]); 
+                        string grandtotal = Convert.ToString(dt.Rows[0]["Subtotal"]);
 
-                        lbl_order.Text = orderdate;
-                        lbl_tems.Text = items;
-                        lbl_grandtotal.Text = grandtotal;
+                        //lbl_order.Text = orderdate;
+                        lbl_tems.Text = Convert.ToString(items);
+                        lbl_grandtotal.Text = Convert.ToString(grandtotal);
                     }
             
 
                 }
 
-            
 
-                
+
+            }     
 
         }
 
+       
+        
+        
+        
         private void bindgrid()
         {
             int UserID = Convert.ToInt32(Session["UserID"]);
@@ -77,7 +94,8 @@ namespace Grihini.GUI_Form
             }
             catch (Exception ex)
             {
-
+                string strError = ex.Message.Replace("'", "");
+                Response.Write("<script>alert('" + strError + "');</script>");
             }
         }
     }

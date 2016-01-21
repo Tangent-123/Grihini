@@ -242,12 +242,7 @@ namespace Grihini.GUI_Form
                    
                     Session["UserID"] = Convert.ToInt32(e.CommandArgument);
                     Response.Redirect("SpecificUserOrderDescription.aspx");
-                   
               }
-        
-                   
-
-                
         }
 
         //------------Button click Event To Download Excel File of The Bound GridView-----------///

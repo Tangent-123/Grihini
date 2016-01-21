@@ -22,3 +22,14 @@ C:\Project\SoumyaDa_Grihini_21_01_2016\Grihini\obj\Debug\RdlCompile.cache
 C:\Project\SoumyaDa_Grihini_21_01_2016\Grihini\obj\Debug\RdlCompile.compiled
 C:\Project\SoumyaDa_Grihini_21_01_2016\Grihini\obj\Debug\Grihini.dll
 C:\Project\SoumyaDa_Grihini_21_01_2016\Grihini\obj\Debug\Grihini.pdb
+D:\My project work\Grihini\Grihini\bin\Grihini.dll
+D:\My project work\Grihini\Grihini\bin\Grihini.pdb
+D:\My project work\Grihini\Grihini\bin\Grihini_BL.BL.dll
+D:\My project work\Grihini\Grihini\bin\Grihini_DL.DL.dll
+D:\My project work\Grihini\Grihini\bin\Grihini_BL.BL.pdb
+D:\My project work\Grihini\Grihini\bin\Grihini_DL.DL.pdb
+D:\My project work\Grihini\Grihini\obj\Debug\Grihini.csprojResolveAssemblyReference.cache
+D:\My project work\Grihini\Grihini\obj\Debug\RdlCompile.cache
+D:\My project work\Grihini\Grihini\obj\Debug\RdlCompile.compiled
+D:\My project work\Grihini\Grihini\obj\Debug\Grihini.dll
+D:\My project work\Grihini\Grihini\obj\Debug\Grihini.pdb

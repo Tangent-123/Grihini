@@ -93,6 +93,20 @@ namespace Grihini.GUI_Form
             }
         }
 
+        //--------Gridview RowCommand Event----///
+
+        protected void GridView_TrackOrder_RowCommand(object sender, GridViewCommandEventArgs e)
+        {
+
+            if (e.CommandName == "details")
+            {
+
+                Session["Order_Id"] = Convert.ToInt32(e.CommandArgument);
+                Response.Redirect("TrackOrderDetails.aspx");
+            }
+        }
+
+
         //protected void image_command(object sender, CommandEventArgs e)
         //{
 

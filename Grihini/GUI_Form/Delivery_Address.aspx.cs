@@ -230,7 +230,7 @@ namespace Grihini.GUI_Form
                 if (dropdowncity.SelectedValue == "1000")
                 {
                     TextOtherLocation.Visible = true;
-                    dropdowncity.Enabled = false;
+                    dropdowncity.Enabled = true;
 
                 }
                 else

@@ -361,6 +361,7 @@ namespace Grihini.GUI_Form
 
         protected void Image_Click(object sender, EventArgs e)
         {
+           
             string abc = "hii";
             string def = abc;
         }

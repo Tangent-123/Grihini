@@ -224,7 +224,7 @@ ul#thumblist li a.zoomThumbActive{
 <div>
 
 <asp:GridView ID="GridView_TrackOrder" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Records To Display!"
-     AllowSorting="false" Visible="true" Width="1024px">
+     AllowSorting="false" Visible="true" Width="1024px" OnRowCommand="GridView_TrackOrder_RowCommand">
 
         <Columns>
              <asp:TemplateField HeaderText="PRODUCT IMAGE" ControlStyle-Font-Size="12px">
@@ -237,7 +237,7 @@ ul#thumblist li a.zoomThumbActive{
              <ItemTemplate>
              <div class="t_order_products_one" style="float:left; width:850px;">
              <div class="t_order_products_orderno">ORDER NO :</div>
-             <div class="t_order_products_orderno_area"><asp:LinkButton ID="LinkBtnOrderId" runat="server" CommandArgument='<%#Eval("Order_Id")%>' 
+             <div class="t_order_products_orderno_area"><asp:LinkButton ID="LinkBtnOrderId" runat="server" CommandName="details" CommandArgument='<%#Eval("Order_Id")%>' 
                                Font-Bold="True"  ForeColor="#000" Text='<%#Eval("Order_Id")%>'></asp:LinkButton></div>
              <div class="t_order_products_orderno">ORDER PLACED ON :</div>
              <div class="t_order_products_orderno_area"><asp:Label ID="LblOrderPlacedOn" runat="server" text='<%#Eval("Orderdate") %>'></asp:Label></div>

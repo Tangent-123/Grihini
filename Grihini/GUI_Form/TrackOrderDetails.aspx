@@ -245,36 +245,50 @@ left: 35%;
 
 <div style="margin-top:5px; float:left;">
 <div style="float:left; width:1024px;">
+
+
 <div class="t_order_products_one" style=" height:50px;">
 <div class="t2_bar" style="border-right:2px solid #fff;">
-<div class="t2_bar_txt">ORDER ON</div>
+<div class="t2_bar_txt">ORDER NO.</div>
 <div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;">
-  <asp:Label ID="lbl_order" runat="server" Text=""></asp:Label>
+<asp:Label ID="lbl_order" runat="server" Text=""></asp:Label>
 </div>
 </div>
 <div class="t2_bar" style="border-right:2px solid #fff;">
-<div class="t2_bar_txt">QUANTITY
-<asp:Label ID="lbl_tems" runat="server" Text=""></asp:Label>
+<div class="t2_bar_txt">QUANTITY</div>
+<div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;">
+ <asp:Label ID="lbl_tems" runat="server" Text=""></asp:Label>
+</div>
+</div>
 
+<div class="t2_bar" style="border-right:2px solid #fff;">
+<div class="t2_bar_txt">GRAND TOTAL</div>
+<div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;">
+ <asp:Label ID="lbl_grandtotal" runat="server" Text=""></asp:Label>
 </div>
-<div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;"></div>
 </div>
-<div class="t2_bar">
+
+<%--<div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;">
+</div>--%>
+</div>
+
+<%--<div class="t2_bar">
 <div class="t2_bar_txt">GRAND TOTAL</div>
 
-<asp:Label ID="lbl_grandtotal" runat="server" Text=""></asp:Label>
-<div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;">2100.00</div>
+<%--<asp:Label ID="lbl_grandtotal" runat="server" Text=""></asp:Label>
+<div class="t2_bar_txt" style="font-weight:normal; font-family:Arial;">
 </div>
+</div>--%>
 
 
-</div>
+<%--</div>--%>
 
 
 <div style="float:left;">
 
-<asp:GridView ID="GridView_TrackOrderdetails" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Records To Display!"
+<asp:GridView ID="GridView_TrackOrderdetails" runat="server" AutoGenerateColumns="false" AllowPaging="false"
      AllowSorting="false" Visible="true" Width="1024px">
-
+     <%--EmptyDataText="No Records To Display!"--%>
         <Columns>
            
                <%--<asp:TemplateField HeaderText="Order ID" ControlStyle-Font-Size="12px">
@@ -453,14 +467,11 @@ left: 35%;
 
 
 
+<%--</div>
 </div>
 </div>
-
-
-
-
 </div>
-</div>
+--%>
 
 <%--<asp:GridView ID="GridView_Pro" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Product"
      AllowSorting="false" Visible="true" Width="1024px">
