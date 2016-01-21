@@ -4,14 +4,15 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
+    <link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 
-    <div class="wrapper" style="background-color:#f7f5ee;">
+    <div class="wrapper">
 
     <div class="main-wrapper">
     <div class="contactus_image"><img src="../Images/contactus_bar.png" /></div>
 
-<div class="contactus_mainarea">
+<div class="contactus_mainarea" style="border:1px solid #eae6db;">
 <div class="contactus_subarea">
 
 <div class="contactus_subarea_one">
@@ -22,7 +23,7 @@
 <div class="c_address_area" style="margin:15px 0 0 0; width:300px;">Address</div>
 
 <div class="c_address_pure">Tata Motors Grihini Social Welfare Society</div>
-<div class="c_address_pure_two">A-2-X-25, Tata motors colony, <br />Pimpari, Pune – 411018</div>
+<div class="c_address_pure_two">A-2-X-25, Tata motors colony, <br />Pimpri, Pune – 411018</div>
 </div>
 
 </div>

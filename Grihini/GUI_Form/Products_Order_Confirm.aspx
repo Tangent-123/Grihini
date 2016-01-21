@@ -3,9 +3,11 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+
+    <link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 
-        <link href="../CSS/addtocart_jqzoom.css" rel="stylesheet" type="text/css" />
+     <link href="../CSS/addtocart_jqzoom.css" rel="stylesheet" type="text/css" />
     <script src="../JS/addtocart_one.js" type="text/javascript"></script>
     <script src="../JS/addtocart_two.js" type="text/javascript"></script>
     <script src="../JS/addtocart_three.js" type="text/javascript"></script>
@@ -201,7 +203,7 @@ ul#thumblist li a.zoomThumbActive{
 <div class="product">
 <div class="main-wrapper" style="height:425px;">
 
-<div style="width:1024px; float:left; height:35px; margin:5px 0 0 0; background-color:#0099CC;">
+<div style="width:1024px; float:left; height:35px; margin:5px 0 0 0; background-color:#0189b6;">
 <div class="add2main-txt">PRODUCT DETAILS</div>
         </div>
 
@@ -247,7 +249,7 @@ ul#thumblist li a.zoomThumbActive{
 
     </asp:GridView>
 
-    <div style="width:1024px; float:left; height:35px; margin:10px 0 0 0; background-color:#0099CC;">
+    <div style="width:1024px; float:left; height:35px; margin:10px 0 0 0; background-color:#0189b6;">
 <div class="add2main-txt">ADDRESS DETAILS</div>
         </div>
    <%-- <asp:GridView ID="GridView_Address" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Product"
@@ -317,8 +319,12 @@ ul#thumblist li a.zoomThumbActive{
     </asp:GridView>--%>
 
    <%-- <div style="width:300px; height:480px; float:right; background-color:White; margin:0 150px 0 0;">--%>
+<<<<<<< HEAD
 
    <div style="float:left; background-color:#2dc6f9; width:1024px;">
+=======
+   <div style="float:left; background-color:#dbe4ea; width:1024px;">
+>>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0
 <asp:DataList ID="DataList_Address" runat="server" 
            
             Font-Names="Verdana" Font-Size="Small" RepeatColumns="1" RepeatDirection="Horizontal"
@@ -383,7 +389,7 @@ ul#thumblist li a.zoomThumbActive{
 
 
 <div style="margin:135px 0 25px 0px; width:230px;">
-    <asp:Button ID="Btn_Confirm" runat="server" CssClass="Btn_Class" Text="Confirm" style="margin-top:30px;" 
+    <asp:Button ID="Btn_Confirm" runat="server" CssClass="button-0" Text="Confirm" style="margin-top:30px;" 
         onclick="Btn_Confirm_Click" />
 </div>
 </div>

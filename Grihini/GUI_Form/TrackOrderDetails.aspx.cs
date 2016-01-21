@@ -39,10 +39,12 @@ namespace Grihini.GUI_Form
                         string orderdate = Convert.ToString(dt.Rows[0]["Created_date"]);
                         string items = Convert.ToString(dt.Rows[0]["Quantity"]);
                         string grandtotal = Convert.ToString(dt.Rows[0]["Subtotal"]); 
+                        string OrderNo=Convert.ToString(dt.Rows[0]["Order_Id"]);
 
                         lbl_order.Text = orderdate;
                         lbl_tems.Text = items;
                         lbl_grandtotal.Text = grandtotal;
+                        lbl_OrderNo.Text = OrderNo;
                     }
             
 

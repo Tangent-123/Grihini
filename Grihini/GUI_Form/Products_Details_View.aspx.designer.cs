@@ -85,15 +85,6 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.DropDownList Ddl_Size;
         
         /// <summary>
-        /// DataList_Image_Color control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList_Image_Color;
-        
-        /// <summary>
         /// Ddl_Quantity control.
         /// </summary>
         /// <remarks>
@@ -103,13 +94,22 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.DropDownList Ddl_Quantity;
         
         /// <summary>
-        /// Btn_AddtoCart control.
+        /// DataList_Image_Color control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_AddtoCart;
+        protected global::System.Web.UI.WebControls.DataList DataList_Image_Color;
+        
+        /// <summary>
+        /// LinkButtonAddTocart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonAddTocart;
         
         /// <summary>
         /// ImageButton2 control.
@@ -121,22 +121,34 @@ namespace Grihini.GUI_Form {
         protected global::System.Web.UI.WebControls.ImageButton ImageButton2;
         
         /// <summary>
-        /// btn_buynoww control.
+        /// LinkButto_buynoww control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btn_buynoww;
+        protected global::System.Web.UI.WebControls.LinkButton LinkButto_buynoww;
         
         /// <summary>
-        /// Button3 control.
+        /// LinkButton_choosemore control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+<<<<<<< HEAD
+=======
+        protected global::System.Web.UI.WebControls.Button btn_buynow_false;
+        
+        /// <summary>
+        /// LinkButton_choosemore control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+>>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0
+        protected global::System.Web.UI.WebControls.LinkButton LinkButton_choosemore;
         
         /// <summary>
         /// Product_Image control.

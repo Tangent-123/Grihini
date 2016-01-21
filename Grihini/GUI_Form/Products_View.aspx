@@ -3,12 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+
+    <link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/viewstyle.css" rel="stylesheet" type="text/css" />
 
 <div class="wrapper" >
 <div class="sportsproduct">
-<div class="main-wrapper" style="background-color:#FFF; padding-top:10px;">
+<div class="main-wrapper" style="box-shadow:0px 1px solid #222;">
 <div class="sportsproduct-one" style="background-color:#FFF;">
 
 <%--<div class="sportsproduct-two">

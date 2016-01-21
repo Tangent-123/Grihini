@@ -44,26 +44,26 @@ namespace Grihini.GUI_Form
                 dt = cart.buttonvisible(10, userid, ProductId);
                 if (dt.Rows.Count > 0)
                 {
-                    Btn_AddtoCart.Visible = false;
+                    LinkButtonAddTocart.Visible = false;
                     ImageButton2.Visible = true;
-                    btn_buynoww.Visible = true;
+                    LinkButto_buynoww.Visible = true;
                     //btn_buynow_false.Visible = false;
 
                 }
                 if (dt.Rows.Count == 0)
                 {
-                    Btn_AddtoCart.Visible = true;
+                    LinkButtonAddTocart.Visible = true;
                     ImageButton2.Visible = false;
-                    btn_buynoww.Visible = true;
+                    LinkButto_buynoww.Visible = true;
                     //btn_buynow_false.Visible = false;
                 }
 
 
                 if (userid == 0)
                 {
-                    Btn_AddtoCart.Visible = true;
+                    LinkButtonAddTocart.Visible = true;
                     ImageButton2.Visible = false;
-                    btn_buynoww.Visible = true;
+                    LinkButto_buynoww.Visible = true;
                     //btn_buynow_false.Visible = false;
 
                 }
