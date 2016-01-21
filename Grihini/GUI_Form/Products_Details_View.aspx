@@ -50,6 +50,7 @@ ul#thumblist li a.zoomThumbActive{
 
 
 <div class="wrapper">
+<div class="main-wrapper" style="border:1px solid #eae6db; background-color:White; height:550px;">
 <div id="validdiv" runat="server" visible="false" style="background-color:#0099cc;">
 
 <div style="width:450px; margin:0 auto; height:30px;">
@@ -60,7 +61,7 @@ ul#thumblist li a.zoomThumbActive{
 </div>
 
     </div>
-<div class="main-wrapper" style="border:1px solid #eae6db; background-color:White; height:550px;">
+
 <div class="product-one"><img src="../Images/add1.png" /></div>
 
 <div class="product-two">    
@@ -222,27 +223,4 @@ ul#thumblist li a.zoomThumbActive{
 </div>
 
 
-<%--<!-- ModalPopupExtender -->
-           <div id="divOpenner" runat="server" />
-        <cc1:ModalPopupExtender ID="mp7" runat="server" PopupControlID="Panel7" TargetControlID="divOpenner"
-            CancelControlID="btnClose" BackgroundCssClass="modalBackground">
-        </cc1:ModalPopupExtender>
-        <asp:Panel ID="Panel7" runat="server" CssClass="modalPopuppop" align="center" style = "display:none">
-            <div class="popup_header">
-        Meesage from Webpage
-        </div>
-        <div id="dialog" style="width:100%; height:30px; margin:25px 0 0 0; float:left;">
-           
-            <asp:Label ID="lblmsgshow" runat="server" Font-Size="13px" ForeColor="Red" Text="" Visible="true" CssClass="errortext"></asp:Label>
-
-            </div>
-            <div style="float:left; margin:20px 0 0 125px;">
-            <asp:Button ID="btnClose" runat="server" Text="Close" CssClass="btn_mouuu" Height="25px" Width="80px" />
-            </div>
-
-            <div style="float:left; margin:20px 0 0 125px;">
-            <asp:Button ID="BtnOk" runat="server" Text="Ok" CssClass="btn_mouuu" Height="25px" Width="80px" OnClick="BtnOk_click" />
-            </div>
-        </asp:Panel>
-<!-- ModalPopupExtender -->--%>
 </asp:Content>

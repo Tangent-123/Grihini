@@ -13,6 +13,24 @@ namespace Grihini.GUI_Form {
     public partial class Products_Order_Confirm {
         
         /// <summary>
+        /// lbl_navi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_navi;
+        
+        /// <summary>
+        /// lbl_subnavi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_subnavi;
+        
+        /// <summary>
         /// GridView1 control.
         /// </summary>
         /// <remarks>
@@ -37,6 +55,6 @@ namespace Grihini.GUI_Form {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_Confirm;
+        protected global::System.Web.UI.WebControls.LinkButton Btn_Confirm;
     }
 }

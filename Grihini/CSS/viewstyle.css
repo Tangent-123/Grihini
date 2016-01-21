@@ -27,10 +27,18 @@
 	float: left;
 	width: 100%;
 	text-align: center;
-
 	margin: 0 0 20px 0;
-	-webkit-box-shadow:1px 1px 1px 1px #d1d1d1;
-	box-shadow:1px 1px 1px 1px #d1d1d1;
+	border:1px solid #d1d1d1;
+
+}
+#pricePlans #plans .plan:hover {
+	background: #fff;
+	float: left;
+	width: 100%;
+	text-align: center;
+	margin: 0 0 20px 0;
+	border:1px solid #ffe63b;
+
 }
 
 .planContainer .title h2 {
@@ -94,13 +102,8 @@
 	color: #777;
 }
 
-#credits a {
-	color: #333;
-}
 
-#credits a:hover {
-	text-decoration: none;
-}
+
 
 
 

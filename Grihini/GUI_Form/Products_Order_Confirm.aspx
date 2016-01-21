@@ -7,7 +7,7 @@
     <link href="../CSS/b_new.css" rel="stylesheet" type="text/css" />
     <link href="../CSS/style.css" rel="stylesheet" type="text/css" />
 
-     <link href="../CSS/addtocart_jqzoom.css" rel="stylesheet" type="text/css" />
+
     <script src="../JS/addtocart_one.js" type="text/javascript"></script>
     <script src="../JS/addtocart_two.js" type="text/javascript"></script>
     <script src="../JS/addtocart_three.js" type="text/javascript"></script>
@@ -38,7 +38,7 @@
 
 <style type"text/css">
 
-body{margin:0px;padding:0px;font-family:Arial;}
+
 a img,:link img,:visited img { border: none; }
 table { border-collapse: collapse; border-spacing: 0; }
 :focus { outline: none; }
@@ -69,7 +69,7 @@ ul#thumblist li a.zoomThumbActive{
 
 <style type="text/css">
 	body {
-		font: normal 14px/21px Arial, serif;
+		font: normal 14px/12px Arial, serif;
 	}
 	.example {
 		float: left;
@@ -119,7 +119,7 @@ ul#thumblist li a.zoomThumbActive{
 		float:right;
 		font-family:Arial;
 		font-size:12px;
-		margin:10px 0 0 30px;
+
 	}
 	.product-details{
 		float:left;
@@ -198,12 +198,19 @@ ul#thumblist li a.zoomThumbActive{
 </script>
 
 
+    <link href="../CSS/button2.css" rel="stylesheet" type="text/css" />
 
-<div class="wrapper" style="background:none;">
-<div class="product">
-<div class="main-wrapper" style="height:425px;">
 
-<div style="width:1024px; float:left; height:35px; margin:5px 0 0 0; background-color:#0189b6;">
+
+<div class="wrapper">
+<div class="main-wrapper" style="min-height:522px;">
+
+<div class="navigation_panel_main">
+    <asp:Label ID="lbl_navi" runat="server" Text="Order >>" CssClass="navigation_panel_first"></asp:Label>
+    <asp:Label ID="lbl_subnavi" runat="server" Text="Product Order Confirm" CssClass="navigation_panel_second" ></asp:Label>
+</div>
+
+<div style="width:1024px; float:left; height:35px; margin:0 0 0 0; background-color:#0189b6;">
 <div class="add2main-txt">PRODUCT DETAILS</div>
         </div>
 
@@ -249,10 +256,10 @@ ul#thumblist li a.zoomThumbActive{
 
     </asp:GridView>
 
-    <div style="width:1024px; float:left; height:35px; margin:10px 0 0 0; background-color:#0189b6;">
+<div style="width:1024px; float:left; height:35px; margin:10px 0 0 0; background-color:#0189b6;">
 <div class="add2main-txt">ADDRESS DETAILS</div>
         </div>
-   <%-- <asp:GridView ID="GridView_Address" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Product"
+<%-- <asp:GridView ID="GridView_Address" runat="server" AutoGenerateColumns="false" AllowPaging="false" EmptyDataText="No Product"
      AllowSorting="false" Visible="true" Width="1024px">
 
 
@@ -318,10 +325,7 @@ ul#thumblist li a.zoomThumbActive{
 
     </asp:GridView>--%>
 
-   <%-- <div style="width:300px; height:480px; float:right; background-color:White; margin:0 150px 0 0;">--%>
-<%--<<<<<<< HEAD--%>
-
-   <div style="float:left; background-color:#2dc6f9; width:1024px;">
+<div style="float:left; background-color:#bee0eb; width:1024px;">
 <%--=======
    <div style="float:left; background-color:#dbe4ea; width:1024px;">
 >>>>>>> 54b4a3cb464e3afd4475ff3f65c35828716b57b0--%>
@@ -382,17 +386,16 @@ ul#thumblist li a.zoomThumbActive{
             </ItemTemplate>
         </asp:DataList>
 </div>
-<%--</div>--%>
+
+<div style="margin:20px 0 25px -11px; width:230px; float:left; background-color:White;">
+<%--    <asp:Button ID="Btn_Confirm" runat="server" CssClass="button-0" Text="Confirm" style="margin-top:30px;" 
+        onclick="Btn_Confirm_Click" />--%>
+
+    <asp:LinkButton ID="Btn_Confirm" runat="server" onclick="Btn_Confirm_Click" class="btn btn-52 btn-52a icon-cart" ><span> CONFIRM</span></asp:LinkButton>
 
 
-
-
-
-<div style="margin:135px 0 25px 0px; width:230px;">
-    <asp:Button ID="Btn_Confirm" runat="server" CssClass="button-0" Text="Confirm" style="margin-top:30px;" 
-        onclick="Btn_Confirm_Click" />
 </div>
-</div>
+
 </div>
 </div>
 </asp:Content>

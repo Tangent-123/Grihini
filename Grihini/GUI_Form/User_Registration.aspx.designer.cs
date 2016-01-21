@@ -559,7 +559,7 @@ namespace Grihini.GUI_Form {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Btn_Add;
+        protected global::System.Web.UI.WebControls.LinkButton Btn_Add;
         
         /// <summary>
         /// Btn_Excel_Export2 control.

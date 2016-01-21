@@ -53,7 +53,6 @@
 
     });
 </script>
-
 <script type="text/javascript">
     $(function () {
         $("[id$=Text_Dob]").datepicker({
@@ -63,8 +62,6 @@
         });
     });
     </script>
-
-
 <style type"text/css">
 
 body{margin:0px;padding:0px;font-family:Arial;}
@@ -95,10 +92,9 @@ ul#thumblist li a.zoomThumbActive{
 }
 
 </style>
-
 <style type="text/css">
 	body {
-		font: normal 14px/21px Arial, serif;
+		font: normal 14px/12px Arial, serif;
 	}
 	.example {
 		float: left;
@@ -211,7 +207,6 @@ ul#thumblist li a.zoomThumbActive{
 				}
 	
 	</style>
-
 <script type="text/javascript">
 
     $(document).ready(function () {
@@ -226,17 +221,17 @@ ul#thumblist li a.zoomThumbActive{
 
 </script>
 
+     <link href="../CSS/button2.css" rel="stylesheet" type="text/css" />  
    
    
-   
-   
+   <div class="wrapper">
     <asp:MultiView ID="MultiView1" runat="server">
         
         <asp:View ID="View_UserInsert" runat="server">
 
         
    <div class="wrapper">  
-   <div class="main-wrapper" style="height:auto;">
+   <div class="main-wrapper" style="min-height:522px;">
 
    <div class="reg-main" style="float:left; height:auto; background-color:#edf8ff; margin:0 0 0 0; border: 1px solid #dbdbdb;">
 
@@ -538,29 +533,33 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
  
         </asp:View>
 
+
+
+
          <asp:View ID="ViewUserFetch" runat="server">
          
 
          
 
 
-         
+         <div class="main-wrapper">
          <div style="width:auto; height:25px; float:right; margin:10px 10px 10px 0;">
-                    <asp:Button ID="Btn_Add" runat="server" Text="Add New" CssClass="btn_submit"
+<%--                    <asp:Button ID="Btn_Add" runat="server" Text="Add New" CssClass="btn_submit"
                         BackColor="Black" Font-Bold="True" ForeColor="White" 
                         style="float:left; margin:0 50 20px 0; width:100px; height:25px; font-family:Arial; font-size:13px; color:White; background-color:#fc8332; border:none; cursor:pointer;" 
-                        onclick="Btn_Add_Click" Visible="false"/>
+                        onclick="Btn_Add_Click" Visible="false"/>--%>
 
+             <asp:LinkButton ID="Btn_Add" runat="server" onclick="Btn_Add_Click" Visible="false" class="btn btn-52 btn-52a icon-cart" ><span> ADD NEW</span></asp:LinkButton>
                   
                </div>
-               <div style="width:auto; height:auto; float:right; margin:3px 90px 10px 0; ">
+         <div style="width:auto; height:auto; float:right; margin:16px 30px 10px 0; ">
                 
-                <asp:ImageButton ID="Btn_Excel_Export2" runat="server" Width="25px"  Height="25px"
+                <asp:ImageButton ID="Btn_Excel_Export2" runat="server" Width="28px"  Height="28px"
                     ImageUrl="~/Images/NewExcel_Download.png" ToolTip="Download Excel" 
                     onclick="Btn_Excel_Export2_Click"/>
 
 
-  <asp:ImageButton ID="Btn_Pdf_Export2" runat="server" Width="25px"  Height="25px"
+  <asp:ImageButton ID="Btn_Pdf_Export2" runat="server" Width="28px"  Height="28px"
                     ImageUrl="~/Images/NewPDF_Download.png" ToolTip="Download Pdf" 
                     onclick="Btn_Pdf_Export2_Click"/>
              </div>
@@ -572,7 +571,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
 </div>
        
             <%--<div id="Panel3" runat="server" class="grid"  style="width:1024px; min-height:30px; margin:0 0 0 0px; float:left; border:1px solid #ccc; overflow:auto; background-color:White; text-align:center;">--%>
-            <div id="Panel3" runat="server" class="grid" style="width:1024px; min-height:30px; float:left; border:1px solid #ccc; overflow:auto; background-color:White; text-align:center;">
+            <div id="Panel3" runat="server" class="grid" style="width:1022px; min-height:30px; float:left; border:1px solid #ccc; overflow:auto; background-color:White; text-align:center;">
             <asp:GridView ID="GridView_User_Details" runat="server" AutoGenerateColumns="False"                  
             EnableModelValidation="True" DataKeyNames="User_Id" EmptyDataRowStyle-BackColor="Azure" EmptyDataRowStyle-ForeColor="Red"
                       Width="1024px" EmptyDataRowStyle-Font-Bold="true" EmptyDataRowStyle-BorderColor="Red">
@@ -584,22 +583,28 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
                 <asp:Label ID="LabelUser_Id" runat="server" Text='<%#Eval("User_Id") %>'></asp:Label>
             </ItemTemplate>
             </asp:TemplateField>
+
+            <asp:TemplateField HeaderText="Emp Id"  ControlStyle-Font-Size="12px">
+            <ItemTemplate>
+                <asp:Label ID="LabelEmp_Id" runat="server" Text='<%#Eval("Emp_Id") %>'></asp:Label>
+            </ItemTemplate>
+            </asp:TemplateField>
+
+            <asp:TemplateField HeaderText="Contact No."  ControlStyle-Font-Size="12px">
+            <ItemTemplate>
+                <asp:Label ID="LabelMobile_No" runat="server" Text='<%#Eval("Mobile_No") %>'></asp:Label>
+            </ItemTemplate>
+            </asp:TemplateField>
+
+            <asp:TemplateField HeaderText="Email Id"  ControlStyle-Font-Size="12px">
+            <ItemTemplate>
+                <asp:Label ID="LabelEmail_Id" runat="server" Text='<%#Eval("Email_Id") %>'></asp:Label>
+            </ItemTemplate>
+            </asp:TemplateField>
           
-            <asp:TemplateField HeaderText="First Name"  ControlStyle-Font-Size="12px">
+            <asp:TemplateField HeaderText="Employee Name"  ControlStyle-Font-Size="12px">
             <ItemTemplate>
-                <asp:Label ID="LabelFirst_Name" runat="server" Text='<%#Eval("First_Name") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>
-
-            <asp:TemplateField HeaderText="Middle Name"  ControlStyle-Font-Size="12px">
-            <ItemTemplate>
-                <asp:Label ID="LabelMiddle_Name" runat="server" Text='<%#Eval("Middle_Name") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>
-
-            <asp:TemplateField HeaderText="Last Name"  ControlStyle-Font-Size="12px">
-            <ItemTemplate>
-                <asp:Label ID="LabelLast_Name" runat="server" Text='<%#Eval("Last_Name") %>'></asp:Label>
+                <asp:Label ID="LabelFirst_Name" runat="server" Text='<%#Eval("EmployeeName") %>'></asp:Label>
             </ItemTemplate>
             </asp:TemplateField>
 
@@ -615,23 +620,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
             </ItemTemplate>
             </asp:TemplateField>
 
-            <asp:TemplateField HeaderText="Contact No"  ControlStyle-Font-Size="12px">
-            <ItemTemplate>
-                <asp:Label ID="LabelMobile_No" runat="server" Text='<%#Eval("Mobile_No") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>
-
-            <asp:TemplateField HeaderText="Email Id"  ControlStyle-Font-Size="12px">
-            <ItemTemplate>
-                <asp:Label ID="LabelEmail_Id" runat="server" Text='<%#Eval("Email_Id") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>
-
-            <asp:TemplateField HeaderText="Country"  ControlStyle-Font-Size="12px">
-            <ItemTemplate>
-                <asp:Label ID="LabelCountryName" runat="server" Text='<%#Eval("country_name") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>
+            
 
             <asp:TemplateField HeaderText="State"  ControlStyle-Font-Size="12px">
             <ItemTemplate>
@@ -645,11 +634,7 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
             </ItemTemplate>
             </asp:TemplateField>
 
-            <asp:TemplateField HeaderText="Emp Id"  ControlStyle-Font-Size="12px">
-            <ItemTemplate>
-                <asp:Label ID="LabelEmp_Id" runat="server" Text='<%#Eval("Emp_Id") %>'></asp:Label>
-            </ItemTemplate>
-            </asp:TemplateField>
+            
 
            </Columns>
              
@@ -670,5 +655,5 @@ ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" ValidationGr
         </asp:View>
 
     </asp:MultiView>
-   
+   </div>
 </asp:Content>

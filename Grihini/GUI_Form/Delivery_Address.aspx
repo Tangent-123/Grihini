@@ -37,7 +37,7 @@
     }
 </script> 
 
-
+    <link href="../CSS/button2.css" rel="stylesheet" type="text/css" />
 
 
    <div class="wrapper">
@@ -154,12 +154,12 @@
     </div>
     </div>
 
-    <div class="del-name-area" style="margin:35px 0 15px 149px; width:230px;">
+    <div class="del-name-area" style="margin:25px 0 15px 139px; width:230px;">
 <%--<asp:ImageButton ID="ImageButton100" runat="server" 
             ImageUrl="~/Images/saveicon.png" ValidationGroup="Delivery_Group" height="30" 
             width="230" onclick="ImageButton100_Click"  />--%>
 
-    <asp:LinkButton ID="ImageButton100" runat="server" onclick="ImageButton100_Click" class="btn btn-52 btn-52a icon-cart" ><span>SAVE & CONTINUE</span></asp:LinkButton>
+    <asp:LinkButton ID="ImageButton100" runat="server" onclick="ImageButton100_Click" ValidationGroup="Delivery_Group" class="btn btn-53 btn-53a icon-cart" ><span>SAVE & CONTINUE</span></asp:LinkButton>
 
     <asp:ValidationSummary ID="popmgs" runat="server" ValidationGroup="Delivery_Group" ShowMessageBox="true" ShowSummary="false" />
     </div>
@@ -213,7 +213,10 @@
                 <div class="btn-continue-with">
                 
                 <%--<asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Images/conform.png"  Height="280" Width="243" style="margin:5px 0 0 0; height:25px; width:130px; padding:0 0 10px 0;"/>--%>
-                   <asp:Button ID="Button1" runat="server" class="button-0" OnCommand="Delivery_Add_Id" CommandArgument='<%#Eval("Delivery_Id")%>'  Text="CONTINUE WITH THIS" />
+<%--                   <asp:Button ID="Button1" runat="server" class="button-0" OnCommand="Delivery_Add_Id" CommandArgument='<%#Eval("Delivery_Id")%>'  Text="CONTINUE WITH THIS" />--%>
+                   
+                    <asp:LinkButton ID="Button1" runat="server" OnCommand="Delivery_Add_Id" CommandArgument='<%#Eval("Delivery_Id")%>' class="btn btn-54 btn-54a icon-cart" ><span>CONTINUE WITH THIS</span></asp:LinkButton>
+                   
                    </div>
                 <br />     
                                 

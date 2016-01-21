@@ -172,6 +172,36 @@ body{
 }
 
 
+.navigation_panel_main
+{
+    float:left;
+    width:1024px;
+    background-color:#0189b6;
+    height:25px;
+    margin:0 0 10px 0;
+}
+.navigation_panel_first
+{
+    font-family:Cambria;
+    font-size:14px;
+    color:Black;
+    float:left;
+    margin:5px 0 0 20px;
+    color:White;
+    
+  
+}
+.navigation_panel_second
+{
+    font-family:Cambria;
+    font-size:14px;
+    color:Black;
+    float:left;
+    margin:5px 0 0 15px;
+    color:White;
+}
+
+
 .btn-3 {
   background: lighten($red, 3%);  
   border: 1px solid darken($red, 4%);
