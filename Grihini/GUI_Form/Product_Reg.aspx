@@ -376,7 +376,7 @@ ul#thumblist li a.zoomThumbActive{
     </div>
     <div class="form-box-right">
      <div> 
-          <asp:Label ID="Label14" runat="server" Text="Quantity"></asp:Label> 
+          <asp:Label ID="Label14" runat="server" Text="Max. Quantity"></asp:Label> 
           <asp:Label ID="Label15" runat="server" Text="*" Font-Size="12px" ForeColor="Red"></asp:Label>
      </div>
 
@@ -526,6 +526,7 @@ ul#thumblist li a.zoomThumbActive{
           <div> 
             <asp:DropDownList ID="Ddl_Color" runat="server" OnSelectedIndexChanged="ddl_Color_Ev" AutoPostBack="true" style="width:230px; float:left; background-color:#FFF; height:25px; margin:6px 0 0 0; border: 1px solid #dbdbdb;" >
              <asp:ListItem Value="0">Select Color</asp:ListItem>
+             <asp:ListItem Value="0">No Color</asp:ListItem>
              <asp:ListItem Value="1">1</asp:ListItem>
              <asp:ListItem Value="2">2</asp:ListItem>
              <asp:ListItem Value="3">3</asp:ListItem>
